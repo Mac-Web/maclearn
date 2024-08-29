@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Finished Course | MacLearn</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="overflow-menu shoot" id="overflow-menu">
+      <a href="/maclearn/html/" class="olink">HTML</a>
+      <a href="/maclearn/css/" class="olink">CSS</a>
+      <a href="/maclearn/references/" class="olink">References</a>
+      <a href="/maclearn/playground/" class="olink">Playground</a>
+    </div>
+    <nav class="nav">
+      <div class="overflowm shoot" id="overflowm">
+        <img src="/bars-solid.svg" alt="Menu" class="shoot" />
+      </div>
+      <a href="/maclearn/" class="logo">
+        <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
+      </a>
+      <a href="/maclearn/html/" class="nav-link">HTML</a>
+      <a href="/maclearn/css/" class="nav-link">CSS</a>
+      <a href="/maclearn/references/" class="nav-link">References</a>
+      <a href="/maclearn/playground/" class="nav-link">Playground</a>
+      <a href="/maclearn/me/" class="nav-link">Me</a>
+      <div class="select secondselect">
+        <span id="header123">Tabs</span>
+        <ul id="cats">
+          <a href="/maclearn/html/">HTML</a>
+          <a href="/maclearn/css/">CSS</a>
+          <a href="/maclearn/references/">References</a>
+          <a href="/maclearn/playground/">Playground</a>
+        </ul>
+      </div>
+      <div class="select">
+        <span id="header123">Help</span>
+        <ul id="cats">
+          <a href="/macblog/projects/maclearn/">About</a>
+          <a href="/macblog/updates/maclearn/">Updates</a>
+          <a href="/macblog/projects/maclearn/">Docs</a>
+          <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"
+            >Feedback</a
+          >
+        </ul>
+      </div>
+    </nav>
+    <div class="wrapper side-wrapper">
+      <div class="sidebar side">
+        <ul style="list-style-type: none">
+          <h2>HTML Visuals</h2>
+          <a href="html-tables.html">
+            <li>HTML Tables</li>
+          </a>
+          <a href="html-multimedia.html">
+            <li>HTML Multimedia</li>
+          </a>
+          <a href="html-embed.html">
+            <li>HTML Embed</li>
+          </a>
+          <a href="html-svg.html">
+            <li>HTML SVG</li>
+          </a>
+          <a href="visuals-quiz.html">
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Efficient Code</h2>
+
+          <a href="html-semantics.html">
+            <li>HTML Semantics</li>
+          </a>
+          <a href="html-special-characters.html">
+            <li>HTML Special Characters</li>
+          </a>
+          <a href="efficient-quiz.html">
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Handling Users</h2>
+          <a href="html-forms.html">
+            <li>HTML Forms</li>
+          </a>
+          <a href="html-meta.html">
+            <li>HTML Meta Tag</li>
+          </a>
+          <a href="user-quiz.html">
+            <li>Unit Quiz</li>
+          </a>
+          <br />
+          <div class="sidebtns">
+            <a href="what-is-coding.html" class="sidebtn">Back</a>
+            <a href="finish.html" class="sidebtn">Next</a>
+          </div>
+        </ul>
+      </div>
+      <div class="tbar" id="tbar">
+        <h2 class="bart">HTML Special Characters</h2>
+        <div class="bard">1.17.2024</div>
+        <div class="icons">
+          <img
+            src="/maclearn/icons/star-regular.svg"
+            alt="Favorite"
+            id="favorite"
+            class="icon"
+          />
+          <img
+            src="/maclearn/icons/share-solid.svg"
+            alt="Share"
+            id="share"
+            class="icon"
+          />
+          <img
+            src="/maclearn/icons/flag.svg"
+            alt="Report"
+            id="flag"
+            class="icon"
+          />
+        </div>
+      </div>
+      <script src="app.js"></script>
+      <article class="article">
+        <div class="congratulate">
+          <h1 style="background-color: rgb(40, 40, 40);">
+            Congratulations!<br />
+            You finished the HTML beta course on MacLearn 🥳!
+          </h1>
+          <p>
+            Hello fellow learner / beta tester, you finished this HTML beta
+            course! This is still a beta course, and we'll roll out major
+            changes and updates on course content, structure, and more. Thanks
+            for experimenting this beta course with us, while also learning some
+            awesome HTML coding knowledge. If you have any suggestions or
+            feedback, please click on this
+            <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"
+              >link</a
+            >
+            so we can improve your MacLearn experience. See you when this HTML
+            course and platform is matured enough, bye ✌️!
+          </p>
+          <p>Move on and learn about CSS to make your site look better!</p>
+        </div>
+        <div class="buttons">
+          <button id="prevButton" class="button">Back</button>
+          <button id="myButton" class="button">Finish 🎉</button>
+          <script>
+            document
+              .getElementById("myButton")
+              .addEventListener("click", function () {
+                window.location.href = "/maclearn/";
+              });
+            document
+              .getElementById("prevButton")
+              .addEventListener("click", function () {
+                window.location.href = "user-quiz.html";
+              });
+          </script>
+        </div>
+      </article>
+      <footer class="footer">
+        <div>
+          © <span id="year">2024</span>
+          <a
+            href="/"
+            target="_blank"
+            style="text-decoration: underline; color: white"
+            >MacWeb</a
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

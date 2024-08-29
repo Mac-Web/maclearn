@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Installing VS Code | MacLearn</title>
+    <link href="../style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <script src="../app.js"></script>
+  </head>
+  <body>
+    <div class="overflow-menu shoot" id="overflow-menu">
+      <a href="/maclearn/html/" class="olink">HTML</a>
+      <a href="/maclearn/css/" class="olink">CSS</a>
+      <a href="/maclearn/references/" class="olink">References</a>
+      <a href="/maclearn/playground/" class="olink">Playground</a>
+    </div>
+    <nav class="nav">
+      <div class="overflowm shoot" id="overflowm">
+        <img src="/bars-solid.svg" alt="Menu" class="shoot" />
+      </div>
+      <a href="/maclearn/" class="logo">
+        <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
+      </a>
+      <a href="/maclearn/html/" class="nav-link">HTML</a>
+      <a href="/maclearn/css/" class="nav-link">CSS</a>
+      <a href="/maclearn/references/" class="nav-link">References</a>
+      <a href="/maclearn/playground/" class="nav-link">Playground</a>
+      <a href="/maclearn/me/" class="nav-link">Me</a>
+      <div class="select secondselect">
+        <span id="header123">Tabs</span>
+        <ul id="cats">
+          <a href="/maclearn/html/">HTML</a>
+          <a href="/maclearn/css/">CSS</a>
+          <a href="/maclearn/references/">References</a>
+          <a href="/maclearn/playground/">Playground</a>
+        </ul>
+      </div>
+      <div class="select">
+        <span id="header123">Help</span>
+        <ul id="cats">
+          <a href="/macblog/projects/maclearn/">About</a>
+          <a href="/macblog/updates/maclearn/">Updates</a>
+          <a href="/macblog/projects/maclearn/">Docs</a>
+          <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"
+            >Feedback</a
+          >
+        </ul>
+      </div>
+    </nav>
+    <div class="wrapper side-wrapper">
+      <div class="sidebar side">
+        <ul style="list-style-type: none">
+          <h2>Web Development</h2>
+          <a
+            href="install-vs-code.html"
+            style="font-weight: bold; color: rgb(89, 137, 227)"
+          >
+            <li>Installing VS Code</li>
+          </a>
+        </ul>
+      </div>
+      <article class="article">
+        <h1>Installing Visual Studio Code</h1>
+        <h3 class="author">
+          By Tony
+          <!--<span class="date">Released 2023.2.11</span>-->
+          <span class="date">6.8.2024</span>
+        </h3>
+        <hr />
+        <p>
+          To code a website, we need a <i>code editor</i>, so you can code on
+          it.
+        </p>
+        <p>
+          Most people use Microsoft's
+          <strong>Visual Studio Code (VS Code)</strong> as thier code editor,
+          but you can also use Replit, Sublime Text, TextEdit, or even Notepad.
+          But because of its efficiency, power, and ease of use, VS Code is
+          recomended for code editing.
+        </p>
+        <img
+          src="../media/vs1.jpg"
+          alt="Visual Studio Code logo"
+          style="width: 30%; margin-inline: 35%; border-radius: 10px"
+        />
+        <figcaption>Visul Studio Code 2022 logo.</figcaption>
+        <p>
+          To install VS Code, click on
+          <a href="https://code.visualstudio.com/download" target="_blank"
+            >their official website</a
+          >
+          and coose the version that maches your operating system, then download
+          it and follow the steps bellow:
+        </p>
+        <h2>1. Click the downloaded file at the bottom-left corner.</h2>
+        <img
+          src="../media/vs2.png"
+          alt="Step1"
+          style="width: 90%; margin-inline: 5%"
+        />
+        <h2>2. Select "I accept" and click "Next".</h2>
+        <img
+          src="../media/vs3.png"
+          alt="Step2"
+          style="width: 70%; margin-inline: 15%"
+        />
+        <h2>3. Select "Create a desktop icon", and click "Next".</h2>
+        <img
+          src="../media/vs4.png"
+          alt="Step3"
+          style="width: 70%; margin-inline: 15%"
+        />
+        <h2>4. Click "Install".</h2>
+        <img
+          src="../media/vs5.png"
+          alt="Step4"
+          style="width: 70%; margin-inline: 15%"
+        />
+        <h2>5. Click "Finish" and VS Code should launch!</h2>
+        <img
+          src="../media/vs6.png"
+          alt="Step5"
+          style="width: 70%; margin-inline: 15%"
+        />
+        <p>
+          If it doesn't launch, go check if there is a VS Code icon on your
+          desktop. If you have any problem, fell free to search online for other
+          VS Code installing tutorials!
+        </p>
+
+        <div class="buttons">
+          <button id="prevButton" class="button">Back</button>
+          <button id="myButton" class="button">Next</button>
+          <script>
+            document
+              .getElementById("myButton")
+              .addEventListener("click", function () {
+                window.location.href = "/maclearn/coding/references/";
+              });
+            document
+              .getElementById("prevButton")
+              .addEventListener("click", function () {
+                window.location.href = "/maclearn/coding/references/";
+              });
+          </script>
+        </div>
+      </article>
+      <footer class="footer">
+        <div>
+          © <span id="year">2024</span>
+          <a href="/" style="text-decoration: underline; color: white"
+            >MacWeb</a
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

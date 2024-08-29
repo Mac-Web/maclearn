@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Visuals Quiz | MacLearn</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="/maclearn/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="quiz.css" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="overflow-menu shoot" id="overflow-menu">
+      <a href="/maclearn/html/" class="olink">HTML</a>
+      <a href="/maclearn/css/" class="olink">CSS</a>
+      <a href="/maclearn/references/" class="olink">References</a>
+      <a href="/maclearn/playground/" class="olink">Playground</a>
+    </div>
+    <nav class="nav">
+      <div class="overflowm shoot" id="overflowm">
+        <img src="/bars-solid.svg" alt="Menu" class="shoot" />
+      </div>
+      <a href="/maclearn/" class="logo">
+        <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
+      </a>
+      <a href="/maclearn/html/" class="nav-link">HTML</a>
+      <a href="/maclearn/css/" class="nav-link">CSS</a>
+      <a href="/maclearn/references/" class="nav-link">References</a>
+      <a href="/maclearn/playground/" class="nav-link">Playground</a>
+      <a href="/maclearn/me/" class="nav-link">Me</a>
+      <div class="select secondselect">
+        <span id="header123">Tabs</span>
+        <ul id="cats">
+          <a href="/maclearn/html/">HTML</a>
+          <a href="/maclearn/css/">CSS</a>
+          <a href="/maclearn/references/">References</a>
+          <a href="/maclearn/playground/">Playground</a>
+        </ul>
+      </div>
+      <div class="select">
+        <span id="header123">Help</span>
+        <ul id="cats">
+          <a href="/macblog/projects/maclearn/">About</a>
+          <a href="/macblog/updates/maclearn/">Updates</a>
+          <a href="/macblog/projects/maclearn/">Docs</a>
+          <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"
+            >Feedback</a
+          >
+        </ul>
+      </div>
+    </nav>
+    <div class="wrapper side-wrapper">
+      <div class="sidebar side">
+        <ul style="list-style-type: none">
+          <h2>HTML Visuals</h2>
+          <a href="html-tables.html">
+            <li>HTML Tables</li>
+          </a>
+          <a href="html-multimedia.html">
+            <li>HTML Multimedia</li>
+          </a>
+          <a href="html-embed.html">
+            <li>HTML Embed</li>
+          </a>
+          <a href="html-svg.html">
+            <li>HTML SVG</li>
+          </a>
+          <a
+            href="visuals-quiz.html"
+            style="font-weight: bold; color: rgb(89, 137, 227)"
+          >
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Efficient Code</h2>
+
+          <a href="html-semantics.html">
+            <li>HTML Semantics</li>
+          </a>
+          <a href="html-special-characters.html">
+            <li>HTML Special Characters</li>
+          </a>
+          <a href="efficient-quiz.html">
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Handling Users</h2>
+          <a href="html-forms.html">
+            <li>HTML Forms</li>
+          </a>
+          <a href="html-meta.html">
+            <li>HTML Meta Tag</li>
+          </a>
+          <a href="user-quiz.html">
+            <li>Unit Quiz</li>
+          </a>
+          <br />
+          <div class="sidebtns">
+            <a href="what-is-coding.html" class="sidebtn">Back</a>
+            <a href="finish.html" class="sidebtn">Next</a>
+          </div>
+        </ul>
+      </div>
+      <div class="tbar" id="tbar">
+        <h2 class="bart">HTML Special Characters</h2>
+        <div class="bard">1.17.2024</div>
+        <div class="icons">
+          <img
+            src="/maclearn/icons/star-regular.svg"
+            alt="Favorite"
+            id="favorite"
+            class="icon"
+          />
+          <img
+            src="/maclearn/icons/share-solid.svg"
+            alt="Share"
+            id="favorite"
+            class="icon"
+          />
+          <img
+            src="/maclearn/icons/flag.svg"
+            alt="Report"
+            id="favorite"
+            class="icon"
+          />
+        </div>
+      </div>
+      <script src="app.js"></script>
+      <div class="flex">
+        <div class="container">
+          <div id="question-container" class="hide">
+            <div id="question">Question</div>
+
+            <div id="answer-buttons" class="btn-grid">
+              <button class="btn">Answer 1</button>
+              <button class="btn">Answer 2</button>
+              <button class="btn">Answer 3</button>
+              <button class="btn">Answer 4</button>
+            </div>
+          </div>
+          <div id="controls">
+            <div id="message">
+              <div
+                id="message2"
+                style="
+                  padding-inline: 100px;
+                  line-height: 40px;
+                  font-size: 27px;
+                "
+              >
+                Click "start" to test your HTML visual element skills and
+                knowledge!
+              </div>
+            </div>
+          </div>
+          <div class="results" id="results">
+            <div class="score" id="score">fdewedf</div>
+          </div>
+        </div>
+      </div>
+      <article class="article">
+        <div class="buttons">
+          <button id="back" class="button">Back</button>
+          <button id="start" class="button">Start</button>
+        </div>
+      </article>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const start = document.getElementById("start");
+          const quiz = document.getElementById("question-container");
+          const question = document.getElementById("question");
+          const answerButtonsElement =
+            document.getElementById("answer-buttons");
+          const back = document.getElementById("back");
+          const controls = document.getElementById("controls");
+          const results = document.getElementById("results");
+          let currentQuestionIndex, index;
+          let answerArray = [];
+          let correctArray = [];
+          back.classList.add("hide");
+          results.classList.add("hide");
+          start.addEventListener("click", () => {
+            if (start.innerHTML === "Start") {
+              startQuiz();
+              controls.style.display = "none";
+            } else if (start.innerHTML === "Next") {
+              currentQuestionIndex++;
+              setNextQuestion();
+            } else if (start.innerHTML === "Finish") {
+              currentQuestionIndex++;
+              question.classList.add("hide");
+              results.classList.remove("hide");
+              answerButtonsElement.classList.add("hide");
+              let actualCount = 0;
+              correctArray.forEach((correct) => {
+                if (correct !== null) {
+                  actualCount++;
+                }
+              });
+              let percentage = Math.round(
+                (actualCount / questions.length) * 100
+              );
+              results.innerHTML =
+                "Your quiz score is " +
+                percentage +
+                "% correct. <br> Go back, review, and improve your score!";
+              start.innerHTML = "Review!";
+              start.addEventListener("click", () => {
+                window.location.href = "/maclearn/html/html-tables.html";
+              });
+              if (percentage > 80) {
+                results.innerHTML =
+                  "Your quiz score is " +
+                  percentage +
+                  "% correct! <br> Good job, you finished the HTML Visuals unit! Move on and explore efficient code writing and user handling!";
+                start.innerHTML = "Go!";
+                start.addEventListener("click", () => {
+                  window.location.href =
+                    "/maclearn/html/html-semantics.html";
+                });
+              }
+            }
+          });
+
+          back.addEventListener("click", () => {
+            if (currentQuestionIndex >= 1) {
+              currentQuestionIndex--;
+              setNextQuestion();
+              question.classList.remove("hide");
+              answerButtonsElement.classList.remove("hide");
+              results.classList.add("hide");
+              start.innerHTML = "Next";
+              if (currentQuestionIndex === 3) {
+                start.innerHTML = "Finish";
+              }
+            } else {
+              controls.style.display = "flex";
+              start.innerHTML = "Start";
+              message.classList.remove("hide");
+              quiz.classList.add("hide");
+              back.classList.add("hide");
+            }
+          });
+
+          function startQuiz() {
+            start.innerHTML = "Next";
+            message.classList.add("hide");
+            quiz.classList.remove("hide");
+            shuffledQuestions = questions;
+            currentQuestionIndex = 0;
+            back.classList.remove("hide");
+            setNextQuestion();
+          }
+
+          function setNextQuestion() {
+            reset();
+            showQuestion(questions[currentQuestionIndex]);
+            if (currentQuestionIndex === 3) {
+              start.innerHTML = "Finish";
+            }
+          }
+
+          function reset() {
+            while (answerButtonsElement.firstChild) {
+              answerButtonsElement.removeChild(answerButtonsElement.firstChild);
+            }
+          }
+
+          function showQuestion(q) {
+            question.innerText = q.question;
+            index = 0;
+            q.answers.forEach((answer) => {
+              const button = document.createElement("div");
+              const label = document.createElement("label");
+              const radioButton = document.createElement("input");
+              radioButton.setAttribute("type", "radio");
+              label.setAttribute("for", index);
+              radioButton.setAttribute("id", index);
+              radioButton.setAttribute("name", "radio");
+              label.innerText = answer.text;
+              button.classList.add("btn");
+              if (answer.correct) {
+                button.dataset.correct = answer.correct;
+              }
+              button.addEventListener("click", selectAnswer);
+              answerButtonsElement.appendChild(button);
+              button.appendChild(radioButton);
+              button.appendChild(label);
+              if (answerArray[currentQuestionIndex]) {
+                if (answerArray[currentQuestionIndex] === button.innerHTML) {
+                  radioButton.checked = true;
+                }
+              }
+              index++;
+            });
+          }
+
+          function selectAnswer(e) {
+            const selectedAnswer = e.target;
+            const correct = selectedAnswer.parentElement.dataset.correct;
+            if (questions.length > currentQuestionIndex + 1) {
+              start.innerHTML = "Next";
+            } else {
+              start.innerHTML = "Finish";
+            }
+            if (selectedAnswer.parentElement.dataset.correct) {
+              correctArray[currentQuestionIndex] = selectedAnswer;
+            } else {
+              correctArray.splice(currentQuestionIndex, 1);
+            }
+            answerArray[currentQuestionIndex] =
+              selectedAnswer.parentElement.innerHTML;
+          }
+          const questions = [
+            {
+              question: "What does the <tr> tag do?",
+              answers: [
+                { text: "It creates data cells in a table", correct: false },
+                { text: "It creates rows in a table", correct: true },
+                { text: "It creates a column in a table", correct: false },
+                { text: "It creates a table", correct: false },
+              ],
+            },
+            {
+              question: "How to embed another web page on your own web page?",
+              answers: [
+                { text: "<iframe>", correct: true },
+                { text: "<page>", correct: false },
+                { text: "<link>", correct: false },
+                { text: "<inline>", correct: false },
+              ],
+            },
+            {
+              question: "What does the <circle> tag do?",
+              answers: [
+                { text: "It creates a circular background", correct: false },
+                { text: "It creates a circle in a PNG file", correct: false },
+                { text: "It circles an element", correct: false },
+                { text: "It creates a circle in inline SVG", correct: true },
+              ],
+            },
+            {
+              question: "How to put a video on your web page?",
+              answers: [
+                { text: "<video> with <source>", correct: true },
+                { text: '<video src="">', correct: false },
+                { text: '<media src="">', correct: false },
+                { text: "<media> with <source>", correct: false },
+              ],
+            },
+          ];
+        });
+      </script>
+    </div>
+    <footer class="footer">
+      <div>
+        © <span id="year">2024</span>
+        <a href="/" style="text-decoration: underline; color: white">MacWeb</a>
+      </div>
+    </footer>
+  </body>
+</html>

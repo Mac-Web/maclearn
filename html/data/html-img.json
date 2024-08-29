@@ -1,0 +1,10 @@
+{
+  "paragraph": "<p><b>Images help a lot on visualizing and understanding different concepts, information, and other things.</b> They also make your webpage richer with content and information. This article will show you how to put images on your webpage.</p><img src=\"media/coding11.png\" alt=\"An image\" style=\"width: 40%; margin-inline: 30%\" /><p>This is an image tag's HTML code:</p><div class=\"example\"><textarea id=\"html\" class=\"html-example\" placeholder=\"HTML\"></textarea><iframe class=\"iframe-example\" id=\"output\" style=\"background-color: white\" sandbox=\"allow-forms allow-scripts allow-same-origin allow-popups\"></iframe></div><p>The src attribute of the &ltimg&gt tag tells the browser the image source so it can display it properly, and alt attribute tells the browser what the alternative text of the image is for accessibility or if the image doesn't show. These are two most important attributes for &ltimg&gt tag. For more information, visit our <a href=\"/maclearn/coding/references/tags/img-tag.html\">references</a>.</p>",
+  "next": "html-hyperlink.html",
+  "previous": "foundations-quiz.html",
+  "articleName": "HTML Image",
+  "articleDate": "2.18.2024",
+  "author": "Tony",
+  "articleRelease": "3.3.2023",
+  "interactiveHTML": "<img src=\"image.png\" alt=\"Image\">"
+}

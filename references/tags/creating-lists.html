@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Creating Lists | HTML Reference | MacLearn</title>
+    <link href="../style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <script src="../app.js"></script>
+  </head>
+  <body>
+    <div class="overflow-menu shoot" id="overflow-menu">
+      <a href="/maclearn/html/" class="olink">HTML</a>
+      <a href="/maclearn/css/" class="olink">CSS</a>
+      <a href="/maclearn/references/" class="olink">References</a>
+      <a href="/maclearn/playground/" class="olink">Playground</a>
+    </div>
+    <nav class="nav">
+      <div class="overflowm shoot" id="overflowm">
+        <img src="/bars-solid.svg" alt="Menu" class="shoot" />
+      </div>
+      <a href="/maclearn/" class="logo">
+        <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
+      </a>
+      <a href="/maclearn/html/" class="nav-link">HTML</a>
+      <a href="/maclearn/css/" class="nav-link">CSS</a>
+      <a href="/maclearn/references/" class="nav-link">References</a>
+      <a href="/maclearn/playground/" class="nav-link">Playground</a>
+      <a href="/maclearn/me/" class="nav-link">Me</a>
+      <div class="select secondselect">
+        <span id="header123">Tabs</span>
+        <ul id="cats">
+          <a href="/maclearn/html/">HTML</a>
+          <a href="/maclearn/css/">CSS</a>
+          <a href="/maclearn/references/">References</a>
+          <a href="/maclearn/playground/">Playground</a>
+        </ul>
+      </div>
+      <div class="select">
+        <span id="header123">Help</span>
+        <ul id="cats">
+          <a href="/macblog/projects/maclearn/">About</a>
+          <a href="/macblog/updates/maclearn/">Updates</a>
+          <a href="/macblog/projects/maclearn/">Docs</a>
+          <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"
+            >Feedback</a
+          >
+        </ul>
+      </div>
+    </nav>
+    <div class="wrapper side-wrapper">
+      <div class="sidebar side">
+        <ul style="list-style-type: none">
+          <h2>HTML Tags</h2>
+          <a href="a-tags.html">
+            <li>&lta&gt</li>
+          </a>
+          <a href="br-tag.html">
+            <li>&ltbr&gt</li>
+          </a>
+          <a href="heading-tags.html">
+            <li>&lth1&gt - &lth6&gt</li>
+          </a>
+          <a href="hr-tag.html">
+            <li>&lthr&gt</li>
+          </a>
+          <a href="img-tag.html">
+            <li>&ltimg&gt</li>
+          </a>
+          <a href="creating-lists.html" style="font-weight: bold; color: rgb(89, 137, 227)">
+            <li>List Tags</li>
+          </a>
+          <a href="creating-tables.html">
+            <li>Table Tags</li>
+          </a> <br /><br />
+        </ul>
+      </div>
+      <article class="article">
+        <h1 id="hr">Creating Lists</h1>
+        <h3 class="author">By Tony <span class="date">2023.3.3</span></h3>
+        <hr />
+        <p>
+          Lists are everywhere. Shopping lists, to-do lists, menu lists... You
+          can also make unordered lists or number-ordered lists on your webpage.
+          This article will tell you how to do this in HTML.
+        </p>
+        <!--put an image here about list-->
+        <h2>1. Unordered List</h2>
+        <p>
+          Here is some code of an unordered list example:<br /><br />
+          <code>
+            &lth1&gtMy Shopping List&lt/h1&gt<br />
+            &ltul&gt<br />
+            <span style="color: transparent">www</span
+            >&ltli&gtFood&lt/li&gt<br />
+            <span style="color: transparent">www</span
+            >&ltli&gtToys&lt/li&gt<br />
+            <span style="color: transparent">www</span
+            >&ltli&gtShirts&lt/li&gt<br />
+            &lt/ul&gt
+          </code>
+        </p>
+
+        <p>
+          At the first line, we created a heading called "My Shopping List".<br />
+          At the second line, we typed &ltul&gt&lt/ul&gt tags. These tags tell
+          browser the elements wrapped inside them are parts of an
+          <b>unordered list</b>.<br />
+          To define the list items, we typed 3 &ltli&gt&lt/li&gt pairs with
+          food, toys, or shirts inside them.<br />
+          This is the output of the code:
+        </p>
+
+        <h1>My Shopping List</h1>
+        <ul>
+          <li>Food</li>
+          <li>Toys</li>
+          <li>Shirts</li>
+        </ul>
+        <span style="font-size: 17px"
+          ><i
+            >Note: The output had been styled but it's basically same without
+            styling it.</i
+          ></span
+        ><br /><br />
+        <p>
+          Always remember to put &ltli&gt&lt/li&gt tags inside &ltul&gt&lt/ul&gt
+          tags when creating an unordered list. These tags are very helpful when
+          organizing things on your webpage. You can style it, give it a title,
+          assign it an id or a class, or do whatever you want with it. Have fun
+          exploring &ltul&gt&lt/ul&gt tags!
+        </p>
+
+        <h2>2. Ordered List</h2>
+        <p>
+          Here is some code of an ordered list example:<br /><br />
+          <code>
+            &lth1&gtHow To Learn Coding&lt/h1&gt<br />
+            &ltol&gt<br />
+            <span style="color: transparent">cpc</span>&ltli&gtGo to coding
+            place.&lt/li&gt<br />
+            <span style="color: transparent">cpc</span>&ltli&gtTake some time to
+            learn and practice.&lt/li&gt<br />
+            <span style="color: transparent">cpc</span>&ltli&gtPractice some
+            more.&lt/li&gt<br />
+            <span style="color: transparent">cpc</span>&ltli&gtAnd your
+            done!&lt/li&gt<br />
+            &lt/ol&gt
+          </code>
+        </p>
+
+        <p>
+          At the first line, we created a heading called "How To Learn
+          Coding".<br />
+          At the second line, we typed &ltol&gt&lt/ol&gt tags. They tell browser
+          the elements wrapped inside them are parts of an
+          <b>number-ordered list</b>.<br />
+          To define the list items, we did the same thing as &ltul&gt&lt/ul&gt
+          tags:<br />
+          &ltli&gt&lt/li&gt pairs.<br />
+          This is the output of the code:
+        </p>
+
+        <h1>How to learn coding</h1>
+        <ol>
+          <li>Go to Coding Place.</li>
+          <li>Take some time to learn and practice.</li>
+          <li>Practice some more.</li>
+          <li>And your done!</li>
+        </ol>
+        <span style="font-size: 17px"
+          ><i
+            >Note: The output had been styled but it's basically same without
+            styling it.</i
+          ></span
+        ><br /><br />
+        <p>
+          Always remember to put &ltli&gt&lt/li&gt tags inside &ltol&gt&lt/ol&gt
+          tags or it won't work! These tags are very helpful when listing steps
+          to do something on your webpage. You can style it, give it a title,
+          assign it an id or a class, or do whatever you want with it. Have fun
+          exploring &ltol&gt&lt/ol&gt tags!
+        </p>
+        <h2>Bonus: How to change the label before a list item?</h2>
+        <p>
+          Maybe you want a square before &ltul&gt list item instead of a circle,
+          or you want alphabat-ordered items instead of number-ordered items in
+          &ltol&gt tags. You can do this by styling the &ltul&gt or &ltol&gt
+          tags.<br />
+          Here is how you do it in HTML:<br /><br />
+          <code>
+            &lth1&gtStyling ul Tags&lt/h1&gt<br />
+            &ltul style="list-style-type: square;"&gt<br />
+            <span style="color: transparent">cpc</span>&ltli&gtAn
+            item.&lt/li&gt<br />
+            <span style="color: transparent">cpc</span>&ltli&gtAnother
+            item.&lt/li&gt<br />
+            <span style="color: transparent">cpc</span>&ltli&gtThe last
+            item.&lt/li&gt<br />
+            &lt/ul&gt
+          </code>
+        </p>
+
+        <p>
+          The structure is still same , but we added a style attribute on the
+          &ltul&gt tag in order to style the label. Type "list-style-type" so
+          you can choose any label avaliable in HTML5. We used square, but there
+          are none, circle, decimal (number), alpha (alphabet), and many more
+          choices you can explore. Styling ordered list is exactly the same, no
+          difference.<br />
+          This is the output:
+        </p>
+
+        <h1>Styling ul Tags</h1>
+        <ul style="list-style-type: square">
+          <li>An item.</li>
+          <li>Another item.</li>
+          <li>The last item.</li>
+        </ul>
+        <span style="font-size: 17px"
+          ><i
+            >Note: The output had been styled but it's basically same without
+            styling it.</i
+          ></span
+        ><br /><br />
+        <h2>Summary</h2>
+        <p>
+          List tags are very important and useful. They are &ltul&gt tags which
+          means unordered list; &ltol&gt tags which means ordered list; and
+          &ltli&gt tags which wrap up list items and can be put inside &ltul&gt
+          tags or &ltol&gt tags. To style the label of a list item, use styling
+          method and type "list-style-type" to choose any avaliable labels.
+        </p>
+        <div class="buttons">
+          <button id="prevButton" class="button">◀ Previous</button>
+          <button id="myButton" class="button">Next ▶</button>
+          <script>
+            document
+              .getElementById("myButton")
+              .addEventListener("click", function () {
+                window.location.href = "creating-tables.html";
+              });
+            document
+              .getElementById("prevButton")
+              .addEventListener("click", function () {
+                window.location.href = "img-tag.html";
+              });
+          </script>
+        </div>
+      </article>
+      <footer class="footer">
+        <div>
+          © <span id="year">2024</span>
+          <a href="/" style="text-decoration: underline; color: white"
+            >MacWeb</a
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

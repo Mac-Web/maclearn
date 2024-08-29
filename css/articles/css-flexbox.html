@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Flexbox | MacLearn</title>
+    <link href="../style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
+      async="async"
+    ></script>
+    <name id="page" data="css-flexbox"></name>
+  </head>
+  <body>
+    <div class="overflow-menu shoot" id="overflow-menu">
+      <a href="/maclearn/html/" class="olink">HTML</a>
+      <a href="/maclearn/css/" class="olink">CSS</a>
+      <a href="/maclearn/references/" class="olink">References</a>
+      <a href="/maclearn/playground/" class="olink">Playground</a>
+    </div>
+    <nav class="nav">
+      <div class="overflowm shoot" id="overflowm">
+        <img src="/bars-solid.svg" alt="Menu" class="shoot" />
+      </div>
+      <a href="/maclearn/" class="logo">
+        <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
+      </a>
+      <a href="/maclearn/html/" class="nav-link">HTML</a>
+      <a href="/maclearn/css/" class="nav-link">CSS</a>
+      <a href="/maclearn/references/" class="nav-link">References</a>
+      <a href="/maclearn/playground/" class="nav-link">Playground</a>
+      <a href="/maclearn/me/" class="nav-link">Me</a>
+      <div class="select secondselect">
+        <span id="header123">Tabs</span>
+        <ul id="cats">
+          <a href="/maclearn/html/">HTML</a>
+          <a href="/maclearn/css/">CSS</a>
+          <a href="/maclearn/references/">References</a>
+          <a href="/maclearn/playground/">Playground</a>
+        </ul>
+      </div>
+      <div class="select">
+        <span id="header123">Help</span>
+        <ul id="cats">
+          <a href="/macblog/projects/maclearn/">About</a>
+          <a href="/macblog/updates/maclearn/">Updates</a>
+          <a href="/macblog/projects/maclearn/">Docs</a>
+          <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"
+            >Feedback</a
+          >
+        </ul>
+      </div>
+    </nav>
+    <div class="wrapper side-wrapper">
+      <div class="sidebar side">
+        <ul style="list-style-type: none">
+          <h2>Laying Out Stuff</h2>
+          <a href="css-display.html">
+            <li>CSS Display</li>
+          </a>
+          <a
+            href="css-flexbox.html"
+            style="font-weight: bold; color: rgb(89, 137, 227)"
+          >
+            <li>CSS Flexbox</li>
+          </a>
+          <a href="css-position.html">
+            <li>CSS Position</li>
+          </a>
+          <a href="quiz-layout.html">
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Useful CSS Tips</h2>
+          <a href="css-math.html">
+            <li>CSS Math</li>
+          </a>
+          <a href="css-important.html">
+            <li>CSS !important</li>
+          </a>
+          <a href="css-pseudo.html">
+            <li>CSS Pseudo</li>
+          </a>
+          <a href="quiz-useful.html">
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Creating Animations</h2>
+          <a href="css-transition.html">
+            <li>CSS Transition</li>
+          </a>
+          <a href="css-animation.html">
+            <li>CSS Animation</li>
+          </a>
+          <a href="css-transform.html">
+            <li>CSS Transform</li>
+          </a>
+          <a href="quiz-animation.html">
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Responsive Design</h2>
+          <a href="css-media-queries.html">
+            <li>CSS Media Queries</li>
+          </a>
+          <a href="css-viewport.html">
+            <li>CSS Viewport</li>
+          </a>
+          <a href="quiz-responsive.html">
+            <li>Unit Quiz</li>
+          </a>
+          <br />
+          <div class="sidebtns">
+            <a href="css-intro.html" class="sidebtn">Back</a>
+            <a href="finish.html" class="sidebtn">Next</a>
+          </div>
+        </ul>
+      </div>
+      <div class="tbar" id="tbar">
+        <h2 class="bart">CSS Flexbox</h2>
+        <div class="bard">8.15.2024</div>
+      </div>
+      <script src="../app.js"></script>
+      <article class="article">
+        <div class="entire">
+          <div class="sharepanel">
+            <div class="sharethis-inline-share-buttons"></div>
+            <div class="copy">
+              <div class="clink" id="clink"></div>
+              <div class="cbtn" id="cbtn">Copy</div>
+            </div>
+          </div>
+        </div>
+        <h1>CSS Flexbox</h1>
+        <h3 class="author">
+          By Tony
+          <!--<span class="date">2024.8.15</span>
+          <span style="padding-inline: 10px">•</span> Last updated-->
+          <span class="date">8.15.2024</span>
+          <div class="icons">
+            <img
+              src="/maclearn/media/icons/star-regular.svg"
+              alt="Favorite"
+              id="favorite"
+              class="icon"
+            />
+            <img
+              src="/maclearn/media/icons/share-solid.svg"
+              alt="Share"
+              id="share"
+              class="icon"
+            />
+            <img
+              src="/maclearn/media/icons/flag.svg"
+              alt="Report"
+              id="flag"
+              class="icon"
+            />
+          </div>
+        </h3>
+        <hr />
+        <p>
+          Sure, you can position several elements using padding and margin, or
+          even the &lt;br&gt; tag. But is it efficient? Does it really achieve
+          the layout you want? Is it flexible enough? CSS flexbox is all three
+          of these. It's efficient, powerful, and flexible at laying out
+          elements.
+        </p>
+        <code class="code">
+          display: flex;<br />
+          justify-content: center;<br />
+          align-items: center;<br />
+          flex-direction: column;<br />
+          flex-wrap: wrap;
+        </code>
+        <p>
+          To make all these properties work, you need to set the display of the
+          container of the elements to display: flex; To understand how flexbox
+          works, first imagine three elements being attached to an axis. The
+          flex-direction property specifies whether the axis is horizontal or
+          vertical. The property justify-content tells the browser how to
+          position the three elements along the axis. It can be at the center of
+          the axis, at the start/end of it, or equally spaced out from each
+          other. Now imagine there's some space around the axis, forming a box
+          (flexbox). align-items determines where the axis should be aligned. At
+          the beginning edge of the box, the center of the box, or the end of
+          the box. Note that align-items moves the axis itself, and
+          justify-content moves the elements along the axis. Well, what if
+          there's too many elements and the axis is full? The flex-wrap property
+          tells the browser to create a new axis directly after (and parallel)
+          the original axis and put the extra elements on it if the original
+          axis is full.
+        </p>
+        <div class="example">
+          <textarea id="css" class="html-example" placeholder="CSS"></textarea>
+          <input
+            type="text"
+            id="html"
+            style="display: none"
+            value='<div class="container"><div class="children">Element 1</div><div class="children">Elememt 2</div><div class="children">Element 3</div><div class="children">Element 4</div></div>'
+          />
+          <iframe
+            class="iframe-example"
+            id="output"
+            style="background-color: white"
+            sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
+          ></iframe>
+          <script>
+            const cssExample = document.getElementById("css");
+            cssExample.value = `.container {
+  background-color: orange;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+  
+.children {
+  background-color: lightblue;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}`;
+          </script>
+        </div>
+        <p>
+          As you can see above, the elements are being aligned in the center
+          (horizontally and vertically) of the orange container without any
+          margin or padding thanks to the justify&#8209;content and align-items
+          properties. And because of flex-wrap: wrap; element 4 is being wrapped
+          to a new line (axis), and not overflowing the orange container.
+          Although there is a ton more properties, values, and techniques
+          related to flexbox, these are the major ones you'll use the most
+          often, so play around with the values and properties and see what
+          happens!
+        </p>
+        <h2>Summary</h2>
+        <p>
+          CSS flexbox is a very powerful tool for laying out elements. display:
+          flex turns a container into a flexbox, justify-content positions the
+          elements within the container along an axis, and align-items positions
+          the axis within the container. flex-wrap wraps overflowing elements
+          into a new axis and flex-direction changes the direction on the axis.
+          To put the axis analogy into the real world of flexbox, the box
+          containing the axes is the HTML element that contains the elements you
+          want to layout. The objects on the axis are the elements in the
+          container box, or flexbox, that you want to lay out.
+        </p>
+        <p>
+          We know we covered a lot in this tutorial, but if you take the time to understand, learn, and actually try flexbox out, you'll find that it is incredibly powerful and useful. From simply aligning something to the center or making the elements line up in a row, to creating interactive cards and buttons, flexbox's usage is everywhere. Have fun 🔥!
+        </p>
+        <div class="buttons">
+          <button id="prevButton" class="button">Back</button>
+          <button id="myButton" class="button">Next</button>
+          <script>
+            document
+              .getElementById("myButton")
+              .addEventListener("click", function () {
+                window.location.href = "css-position.html";
+              });
+            document
+              .getElementById("prevButton")
+              .addEventListener("click", function () {
+                window.location.href = "css-display.html";
+              });
+          </script>
+        </div>
+      </article>
+      <footer class="footer">
+        <div>
+          © <span id="year">2024</span>
+          <a
+            href="/"
+            target="_blank"
+            style="text-decoration: underline; color: white"
+            >MacWeb</a
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

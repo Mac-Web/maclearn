@@ -7,60 +7,31 @@
     <script src="app.js"></script>
   </head>
   <body>
+    <div class="overflow-menu shoot" id="overflow-menu">
+      <a href="/maclearn/html/" class="olink">HTML</a>
+      <a href="/maclearn/css/" class="olink">CSS</a>
+      <a href="/maclearn/references/" class="olink">References</a>
+      <a href="/maclearn/playground/" class="olink">Playground</a>
+    </div>
     <nav class="nav">
+      <div class="overflowm shoot" id="overflowm">
+        <img src="/bars-solid.svg" alt="Menu" class="shoot" />
+      </div>
       <a href="/maclearn/" class="logo">
         <img src="maclearn-logo.png" alt="MacLearn Logo" />
       </a>
-      <div class="select">
-        <span id="header123">Coding</span>
+      <a href="/maclearn/html/" class="nav-link">HTML</a>
+      <a href="/maclearn/css/" class="nav-link">CSS</a>
+      <a href="/maclearn/references/" class="nav-link">References</a>
+      <a href="/maclearn/playground/" class="nav-link">Playground</a>
+      <a href="/maclearn/me/" class="nav-link">Me</a>
+      <div class="select secondselect">
+        <span id="header123">Tabs</span>
         <ul id="cats">
-          <a href="/maclearn/coding/html/">HTML</a>
-          <a href="/maclearn/coding/css/">CSS</a>
-          <a href="/maclearn/coding/js/">JavaScript</a>
-          <a href="/maclearn/coding/python/">Python</a>
-          <a href="/maclearn/coding/computing/">Computing</a>
-          <a href="/maclearn/coding/references/">References</a>
-          <a href="/maclearn/coding/playground/">Playground</a>
-        </ul>
-      </div>
-      <div class="select">
-        <span id="header123">Humanity</span>
-        <ul id="cats">
-          <a href="/maclearn/humanity/art/">Art</a>
-          <a href="/maclearn/humanity/civics/">Civics</a>
-          <a href="/maclearn/humanity/economy/">Economy</a>
-          <a href="/maclearn/humanity/health/">Health</a>
-          <a href="/maclearn/humanity/history/">History</a>
-        </ul>
-      </div>
-      <div class="select">
-        <span id="header123">Languages</span>
-        <ul id="cats">
-          <a href="/maclearn/languages/english/">English</a>
-          <a href="/maclearn/languages/spanish/">Spanish</a>
-          <a href="/maclearn/languages/french/">French</a>
-          <a href="/maclearn/languages/chinese/">Chinese</a>
-          <a href="/maclearn/languages/korean/">Korean</a>
-        </ul>
-      </div>
-      <div class="select">
-        <span id="header123">Math</span>
-        <ul id="cats">
-          <a href="/maclearn/math/kindergarten/">Kindergarten</a>
-          <a href="/maclearn/math/elementary/">Elementary</a>
-          <a href="/maclearn/math/middle/">Middle School</a>
-          <a href="/maclearn/math/high/">High School</a>
-          <a href="/maclearn/math/college/">College</a>
-        </ul>
-      </div>
-      <div class="select">
-        <span id="header123">Science</span>
-        <ul id="cats">
-          <a href="/maclearn/science/biology/">Biology</a>
-          <a href="/maclearn/science/chemistry/">Chemistry</a>
-          <a href="/maclearn/science/engineering/">Engineering</a>
-          <a href="/maclearn/science/geology/">Geology</a>
-          <a href="/maclearn/science/physics/">Physics</a>
+          <a href="/maclearn/html/">HTML</a>
+          <a href="/maclearn/css/">CSS</a>
+          <a href="/maclearn/references/">References</a>
+          <a href="/maclearn/playground/">Playground</a>
         </ul>
       </div>
       <div class="select">
@@ -78,16 +49,16 @@
     <div class="announce">
       <h2>
         The
-        <a href="/macblog/updates/maclearn/2024/july.html" target="_blank"
-          >MacLearn July Update</a
+        <a href="/macblog/updates/maclearn/2024/september.html" target="_blank"
+          >MacLearn September Update</a
         >
-        is here! Check out what's new 🔥!
-        <img src="xmark-solid.svg" alt="Close" id="closea" />
+        is here! Massive changes, new tutorials, and more 🔥!
+        <img src="media/icons/xmark-solid.svg" alt="Close" id="closea" />
       </h2>
     </div>
     <script>
       let clos = document.getElementById("closea");
-      if (localStorage.getItem("maclearncloseee")) {
+      if (localStorage.getItem("maclearncloseeeee")) {
         clos.parentElement.parentElement.style.display = "none";
       }
     </script>
@@ -104,8 +75,8 @@
       <div class="sub">Learn anything, for free.</div>
     </div>
     <div class="wrap">
-      <a href="coding/html/" class="card" data-tilt>
-        <img src="images/html.png" alt="MacWeb Logo" />
+      <a href="html/" class="card">
+        <img src="media/html.png" />
         <h2
           class="title"
           style="display: flex; align-items: center; justify-content: center"
@@ -136,8 +107,8 @@
           content of a website.
         </p>
       </a>
-      <a href="coding/css/" class="card" data-tilt>
-        <img src="images/css.png" alt="MacWeb Logo" />
+      <a href="css/" class="card">
+        <img src="media/css.png" />
         <h2
           class="title"
           style="display: flex; align-items: center; justify-content: center"
@@ -168,40 +139,8 @@
           appearance.
         </p>
       </a>
-      <a href="coding/js/" class="card" data-tilt>
-        <img src="images/js.png" alt="MacWeb Logo" />
-        <h2
-          class="title"
-          style="display: flex; align-items: center; justify-content: center"
-        >
-          JavaScript<br />
-          <span
-            style="
-              text-align: center;
-              display: inline-block;
-              background-color: rgb(80, 80, 80);
-              color: white;
-              width: 83px;
-              margin-left: 15px;
-              font-size: 13px;
-              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
-                sans-serif;
-              padding-block: 5px;
-              border-radius: 5px;
-              font-weight: bold;
-              position: absolute;
-              right: 0px;
-            "
-            >Coming 2025</span
-          >
-        </h2>
-        <p class="des">
-          <b>Explore</b> JavaScript, the language for all the interactivity and
-          functionailty of a website.
-        </p>
-      </a>
-      <a href="coding/references/" class="card" data-tilt>
-        <img src="images/reference/r5.jpg" alt="MacWeb Logo" />
+      <a href="references/" class="card">
+        <img src="media/references.jpg" />
         <h2
           class="title"
           style="display: flex; align-items: center; justify-content: center"
@@ -228,12 +167,12 @@
           >
         </h2>
         <p class="des">
-          <b>Check</b> our references for info on HTML tags, CSS values,
-          JavaScript syntax, and more!
+          <b>Check</b> our references for info on HTML tags, CSS values, and
+          more!
         </p>
       </a>
-      <a href="coding/playground/" class="card" data-tilt>
-        <img src="images/reference/r1.png" alt="MacWeb Logo" />
+      <a href="playground/" class="card">
+        <img src="media/playground.png" />
         <h2
           class="title"
           style="display: flex; align-items: center; justify-content: center"
@@ -276,6 +215,5 @@
         >
       </div>
     </footer>
-    <script src="vanilla-tilt.js"></script>
   </body>
 </html>
