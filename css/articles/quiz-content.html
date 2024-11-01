@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text & Content Quiz | MacLearn</title>
+    <link href="../quiz.css" rel="stylesheet" />
+    <link href="/maclearn/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="overflow-menu shoot" id="overflow-menu">
+      <a href="/maclearn/html/" class="olink">HTML</a>
+      <a href="/maclearn/css/" class="olink">CSS</a>
+      <a href="/maclearn/references/" class="olink">References</a>
+      <a href="/maclearn/playground/" class="olink">Playground</a>
+    </div>
+    <nav class="nav">
+      <div class="overflowm shoot" id="overflowm">
+        <img src="/bars-solid.svg" alt="Menu" class="shoot" />
+      </div>
+      <a href="/maclearn/" class="logo">
+        <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
+      </a>
+      <a href="/maclearn/html/" class="nav-link">HTML</a>
+      <a href="/maclearn/css/" class="nav-link">CSS</a>
+      <a href="/maclearn/references/" class="nav-link">References</a>
+      <a href="/maclearn/playground/" class="nav-link">Playground</a>
+      <a href="/maclearn/me/" class="nav-link">Me</a>
+      <div class="select secondselect">
+        <span id="header123">Tabs</span>
+        <ul id="cats">
+          <a href="/maclearn/html/">HTML</a>
+          <a href="/maclearn/css/">CSS</a>
+          <a href="/maclearn/references/">References</a>
+          <a href="/maclearn/playground/">Playground</a>
+        </ul>
+      </div>
+      <div class="select">
+        <span id="header123">Help</span>
+        <ul id="cats">
+          <a href="/macblog/projects/maclearn/">About</a>
+          <a href="/macblog/updates/maclearn/">Updates</a>
+          <a href="/macblog/projects/maclearn/">Docs</a>
+          <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"
+            >Feedback</a
+          >
+        </ul>
+      </div>
+    </nav>
+    <div class="wrapper side-wrapper">
+      <div class="sidebar side">
+        <ul style="list-style-type: none">
+          <h2>Meeting CSS</h2>
+          <a href="css-intro.html">
+            <li>CSS Intro</li>
+          </a>
+          <a href="adding-css.html">
+            <li>Adding CSS</li>
+          </a>
+          <a href="quiz-meeting.html">
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Colors & Borders</h2>
+          <a href="css-colors.html">
+            <li>CSS Colors</li>
+          </a>
+          <a href="css-background.html">
+            <li>CSS Background</li>
+          </a>
+          <a href="css-borders.html">
+            <li>CSS Borders</li>
+          </a>
+          <a href="quiz-colors.html">
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Adding Space</h2>
+          <a href="css-width-height.html">
+            <li>CSS Width & Height</li>
+          </a>
+          <a href="css-padding-margin.html">
+            <li>CSS Padding & Margin</li>
+          </a>
+          <a href="css-box-model.html">
+            <li>CSS Box Model</li>
+          </a>
+          <a href="quiz-space.html">
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Text & Content</h2>
+          <a href="css-font.html">
+            <li>CSS Font</li>
+          </a>
+          <a href="css-text.html">
+            <li>CSS Text</li>
+          </a>
+          <a href="css-align.html">
+            <li>CSS Align</li>
+          </a>
+          <a
+            href="quiz-content.html"
+            style="font-weight: bold; color: rgb(89, 137, 227)"
+          >
+            <li>Unit Quiz</li>
+          </a>
+          <br />
+          <div class="sidebtns">
+            <a href="/maclearn/" class="sidebtn">Back</a>
+            <a href="css-display.html" class="sidebtn">Next</a>
+          </div>
+        </ul>
+      </div>
+      <script src="app.js"></script>
+      <div class="flex">
+        <div class="container">
+          <div id="question-container" class="hide">
+            <div id="question">Question</div>
+
+            <div id="answer-buttons" class="btn-grid">
+              <button class="btn">Answer 1</button>
+              <button class="btn">Answer 2</button>
+              <button class="btn">Answer 3</button>
+              <button class="btn">Answer 4</button>
+            </div>
+          </div>
+          <div id="controls">
+            <div id="message">
+              <div
+                id="message2"
+                style="
+                  padding-inline: 100px;
+                  line-height: 40px;
+                  font-size: 27px;
+                "
+              >
+                Click "start" to see what you know about basic CSS syntax and
+                implementation!
+              </div>
+            </div>
+          </div>
+          <div class="results" id="results">
+            <div class="score" id="score">fdewedf</div>
+          </div>
+        </div>
+      </div>
+      <article class="article">
+        <div class="buttons">
+          <button id="back" class="button">Back</button>
+          <button id="start" class="button">Start</button>
+        </div>
+      </article>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const start = document.getElementById("start");
+          const quiz = document.getElementById("question-container");
+          const question = document.getElementById("question");
+          const answerButtonsElement =
+            document.getElementById("answer-buttons");
+          const back = document.getElementById("back");
+          const controls = document.getElementById("controls");
+          const results = document.getElementById("results");
+          let currentQuestionIndex, index;
+          let answerArray = [];
+          let correctArray = [];
+          back.classList.add("hide");
+          results.classList.add("hide");
+          start.addEventListener("click", () => {
+            if (start.innerHTML === "Start") {
+              startQuiz();
+              controls.style.display = "none";
+            } else if (start.innerHTML === "Next") {
+              currentQuestionIndex++;
+              setNextQuestion();
+            } else if (start.innerHTML === "Finish") {
+              currentQuestionIndex++;
+              question.classList.add("hide");
+              results.classList.remove("hide");
+              answerButtonsElement.classList.add("hide");
+              let actualCount = 0;
+              correctArray.forEach((correct) => {
+                if (correct !== null) {
+                  actualCount++;
+                }
+              });
+              let percentage = Math.round(
+                (actualCount / questions.length) * 100
+              );
+              results.innerHTML =
+                "Your quiz score is " +
+                percentage +
+                "% correct. <br> Go back, review, and improve your score!";
+              start.innerHTML = "Review!";
+              start.addEventListener("click", () => {
+                window.location.href =
+                  "/maclearn/css/articles/css-font.html";
+              });
+              if (percentage > 80) {
+                results.innerHTML =
+                  "Your quiz score is " +
+                  percentage +
+                  "% correct! <br> Move on to learn more CSS properties and tricks!";
+                start.innerHTML = "Go!";
+                start.addEventListener("click", () => {
+                  window.location.href = "/maclearn/css/articles/css-display.html";
+                });
+              }
+            }
+          });
+
+          back.addEventListener("click", () => {
+            if (currentQuestionIndex >= 1) {
+              currentQuestionIndex--;
+              setNextQuestion();
+              question.classList.remove("hide");
+              answerButtonsElement.classList.remove("hide");
+              results.classList.add("hide");
+              start.innerHTML = "Next";
+              if (currentQuestionIndex === 3) {
+                start.innerHTML = "Finish";
+              }
+            } else {
+              controls.style.display = "flex";
+              start.innerHTML = "Start";
+              message.classList.remove("hide");
+              quiz.classList.add("hide");
+              back.classList.add("hide");
+            }
+          });
+
+          function startQuiz() {
+            start.innerHTML = "Next";
+            message.classList.add("hide");
+            quiz.classList.remove("hide");
+            shuffledQuestions = questions;
+            currentQuestionIndex = 0;
+            back.classList.remove("hide");
+            setNextQuestion();
+          }
+
+          function setNextQuestion() {
+            reset();
+            showQuestion(questions[currentQuestionIndex]);
+            if (currentQuestionIndex === 3) {
+              start.innerHTML = "Finish";
+            }
+          }
+
+          function reset() {
+            while (answerButtonsElement.firstChild) {
+              answerButtonsElement.removeChild(answerButtonsElement.firstChild);
+            }
+          }
+
+          function showQuestion(q) {
+            question.innerText = q.question;
+            index = 0;
+            q.answers.forEach((answer) => {
+              const button = document.createElement("div");
+              const label = document.createElement("label");
+              const radioButton = document.createElement("input");
+              radioButton.setAttribute("type", "radio");
+              label.setAttribute("for", index);
+              radioButton.setAttribute("id", index);
+              radioButton.setAttribute("name", "radio");
+              label.innerText = answer.text;
+              button.classList.add("btn");
+              if (answer.correct) {
+                button.dataset.correct = answer.correct;
+              }
+              button.addEventListener("click", selectAnswer);
+              answerButtonsElement.appendChild(button);
+              button.appendChild(radioButton);
+              button.appendChild(label);
+              if (answerArray[currentQuestionIndex]) {
+                if (answerArray[currentQuestionIndex] === button.innerHTML) {
+                  radioButton.checked = true;
+                }
+              }
+              index++;
+            });
+          }
+
+          function selectAnswer(e) {
+            const selectedAnswer = e.target;
+            const correct = selectedAnswer.parentElement.dataset.correct;
+            if (questions.length > currentQuestionIndex + 1) {
+              start.innerHTML = "Next";
+            } else {
+              start.innerHTML = "Finish";
+            }
+            if (selectedAnswer.parentElement.dataset.correct) {
+              correctArray[currentQuestionIndex] = selectedAnswer;
+            } else {
+              correctArray.splice(currentQuestionIndex, 1);
+            }
+            answerArray[currentQuestionIndex] =
+              selectedAnswer.parentElement.innerHTML;
+          }
+
+          const questions = [
+            {
+              question:
+                "Which CSS property determines whether or not a text is italicized?",
+              answers: [
+                { text: "font-style", correct: true },
+                { text: "text-style", correct: false },
+                { text: "italic", correct: false },
+                { text: "font-italic", correct: false },
+              ],
+            },
+            {
+              question:
+                "How to change the line height of a pragraph to 30 pixels using CSS?",
+              answers: [
+                { text: "line: 30px;", correct: false },
+                {
+                  text: "text-height: 30px;",
+                  correct: false,
+                },
+                {
+                  text: "line-height: 30px;",
+                  correct: true,
+                },
+                { text: "paragraph-height: 30pxl", correct: false },
+              ],
+            },
+            {
+              question: 'What does "margin-inline: auto" do?',
+              answers: [
+                {
+                  text: "It removes all the margin on an element.",
+                  correct: false,
+                },
+                {
+                  text: "It gives an element as much margin on the left/right as possible.",
+                  correct: true,
+                },
+                {
+                  text: "It changes the margin on the left/right of an element so the element's size is fixed.",
+                  correct: false,
+                },
+                {
+                  text: "It adds a random amount of margin on the left/right of an element.",
+                  correct: false,
+                },
+              ],
+            },
+          ];
+        });
+      </script>
+    </div>
+    <footer class="footer">
+      <div>
+        © <span id="year">2024</span>
+        <a href="/" style="text-decoration: underline; color: white">MacWeb</a>
+      </div>
+    </footer>
+  </body>
+</html>

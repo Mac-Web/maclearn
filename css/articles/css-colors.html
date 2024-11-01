@@ -9,19 +9,19 @@
       src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
       async="async"
     ></script>
-    <name id="page" data="css-article"></name>
+    <name id="page" data="css-colors"></name>
+    <script src="../app.js"></script>
   </head>
   <body>
-    <div class="overflow-menu shoot" id="overflow-menu">
-      <a href="/maclearn/html/" class="olink">HTML</a>
-      <a href="/maclearn/css/" class="olink">CSS</a>
-      <a href="/maclearn/references/" class="olink">References</a>
-      <a href="/maclearn/playground/" class="olink">Playground</a>
+    <div class="macsidebar" id="sidebar">
+      <a href="/"><img src="/logo.png" alt="" /></a>
+      <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
+      <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
+      <a href="/mactime/"><img src="/MacTime Logo.png" alt="" /></a>
+      <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
+      <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
     </div>
     <nav class="nav">
-      <div class="overflowm shoot" id="overflowm">
-        <img src="/bars-solid.svg" alt="Menu" class="shoot" />
-      </div>
       <a href="/maclearn/" class="logo">
         <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
       </a>
@@ -29,178 +29,144 @@
       <a href="/maclearn/css/" class="nav-link">CSS</a>
       <a href="/maclearn/references/" class="nav-link">References</a>
       <a href="/maclearn/playground/" class="nav-link">Playground</a>
-      <a href="/maclearn/me/" class="nav-link">Me</a>
-      <div class="select secondselect">
-        <span id="header123">Tabs</span>
-        <ul id="cats">
-          <a href="/maclearn/html/">HTML</a>
-          <a href="/maclearn/css/">CSS</a>
-          <a href="/maclearn/references/">References</a>
-          <a href="/maclearn/playground/">Playground</a>
-        </ul>
-      </div>
-      <div class="select">
-        <span id="header123">Help</span>
-        <ul id="cats">
-          <a href="/macblog/projects/maclearn/">About</a>
-          <a href="/macblog/updates/maclearn/">Updates</a>
-          <a href="/macblog/projects/maclearn/">Docs</a>
-          <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"
-            >Feedback</a
-          >
-        </ul>
+      <div class="right">
+        <div class="select help-menu" id="help-menu">
+          <span class="help-menu">Help</span>
+          <img
+            src="/maclearn/media/icons/caret.svg"
+            class="caret help-menu"
+            id="caret"
+          />
+          <ul id="cats" class="help-menu">
+            <a href="/macblog/projects/maclearn/">About</a>
+            <a href="/macblog/updates/maclearn/">Updates</a>
+            <a href="/macblog/projects/maclearn/">Docs</a>
+            <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank">
+              Feedback
+            </a>
+          </ul>
+        </div>
+        <a href="/maclearn/me/" class="profile">
+          <img src="/maclearn/media/icons/profile.svg" />
+        </a>
       </div>
     </nav>
-    <div class="wrapper side-wrapper">
-      <div class="sidebar side">
-        <ul style="list-style-type: none">
-          <h2>Meeting CSS</h2>
-          <a href="css-intro.html">
-            <li>CSS Intro</li>
-          </a>
-          <a href="adding-css.html">
-            <li>Adding CSS</li>
-          </a>
-          <a href="quiz-meeting.html">
-            <li>Unit Quiz</li>
-          </a>
-          <h2>Colors & Borders</h2>
-          <a
-            href="css-colors.html"
-            style="font-weight: bold; color: rgb(89, 137, 227)"
-          >
-            <li>CSS Colors</li>
-          </a>
-          <a href="css-background.html">
-            <li>CSS Background</li>
-          </a>
-          <a href="css-borders.html">
-            <li>CSS Borders</li>
-          </a>
-          <a href="quiz-colors.html">
-            <li>Unit Quiz</li>
-          </a>
-          <h2>Adding Space</h2>
-          <a href="css-width-height.html">
-            <li>CSS Width & Height</li>
-          </a>
-          <a href="css-padding-margin.html">
-            <li>CSS Padding & Margin</li>
-          </a>
-          <a href="css-box-model.html">
-            <li>CSS Box Model</li>
-          </a>
-          <a href="quiz-space.html">
-            <li>Unit Quiz</li>
-          </a>
-          <h2>Text & Content</h2>
-          <a href="css-font.html">
-            <li>CSS Font</li>
-          </a>
-          <a href="css-text.html">
-            <li>CSS Text</li>
-          </a>
-          <a href="css-align.html">
-            <li>CSS Align</li>
-          </a>
-          <a href="quiz-content.html">
-            <li>Unit Quiz</li>
-          </a>
-          <br />
-          <div class="sidebtns">
-            <a href="/maclearn/" class="sidebtn">Back</a>
-            <a href="css-display.html" class="sidebtn">Next</a>
-          </div>
-        </ul>
-      </div>
-      <div class="tbar" id="tbar">
-        <h2 class="bart">CSS Colors</h2>
-        <div class="bard">6.9.2024</div>
-      </div>
-      <script src="../app.js"></script>
-      <article class="article">
-        <div class="entire">
-          <div class="sharepanel">
-            <div class="sharethis-inline-share-buttons"></div>
-            <div class="copy">
-              <div class="clink" id="clink"></div>
-              <div class="cbtn" id="cbtn">Copy</div>
-            </div>
-          </div>
+    <div class="wrap">
+      <ul class="sidebar">
+        <h2 class="sidebar-title">Meeting CSS</h2>
+        <a href="css-intro.html">
+          <li>CSS Intro</li>
+        </a>
+        <a href="adding-css.html">
+          <li>Adding CSS</li>
+        </a>
+        <a href="quiz-meeting.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Colors & Borders</h2>
+        <a
+          href="css-colors.html"
+          style="font-weight: bold; color: rgb(89, 137, 227)"
+        >
+          <li>CSS Colors</li>
+        </a>
+        <a href="css-background.html">
+          <li>CSS Background</li>
+        </a>
+        <a href="css-borders.html">
+          <li>CSS Borders</li>
+        </a>
+        <a href="quiz-colors.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Adding Space</h2>
+        <a href="css-width-height.html">
+          <li>CSS Width & Height</li>
+        </a>
+        <a href="css-padding-margin.html">
+          <li>CSS Padding & Margin</li>
+        </a>
+        <a href="css-box-model.html">
+          <li>CSS Box Model</li>
+        </a>
+        <a href="quiz-space.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Text & Content</h2>
+        <a href="css-font.html">
+          <li>CSS Font</li>
+        </a>
+        <a href="css-text.html">
+          <li>CSS Text</li>
+        </a>
+        <a href="css-align.html">
+          <li>CSS Align</li>
+        </a>
+        <a href="quiz-content.html">
+          <li>Unit Quiz</li>
+        </a>
+        <div class="sidebtns">
+          <a href="/maclearn/" class="sidebtn">Back</a>
+          <a href="css-display.html" class="sidebtn">Next</a>
         </div>
-        <h1>CSS Colors</h1>
-        <h3 class="author">
-          By Tony
-          <!--<span class="date">2024.6.7</span>
-          <span style="padding-inline: 10px">•</span> Last updated-->
-          <span class="date">6.9.2024</span>
-          <div class="icons">
-            <img
-              src="/maclearn/media/icons/star-regular.svg"
-              alt="Favorite"
-              id="favorite"
-              class="icon"
-            />
-            <img
-              src="/maclearn/media/icons/share-solid.svg"
-              alt="Share"
-              id="share"
-              class="icon"
-            />
-            <img
-              src="/maclearn/media/icons/flag.svg"
-              alt="Report"
-              id="flag"
-              class="icon"
-            />
-          </div>
-        </h3>
-        <hr />
-        <p>
-          According to research, colors affect your mood a lot. It's also really
-          important to add colors to your website to make it more interesting,
-          and for it to have a character and improve the element visibility.
-          Today, we'll learn how to add colors to text on your website using
-          CSS. Below are some of the ways that you can add CSS colors.
-        </p>
-        <code class="code">
-          color: red;<br />
-          color: #0000FF;<br />
-          color: rgb(0, 255, 0);<br />
-          color: rgba(100,100,100,0.5);
-        </code>
-        <p>
-          In the above code examples, we listed four different ways to add
-          colors to text using CSS. To add a color to an element, type the color
-          property in your element's CSS. For the value of the rule, there are a
-          couple options. The named colors are the easiest to add, simply just
-          type the name of the color, but it may be limited. Hex code covers all
-          the colors, but is a complicated string with numbers and letters, with
-          a hashtag in front. Then there's rgb, which stands for red, green, and
-          blue, like this: rgb(0,&nbsp;255,&nbsp;0). The numbers inside the
-          parentheses represent how much of each color is used in the mix. So in
-          this example, there's no red (0), a max amount of green (255), and no
-          blue (0). Rgba works exactly the same as rgb, except there's an added
-          value at the end, called "alpha", which determines the color's
-          opacity, or transparency.
-        </p>
-        <div class="example">
-          <textarea id="css" class="html-example" placeholder="CSS"></textarea>
-          <input
-            type="text"
-            id="html"
-            style="display: none"
-            value="<h1>A Heading</h1>"
-          />
-          <iframe
-            class="iframe-example"
-            id="output"
-            style="background-color: white"
-            sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
-          ></iframe>
-          <script>
-            const cssExample = document.getElementById("css");
-            cssExample.value = `h1 {
+      </ul>
+      <div class="content">
+        <article class="article">
+          <h1 class="article-title">CSS Colors</h1>
+          <h3 class="author">By Tony <span class="date">6.9.2024</span></h3>
+          <!--<span class="date">2024.6.7</span>-->
+          <hr />
+          <p>
+            According to research, colors affect your mood a lot. It's also
+            really important to add colors to your website to make it more
+            interesting, and for it to have a character and improve the element
+            visibility. Today, we'll learn how to add colors to text on your
+            website using CSS. Below are some of the ways that you can add CSS
+            colors.
+          </p>
+          <code class="code">
+            color: red;<br />
+            color: #0000FF;<br />
+            color: rgb(0, 255, 0);<br />
+            color: rgba(200,100,50,0.5);
+          </code>
+          <p>
+            In the above code examples, we listed four different ways to add
+            colors to text using CSS. To add a color to an element, type the
+            color property in your element's CSS. For the value of the rule,
+            there are a couple options. The named colors are the easiest to add,
+            simply just type the name of the color, but it may be limited. Hex
+            code covers all the colors, but is a complicated string with numbers
+            and letters, with a hashtag in front. Then there's rgb, which stands
+            for red, green, and blue, like this: rgb(0,&nbsp;255,&nbsp;0). The
+            numbers inside the parentheses represent how much of each color is
+            used in the mix. So in this example, there's no red (0), a max
+            amount of green (255), and no blue (0). Rgba works exactly the same
+            as rgb, except there's an added value at the end, called "alpha",
+            which determines the color's opacity, or transparency.
+          </p>
+          <div class="lab">
+            <div class="tabs">
+              <div class="tab active" id="html">HTML</div>
+              <div class="tab" id="css">CSS</div>
+              <div class="tab" id="js">JavaScript</div>
+              <div class="tab" id="output">Output</div>
+            </div>
+            <div class="contentt" id="content">
+              <textarea
+                id="htmlEdit"
+                placeholder="Enter HTML here"
+                class="show"
+                value='<h1>A Heading</h1>
+<h2>Another Heading</h2>
+<h3>Yet Another Heading</h3>
+<h4>Wow, Heading Again</h4>'
+              ></textarea
+              ><textarea
+                id="cssEdit"
+                placeholder="Enter CSS here"
+                class="show"
+                value='h1 {
   color: red;
 }
 h2 {
@@ -210,50 +176,46 @@ h3 {
   color: rgb(0, 255, 0);
 }
 h4 {
-  color: rgba(100,100,100,0.5);
-} `;
-          </script>
-        </div>
-        <p>
-          In conclusion, the CSS property of "color" adds a specific color to an
-          element's text, and you can set the value of the color with named, hex, rgb, or
-          rgba values.
-        </p>
-        <p>
-          Play around and experiment with the different values above to explore
-          more about CSS colors, and you'll learn how they work and how to use
-          them properly! Move on to learn more about adding a background color
-          to your page and the elements to make your website more interesting.
-          Onward!
-        </p>
-        <div class="buttons">
-          <button id="prevButton" class="button">Back</button>
-          <button id="myButton" class="button">Next</button>
-          <script>
-            document
-              .getElementById("myButton")
-              .addEventListener("click", function () {
-                window.location.href = "css-background.html";
-              });
-            document
-              .getElementById("prevButton")
-              .addEventListener("click", function () {
-                window.location.href = "quiz-meeting.html";
-              });
-          </script>
-        </div>
-      </article>
-      <footer class="footer">
-        <div>
-          © <span id="year">2024</span>
-          <a
-            href="/"
-            target="_blank"
-            style="text-decoration: underline; color: white"
-            >MacWeb</a
-          >
-        </div>
-      </footer>
+  color: rgba(200,100,50,0.5);
+}'
+              ></textarea
+              ><textarea
+                id="jsEdit"
+                placeholder="Enter JavaScript here"
+                class="show"
+              ></textarea
+              ><iframe frameborder="0" id="outputEdit"></iframe>
+            </div>
+          </div>
+          <p>
+            In conclusion, the CSS property of "color" adds a specific color to
+            an element's text, and you can set the value of the color with
+            named, hex, rgb, or rgba values.
+          </p>
+          <p>
+            Play around and experiment with the different values above to
+            explore more about CSS colors, and you'll learn how they work and
+            how to use them properly! Move on to learn more about adding a
+            background color to your page and the elements to make your website
+            more interesting. Onward!
+          </p>
+          <div class="buttons">
+            <a href="quiz-meeting.html" class="button">Back</a>
+            <a href="css-background.html" class="button">Next</a>
+          </div>
+          <footer class="footer">
+            <div>
+              © <span id="year">2024</span>
+              <a
+                href="/"
+                target="_blank"
+                style="text-decoration: underline; color: white"
+                >MacWeb</a
+              >
+            </div>
+          </footer>
+        </article>
+      </div>
     </div>
   </body>
 </html>

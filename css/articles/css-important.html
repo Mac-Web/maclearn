@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS !important | MacLearn</title>
+    <link href="../style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
+      async="async"
+    ></script>
+    <name id="page" data="css-important"></name>
+    <script src="../app.js"></script>
+  </head>
+  <body>
+    <div class="macsidebar" id="sidebar">
+      <a href="/"><img src="/logo.png" alt="" /></a>
+      <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
+      <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
+      <a href="/mactime/"><img src="/MacTime Logo.png" alt="" /></a>
+      <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
+      <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
+    </div>
+    <nav class="nav">
+      <a href="/maclearn/" class="logo">
+        <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
+      </a>
+      <a href="/maclearn/html/" class="nav-link">HTML</a>
+      <a href="/maclearn/css/" class="nav-link">CSS</a>
+      <a href="/maclearn/references/" class="nav-link">References</a>
+      <a href="/maclearn/playground/" class="nav-link">Playground</a>
+      <div class="right">
+        <div class="select help-menu" id="help-menu">
+          <span class="help-menu">Help</span>
+          <img
+            src="/maclearn/media/icons/caret.svg"
+            class="caret help-menu"
+            id="caret"
+          />
+          <ul id="cats" class="help-menu">
+            <a href="/macblog/projects/maclearn/">About</a>
+            <a href="/macblog/updates/maclearn/">Updates</a>
+            <a href="/macblog/projects/maclearn/">Docs</a>
+            <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank">
+              Feedback
+            </a>
+          </ul>
+        </div>
+        <a href="/maclearn/me/" class="profile">
+          <img src="/maclearn/media/icons/profile.svg" />
+        </a>
+      </div>
+    </nav>
+    <div class="wrap">
+      <ul class="sidebar">
+        <h2 class="sidebar-title">Laying Out Stuff</h2>
+        <a href="css-display.html">
+          <li>CSS Display</li>
+        </a>
+        <a href="css-flexbox.html">
+          <li>CSS Flexbox</li>
+        </a>
+        <a href="css-position.html">
+          <li>CSS Position</li>
+        </a>
+        <a href="quiz-layout.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Useful CSS Tips</h2>
+        <a href="css-math.html">
+          <li>CSS Math</li>
+        </a>
+        <a
+          href="css-important.html"
+          style="font-weight: bold; color: rgb(89, 137, 227)"
+        >
+          <li>CSS !important</li>
+        </a>
+        <a href="css-pseudo.html">
+          <li>CSS Pseudo</li>
+        </a>
+        <a href="quiz-useful.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Creating Animations</h2>
+        <a href="css-transition.html">
+          <li>CSS Transition</li>
+        </a>
+        <a href="css-animation.html">
+          <li>CSS Animation</li>
+        </a>
+        <a href="css-transform.html">
+          <li>CSS Transform</li>
+        </a>
+        <a href="quiz-animation.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Responsive Design</h2>
+        <a href="css-media-queries.html">
+          <li>CSS Media Queries</li>
+        </a>
+        <a href="css-viewport.html">
+          <li>CSS Viewport</li>
+        </a>
+        <a href="quiz-responsive.html">
+          <li>Unit Quiz</li>
+        </a>
+        <div class="sidebtns">
+          <a href="css-intro.html" class="sidebtn">Back</a>
+          <a href="finish.html" class="sidebtn">Next</a>
+        </div>
+      </ul>
+      <div class="content">
+        <article class="article">
+          <h1 class="article-title">CSS !important</h1>
+          <h3 class="author">By Tony <span class="date">8.31.2024</span></h3>
+          <!--<span class="date">2024.8.31</span>-->
+          <hr />
+          <p>
+            Let's say you're setting an element's background color to red using
+            the style attribute in HTML (inline style), and you want to change
+            the background color to orange whenever someone hovers their mouse
+            over the element. If you think putting background-color: orange; in
+            the element's :hover class selector will solve this problem, then
+            you'll be wrong. In this tutorial, you'll learn about CSS
+            specificity, the !important property, and more.
+          </p>
+          <code class="code">
+            .element {background-color: red;}<br />
+            div {background-color: orange !important;}
+          </code>
+          <p>
+            Looking at the two rules above, what will be the background color of
+            the div element with the element class? Will it be red or orange?
+            The answer is orange. But if you take off the !important property
+            behind the orange value, then the element will be red. I know this
+            sounds confusing, but stick with me. CSS specificity is a set of
+            rules that tell the browser which value to apply to an element if it
+            has a property with two conflicting values. Inline styles (style
+            attribute) are always the most important, meaning that it overrides
+            any other value set to the same property on an element. Then, it's
+            the element's id selector, then the class selector, and finally the
+            element type selector. Now that you have a grasp of CSS specificity,
+            let's come back to the scenario in the intro above. Because you're
+            applying the new background color in the class selector, and the
+            original background color was set using inline style, CSS
+            specificity tells the browser to ignore the background color set in
+            the class selector because inline style has a higher importance than
+            class selector. To solve this problem, you can apply the
+            <br />!important property at the end of the rule that you want to
+            set a higher importance. !important makes the rule override
+            everything, even inline styles. So with the help of !important, you
+            can make a type selector's rule override an inline style rule!
+          </p>
+          <div class="lab">
+            <div class="tabs">
+              <div class="tab active" id="html">HTML</div>
+              <div class="tab" id="css">CSS</div>
+              <div class="tab" id="js">JavaScript</div>
+              <div class="tab" id="output">Output</div>
+            </div>
+            <div class="contentt" id="content">
+              <textarea
+                id="htmlEdit"
+                placeholder="Enter HTML here"
+                class="show"
+                value='<div class="element">Although the .element selector makes me red, the !important property from the div selector overrides it and makes me orange.</div>'
+              ></textarea
+              ><textarea
+                id="cssEdit"
+                placeholder="Enter CSS here"
+                class="show"
+                value='.element {
+  background-color: red;
+}
+
+div {
+  background-color: orange !important;
+}'
+              ></textarea
+              ><textarea
+                id="jsEdit"
+                placeholder="Enter JavaScript here"
+                class="show"
+              ></textarea
+              ><iframe frameborder="0" id="outputEdit"></iframe>
+            </div>
+          </div>
+          <p>
+            If you remove the !important property from the div selector in the
+            example above, then you'll see that the element is back to red,
+            because the div selector no longer overrides, which has a higher
+            priority according to CSS specificity. Pro tip: avoid using the
+            !important property everywhere because it messes up CSS specificity
+            and you'll end up with more confusion than solution. Instead, still
+            follow CSS specificity to style an element, and only use !important
+            when absolutely necessary.
+          </p>
+          <div class="buttons">
+            <a href="css-math.html" class="button">Back</a>
+            <a href="css-pseudo.html" class="button">Next</a>
+          </div>
+          <footer class="footer">
+            <div>
+              © <span id="year">2024</span>
+              <a
+                href="/"
+                target="_blank"
+                style="text-decoration: underline; color: white"
+                >MacWeb</a
+              >
+            </div>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>

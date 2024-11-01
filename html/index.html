@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML | MacLearn</title>
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="/maclearn/style.css" />
     <script src="app.js"></script>
-    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
   </head>
   <body>
-    <div class="overflow-menu shoot" id="overflow-menu">
-      <a href="/maclearn/html/" class="olink">HTML</a>
-      <a href="/maclearn/css/" class="olink">CSS</a>
-      <a href="/maclearn/references/" class="olink">References</a>
-      <a href="/maclearn/playground/" class="olink">Playground</a>
+    <div class="macsidebar" id="sidebar">
+      <a href="/"><img src="/logo.png" alt="" /></a>
+      <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
+      <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
+      <a href="/mactime/"><img src="/MacTime Logo.png" alt="" /></a>
+      <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
+      <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
     </div>
     <nav class="nav">
-      <div class="overflowm shoot" id="overflowm">
-        <img src="/bars-solid.svg" alt="Menu" class="shoot" />
-      </div>
       <a href="/maclearn/" class="logo">
         <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
       </a>
@@ -24,132 +25,98 @@
       <a href="/maclearn/css/" class="nav-link">CSS</a>
       <a href="/maclearn/references/" class="nav-link">References</a>
       <a href="/maclearn/playground/" class="nav-link">Playground</a>
-      <a href="/maclearn/me/" class="nav-link">Me</a>
-      <div class="select secondselect">
-        <span id="header123">Tabs</span>
-        <ul id="cats">
-          <a href="/maclearn/html/">HTML</a>
-          <a href="/maclearn/css/">CSS</a>
-          <a href="/maclearn/references/">References</a>
-          <a href="/maclearn/playground/">Playground</a>
-        </ul>
-      </div>
-      <div class="select">
-        <span id="header123">Help</span>
-        <ul id="cats">
-          <a href="/macblog/projects/maclearn/">About</a>
-          <a href="/macblog/updates/maclearn/">Updates</a>
-          <a href="/macblog/projects/maclearn/">Docs</a>
-          <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"
-            >Feedback</a
-          >
-        </ul>
+      <div class="right">
+        <div class="select help-menu" id="help-menu">
+          <span class="help-menu">Help</span>
+          <img
+            src="/maclearn/media/icons/caret.svg"
+            class="caret help-menu"
+            id="caret"
+          />
+          <ul id="cats" class="help-menu">
+            <a href="/macblog/projects/maclearn/">About</a>
+            <a href="/macblog/updates/maclearn/">Updates</a>
+            <a href="/macblog/projects/maclearn/">Docs</a>
+            <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank">
+              Feedback
+            </a>
+          </ul>
+        </div>
+        <a href="/maclearn/me/" class="profile">
+          <img src="/maclearn/media/icons/profile.svg" />
+        </a>
       </div>
     </nav>
-    <div class="homeheader">
-      <div class="title">MacLearn HTML Course</div>
-      <div class="sub">
-        HTML is a markup language that creates the main structure and content of
-        a webpage. Learn, try, and master it for free, at MacLearn.
-      </div>
-    </div>
-    <!--
-    <div class="htmlcourse">
-      <div class="coursep">
-        <h2>HTML</h2>
-        <p id="htmlp">
-          <span
-            style="
-              text-align: center;
-              display: block;
-              background-color: black;
-              color: white;
-              width: 40%;
-              margin-inline: 30%;
-              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
-                sans-serif;
-              border-radius: 10px;
-              font-weight: bold;
-            "
-            >Beta Course</span
-          ><br />
-          <b>Learn</b> HTML (HyperText Markup Language), one of the most
-          important programming languages to construct a website.
+    <div class="wrap">
+      <div class="hero">
+        <h1 class="hero-title">HTML</h1>
+        <p class="hero-des">
+          HTML is a very powerful markup language that adds content and
+          structure to your page.
         </p>
-        <a href="/maclearn/coding/html/what-is-coding.html"
-          ><button>Start Learning</button></a
-        >
       </div>
-      <div class="courseimg">
-        <img
-          src="/maclearn/images/coding1.jpg"
-          alt="HTML"
-          style="border-radius: 10px"
-        />
+      <div class="sections">
+        <div class="section">
+          <h2 class="section-title">The Very Basics</h2>
+          <div class="lessons">
+            <a href="what-is-coding.html" class="lesson">What is Coding?</a>
+            <a href="what-is-html.html" class="lesson">What is HTML?</a>
+            <a href="more-html-tags.html" class="lesson">More HTML Tags</a>
+            <a href="basics-quiz.html" class="lesson">Unit Quiz</a>
+          </div>
+        </div>
+        <div class="section">
+          <h2 class="section-title">HTML Foundations</h2>
+          <div class="lessons">
+            <a href="html-basic-structure.html" class="lesson">
+              HTML Basic Structure
+            </a>
+            <a href="html-article.html" class="lesson">
+              HTML Article Structure
+            </a>
+            <a href="html-attributes.html" class="lesson">HTML Attributes</a>
+            <a href="foundations-quiz.html" class="lesson">Unit Quiz</a>
+          </div>
+        </div>
+        <div class="section">
+          <h2 class="section-title">Common Tags</h2>
+          <div class="lessons">
+            <a href="html-img.html" class="lesson">HTML Image</a>
+            <a href="html-hyperlink.html" class="lesson">HTML Hyperlink</a>
+            <a href="html-list.html" class="lesson">HTML List</a>
+            <a href="html-formatting.html" class="lesson">HTML Formatting</a>
+            <a href="common-quiz.html" class="lesson">Unit Quiz</a>
+          </div>
+        </div>
+        <div class="section">
+          <h2 class="section-title">HTML Visuals</h2>
+          <div class="lessons">
+            <a href="html-tables.html" class="lesson">HTML Tables</a>
+            <a href="html-multimedia.html" class="lesson">HTML Multimedia</a>
+            <a href="html-embed.html" class="lesson">HTML Embed</a>
+            <a href="html-svg.html" class="lesson">HTML SVG</a>
+            <a href="visuals-quiz.html" class="lesson">Unit Quiz</a>
+          </div>
+        </div>
+        <div class="section">
+          <h2 class="section-title">Efficient Code</h2>
+          <div class="lessons">
+            <a href="html-semantics.html" class="lesson">HTML Semantics</a>
+            <a href="html-special-characters.html" class="lesson">
+              HTML Special Characters
+            </a>
+            <a href="visuals-quiz.html" class="lesson">Unit Quiz</a>
+          </div>
+        </div>
+        <div class="section">
+          <h2 class="section-title">Handling Users</h2>
+          <div class="lessons">
+            <a href="html-forms.html" class="lesson">HTML Forms</a>
+            <a href="html-meta.html" class="lesson">HTML Meta Tag</a>
+            <a href="user-quiz.html" class="lesson">Unit Quiz</a>
+          </div>
+        </div>
       </div>
-    </div>
-  -->
-    <div class="lessons">
-      <a href="what-is-coding.html" class="lesson">
-        <h2 class="lessonn">What is Coding?</h2>
-      </a>
-      <a href="what-is-html.html" class="lesson">
-        <h2 class="lessonn">What is HTML?</h2>
-      </a>
-      <a href="more-html-tags.html" class="lesson">
-        <h2 class="lessonn">More HTML Tags</h2>
-      </a>
-      <a href="html-basic-structure.html" class="lesson">
-        <h2 class="lessonn">HTML Basic Structure</h2>
-      </a>
-      <a href="html-article.html" class="lesson">
-        <h2 class="lessonn">HTML Article Structure</h2>
-      </a>
-      <a href="html-img.html" class="lesson">
-        <h2 class="lessonn">HTML Image</h2>
-      </a>
-      <a href="html-hyperlink.html" class="lesson">
-        <h2 class="lessonn">HTML Hyperlink</h2>
-      </a>
-      <a href="html-list.html" class="lesson">
-        <h2 class="lessonn">HTML List</h2>
-      </a>
-      <a href="html-formatting.html" class="lesson">
-        <h2 class="lessonn">HTML Formatting</h2>
-      </a>
-      <a href="html-attributes.html" class="lesson">
-        <h2 class="lessonn">HTML Attributes</h2>
-      </a>
-      <a href="beginner-quiz.html" class="lesson">
-        <h2 class="lessonn">Unit Quiz</h2>
-      </a>
-      <a href="html-forms.html" class="lesson">
-        <h2 class="lessonn">HTML Forms</h2>
-      </a>
-      <a href="html-semantics.html" class="lesson">
-        <h2 class="lessonn">HTML Semantics</h2>
-      </a>
-      <a href="html-special-characters.html" class="lesson">
-        <h2 class="lessonn">HTML Special Characters</h2>
-      </a>
-      <a href="html-tables.html" class="lesson">
-        <h2 class="lessonn">HTML Tables</h2>
-      </a>
-      <a href="html-multimedia.html" class="lesson">
-        <h2 class="lessonn">HTML Multimedia</h2>
-      </a>
-      <a href="html-meta.html" class="lesson">
-        <h2 class="lessonn">HTML Meta Tag</h2>
-      </a>
-      <a href="html-embed.html" class="lesson">
-        <h2 class="lessonn">HTML Embed</h2>
-      </a>
-      <a href="html-svg.html" class="lesson">
-        <h2 class="lessonn">HTML SVG</h2>
-      </a>
-      <a href="advanced-quiz.html" class="lesson">
-        <h2 class="lessonn">Unit Quiz</h2>
-      </a>
     </div>
     <footer class="footer">
       <div>

@@ -1,4 +1,94 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const bar = document.getElementById("sidebar");
+  const helpMenuItems = document.getElementById("cats");
+  const helpMenu = document.getElementById("help-menu");
+  const helpCaret = document.getElementById("caret");
+  let helpOpen = false;
+  document.addEventListener("click", function () {
+    bar.classList.remove("movingbar");
+  });
+  document.addEventListener("mousemove", function (event) {
+    if (event.clientX <= 5 && bar.classList.contains("movingbar") !== true) {
+      bar.classList.add("movingbar");
+    }
+  });
+  document.addEventListener("click", (e) => {
+    if (!e.target.classList.contains("help-menu")) {
+      helpMenuItems.style.transform = "scaleY(0)";
+      helpMenu.removeAttribute("style");
+      helpCaret.removeAttribute("style");
+      helpOpen = false;
+    }
+  });
+  helpMenu.addEventListener("click", () => {
+    if (helpOpen === false) {
+      helpMenuItems.style.transform = "scaleY(1)";
+      helpMenu.style.backgroundColor = "rgba(15, 15, 15, 0.8)";
+      helpCaret.style.transform = "rotate(0deg)";
+      helpOpen = true;
+    } else {
+      helpMenuItems.style.transform = "scaleY(0)";
+      helpMenu.removeAttribute("style");
+      helpCaret.removeAttribute("style");
+      helpOpen = false;
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const htmlTab = document.getElementById("html");
+  const cssTab = document.getElementById("css");
+  const jsTab = document.getElementById("js");
+  const outputTab = document.getElementById("output");
+  const htmlEdit = document.getElementById("htmlEdit");
+  htmlEdit.value = htmlEdit.getAttribute("value");
+  const cssEdit = document.getElementById("cssEdit");
+  cssEdit.value = cssEdit.getAttribute("value");
+  const jsEdit = document.getElementById("jsEdit");
+  const outputEdit = document.getElementById("outputEdit");
+  const tabs = [htmlTab, cssTab, jsTab, outputTab];
+  const edits = [htmlEdit, cssEdit, jsEdit, outputEdit];
+  const outputWindow = outputEdit.contentWindow.document;
+  htmlTab.addEventListener("click", function () {
+    code(htmlTab, htmlEdit);
+  });
+  cssTab.addEventListener("click", function () {
+    code(cssTab, cssEdit);
+  });
+  jsTab.addEventListener("click", function () {
+    code(jsTab, jsEdit);
+  });
+  outputTab.addEventListener("click", function () {
+    code(outputTab, outputEdit);
+    output();
+  });
+  function code(tab, edit) {
+    tabs.forEach((t) => t.classList.remove("active"));
+    tab.classList.add("active");
+    edits.forEach((e) => e.classList.remove("show"));
+    edit.classList.add("show");
+  }
+  function output() {
+    let html = htmlEdit.value;
+    let css = cssEdit.value;
+    let js = jsEdit.value;
+    let documentHTML = outputWindow.getElementsByTagName("html")[0];
+    documentHTML.innerHTML = "";
+    outputWindow.open();
+    outputWindow.write(
+      "<style>" +
+        "* {margin:8px; word-wrap:break-word; white-space:pre-wrap; } html {margin:0px;background-color: white;}" +
+        css +
+        "</style>" +
+        "<body>" +
+        html +
+        "<script>{" +
+        js +
+        "}</script>" +
+        "</body>"
+    );
+    outputWindow.close();
+  }
   const bar = document.getElementById("tbar");
   const favorite = document.getElementById("favorite");
   const share = document.getElementById("share");
@@ -26,14 +116,14 @@ document.addEventListener("DOMContentLoaded", function () {
     let things = Array.from(favorites);
     things.forEach(function (thing) {
       if (thing === page) {
-            favorite.src = "/maclearn/media/icons/star-solid.svg";
+        favorite.src = "/maclearn/media/icons/star-solid.svg";
         return;
       }
     });
   }
   favorite.addEventListener("click", function () {
     if (favorite.src.endsWith("star-solid.svg")) {
-            favorite.src = "/maclearn/media/icons/star-regular.svg";
+      favorite.src = "/maclearn/media/icons/star-regular.svg";
       let favorites = localStorage.macLearnFavorites.split(",");
       let things = Array.from(favorites);
       things.forEach(function (thing, index) {
@@ -44,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem("macLearnFavorites", things.join(",")); // Convert things back to a string
       return;
     } else {
-            favorite.src = "/maclearn/media/icons/star-solid.svg";
+      favorite.src = "/maclearn/media/icons/star-solid.svg";
       if (localStorage.macLearnFavorites) {
         let favorites = localStorage.macLearnFavorites.split(",");
         let things = Array.from(favorites);
@@ -72,19 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
   report.addEventListener("click", function () {
     window.open("https://forms.gle/GrNw79oqWgr2u9aLA", "_blank");
   });
-  runCode();
-  const cssTextArea = document.getElementById("css");
-  cssTextArea.addEventListener("input", function () {
-    runCode();
-  });
-  function runCode() {
-    const html = document.getElementById("html").value;
-    const css = document.getElementById("css").value;
-    const output = document.getElementById("output").contentWindow.document;
-    output.open();
-    output.writeln("<body>" + "<style>" + css + "</style>" + html + "</body>");
-    output.close();
-  }
+  
 });
 
 document.addEventListener("DOMContentLoaded", function () {

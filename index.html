@@ -1,67 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | MacLearn</title>
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <script src="app.js"></script>
   </head>
   <body>
-    <div class="overflow-menu shoot" id="overflow-menu">
-      <a href="/maclearn/html/" class="olink">HTML</a>
-      <a href="/maclearn/css/" class="olink">CSS</a>
-      <a href="/maclearn/references/" class="olink">References</a>
-      <a href="/maclearn/playground/" class="olink">Playground</a>
-    </div>
-    <nav class="nav">
-      <div class="overflowm shoot" id="overflowm">
-        <img src="/bars-solid.svg" alt="Menu" class="shoot" />
-      </div>
-      <a href="/maclearn/" class="logo">
-        <img src="maclearn-logo.png" alt="MacLearn Logo" />
-      </a>
-      <a href="/maclearn/html/" class="nav-link">HTML</a>
-      <a href="/maclearn/css/" class="nav-link">CSS</a>
-      <a href="/maclearn/references/" class="nav-link">References</a>
-      <a href="/maclearn/playground/" class="nav-link">Playground</a>
-      <a href="/maclearn/me/" class="nav-link">Me</a>
-      <div class="select secondselect">
-        <span id="header123">Tabs</span>
-        <ul id="cats">
-          <a href="/maclearn/html/">HTML</a>
-          <a href="/maclearn/css/">CSS</a>
-          <a href="/maclearn/references/">References</a>
-          <a href="/maclearn/playground/">Playground</a>
-        </ul>
-      </div>
-      <div class="select">
-        <span id="header123">Help</span>
-        <ul id="cats">
-          <a href="/macblog/projects/maclearn/">About</a>
-          <a href="/macblog/updates/maclearn/">Updates</a>
-          <a href="/macblog/projects/maclearn/">Docs</a>
-          <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"
-            >Feedback</a
-          >
-        </ul>
-      </div>
-    </nav>
-    <div class="announce">
-      <h2>
-        The
-        <a href="/macblog/updates/maclearn/2024/september.html" target="_blank"
-          >MacLearn September Update</a
-        >
-        is here! Massive changes, new tutorials, and more 🔥!
-        <img src="media/icons/xmark-solid.svg" alt="Close" id="closea" />
-      </h2>
-    </div>
-    <script>
-      let clos = document.getElementById("closea");
-      if (localStorage.getItem("maclearncloseeeee")) {
-        clos.parentElement.parentElement.style.display = "none";
-      }
-    </script>
     <div class="macsidebar" id="sidebar">
       <a href="/"><img src="/logo.png" alt="" /></a>
       <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
@@ -70,139 +17,63 @@
       <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
       <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
     </div>
-    <div class="homeheader">
-      <div class="title">Welcome to MacLearn!</div>
-      <div class="sub">Learn anything, for free.</div>
-    </div>
+    <nav class="nav">
+      <a href="/maclearn/" class="logo">
+        <img src="maclearn-logo.png" alt="MacLearn Logo" />
+      </a>
+      <a href="/maclearn/html/" class="nav-link">HTML</a>
+      <a href="/maclearn/css/" class="nav-link">CSS</a>
+      <a href="/maclearn/references/" class="nav-link">References</a>
+      <a href="/maclearn/playground/" class="nav-link">Playground</a>
+      <div class="right">
+        <div class="select help-menu" id="help-menu">
+          <span class="help-menu">Help</span>
+          <img
+            src="/maclearn/media/icons/caret.svg"
+            class="caret help-menu"
+            id="caret"
+          />
+          <ul id="cats" class="help-menu">
+            <a href="/macblog/projects/maclearn/">About</a>
+            <a href="/macblog/updates/maclearn/">Updates</a>
+            <a href="/macblog/projects/maclearn/">Docs</a>
+            <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank">
+              Feedback
+            </a>
+          </ul>
+        </div>
+        <a href="/maclearn/me/" class="profile">
+          <img src="/maclearn/media/icons/profile.svg" />
+        </a>
+      </div>
+    </nav>
     <div class="wrap">
-      <a href="html/" class="card">
-        <img src="media/html.png" />
-        <h2
-          class="title"
-          style="display: flex; align-items: center; justify-content: center"
-        >
-          HTML
-          <span
-            style="
-              text-align: center;
-              display: inline-block;
-              background-color: black;
-              color: white;
-              width: 50px;
-              margin-left: 15px;
-              font-size: 15px;
-              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
-                sans-serif;
-              padding-block: 5px;
-              border-radius: 5px;
-              font-weight: bold;
-              position: absolute;
-              right: 50px;
-            "
-            >Beta</span
-          >
-        </h2>
-        <p class="des">
-          <b>Learn</b> HTML, the language that constructs the structure and
-          content of a website.
-        </p>
-      </a>
-      <a href="css/" class="card">
-        <img src="media/css.png" />
-        <h2
-          class="title"
-          style="display: flex; align-items: center; justify-content: center"
-        >
-          CSS
-          <span
-            style="
-              text-align: center;
-              display: inline-block;
-              background-color: black;
-              color: white;
-              width: 50px;
-              margin-left: 15px;
-              font-size: 15px;
-              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
-                sans-serif;
-              padding-block: 5px;
-              border-radius: 5px;
-              font-weight: bold;
-              position: absolute;
-              right: 50px;
-            "
-            >Beta</span
-          >
-        </h2>
-        <p class="des">
-          <b>Master</b> CSS, the language that styles a website's looks and
-          appearance.
-        </p>
-      </a>
-      <a href="references/" class="card">
-        <img src="media/references.jpg" />
-        <h2
-          class="title"
-          style="display: flex; align-items: center; justify-content: center"
-        >
-          References<br />
-          <span
-            style="
-              text-align: center;
-              display: inline-block;
-              background-color: black;
-              color: white;
-              width: 50px;
-              margin-left: 15px;
-              font-size: 15px;
-              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
-                sans-serif;
-              padding-block: 5px;
-              border-radius: 5px;
-              font-weight: bold;
-              position: absolute;
-              right: 20px;
-            "
-            >Beta</span
-          >
-        </h2>
-        <p class="des">
-          <b>Check</b> our references for info on HTML tags, CSS values, and
-          more!
-        </p>
-      </a>
-      <a href="playground/" class="card">
-        <img src="media/playground.png" />
-        <h2
-          class="title"
-          style="display: flex; align-items: center; justify-content: center"
-        >
-          Playground<br />
-          <span
-            style="
-              text-align: center;
-              display: inline-block;
-              background-color: black;
-              color: white;
-              width: 50px;
-              margin-left: 15px;
-              font-size: 15px;
-              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
-                sans-serif;
-              padding-block: 5px;
-              border-radius: 5px;
-              font-weight: bold;
-              position: absolute;
-              right: 20px;
-            "
-            >Beta</span
-          >
-        </h2>
-        <p class="des">
-          <b>Apply</b> the web development skills you just learned to the
-          playground and see the output!
-        </p>
-      </a>
+      <div class="hero">
+        <h1 class="hero-title">Welcome to MacLearn!</h1>
+        <p class="hero-des">Learn anything, for free.</p>
+      </div>
+      <div class="courses">
+        <a href="html/" class="course">
+          <img src="media/html.png" />
+          <h2 class="course-title">HTML</h2>
+          <p><b>Learn</b> HTML to add content to your webpage.</p>
+        </a>
+        <a href="css/" class="course">
+          <img src="media/css.png" />
+          <h2 class="course-title">CSS</h2>
+          <p><b>Master</b> CSS to design and style your webpage.</p>
+        </a>
+        <a href="references/" class="course">
+          <img src="media/references.png" />
+          <h2 class="course-title">References</h2>
+          <p><b>Browse</b> our detailed references to learn more.</p>
+        </a>
+        <a href="playground/" class="course">
+          <img src="media/playground.png" />
+          <h2 class="course-title">Playground</h2>
+          <p><b>Experiment</b> in playground and apply your skills.</p>
+        </a>
+      </div>
     </div>
     <footer class="footer">
       <div>

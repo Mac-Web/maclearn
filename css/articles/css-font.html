@@ -9,19 +9,19 @@
       src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
       async="async"
     ></script>
-    <name id="page" data="css-box"></name>
+    <name id="page" data="css-font"></name>
+    <script src="../app.js"></script>
   </head>
   <body>
-    <div class="overflow-menu shoot" id="overflow-menu">
-      <a href="/maclearn/html/" class="olink">HTML</a>
-      <a href="/maclearn/css/" class="olink">CSS</a>
-      <a href="/maclearn/references/" class="olink">References</a>
-      <a href="/maclearn/playground/" class="olink">Playground</a>
+    <div class="macsidebar" id="sidebar">
+      <a href="/"><img src="/logo.png" alt="" /></a>
+      <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
+      <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
+      <a href="/mactime/"><img src="/MacTime Logo.png" alt="" /></a>
+      <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
+      <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
     </div>
     <nav class="nav">
-      <div class="overflowm shoot" id="overflowm">
-        <img src="/bars-solid.svg" alt="Menu" class="shoot" />
-      </div>
       <a href="/maclearn/" class="logo">
         <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
       </a>
@@ -29,223 +29,182 @@
       <a href="/maclearn/css/" class="nav-link">CSS</a>
       <a href="/maclearn/references/" class="nav-link">References</a>
       <a href="/maclearn/playground/" class="nav-link">Playground</a>
-      <a href="/maclearn/me/" class="nav-link">Me</a>
-      <div class="select secondselect">
-        <span id="header123">Tabs</span>
-        <ul id="cats">
-          <a href="/maclearn/html/">HTML</a>
-          <a href="/maclearn/css/">CSS</a>
-          <a href="/maclearn/references/">References</a>
-          <a href="/maclearn/playground/">Playground</a>
-        </ul>
-      </div>
-      <div class="select">
-        <span id="header123">Help</span>
-        <ul id="cats">
-          <a href="/macblog/projects/maclearn/">About</a>
-          <a href="/macblog/updates/maclearn/">Updates</a>
-          <a href="/macblog/projects/maclearn/">Docs</a>
-          <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"
-            >Feedback</a
-          >
-        </ul>
+      <div class="right">
+        <div class="select help-menu" id="help-menu">
+          <span class="help-menu">Help</span>
+          <img
+            src="/maclearn/media/icons/caret.svg"
+            class="caret help-menu"
+            id="caret"
+          />
+          <ul id="cats" class="help-menu">
+            <a href="/macblog/projects/maclearn/">About</a>
+            <a href="/macblog/updates/maclearn/">Updates</a>
+            <a href="/macblog/projects/maclearn/">Docs</a>
+            <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank">
+              Feedback
+            </a>
+          </ul>
+        </div>
+        <a href="/maclearn/me/" class="profile">
+          <img src="/maclearn/media/icons/profile.svg" />
+        </a>
       </div>
     </nav>
-    <div class="wrapper side-wrapper">
-      <div class="sidebar side">
-        <ul style="list-style-type: none">
-          <h2>Meeting CSS</h2>
-          <a href="css-intro.html">
-            <li>CSS Intro</li>
-          </a>
-          <a href="adding-css.html">
-            <li>Adding CSS</li>
-          </a>
-          <a href="quiz-meeting.html">
-            <li>Unit Quiz</li>
-          </a>
-          <h2>Colors & Borders</h2>
-          <a href="css-colors.html">
-            <li>CSS Colors</li>
-          </a>
-          <a href="css-background.html">
-            <li>CSS Background</li>
-          </a>
-          <a href="css-borders.html">
-            <li>CSS Borders</li>
-          </a>
-          <a href="quiz-colors.html">
-            <li>Unit Quiz</li>
-          </a>
-          <h2>Adding Space</h2>
-          <a href="css-width-height.html">
-            <li>CSS Width & Height</li>
-          </a>
-          <a href="css-padding-margin.html">
-            <li>CSS Padding & Margin</li>
-          </a>
-          <a href="css-box-model.html">
-            <li>CSS Box Model</li>
-          </a>
-          <a href="quiz-space.html">
-            <li>Unit Quiz</li>
-          </a>
-          <h2>Text & Content</h2>
-          <a
-            href="css-font.html"
-            style="font-weight: bold; color: rgb(89, 137, 227)"
-          >
-            <li>CSS Font</li>
-          </a>
-          <a href="css-text.html">
-            <li>CSS Text</li>
-          </a>
-          <a href="css-align.html">
-            <li>CSS Align</li>
-          </a>
-          <a href="quiz-content.html">
-            <li>Unit Quiz</li>
-          </a>
-          <br />
-          <div class="sidebtns">
-            <a href="/maclearn/" class="sidebtn">Back</a>
-            <a href="css-display.html" class="sidebtn">Next</a>
-          </div>
-        </ul>
-      </div>
-      <div class="tbar" id="tbar">
-        <h2 class="bart">CSS Font</h2>
-        <div class="bard">8.2.2024</div>
-      </div>
-      <script src="../app.js"></script>
-      <article class="article">
-        <div class="entire">
-          <div class="sharepanel">
-            <div class="sharethis-inline-share-buttons"></div>
-            <div class="copy">
-              <div class="clink" id="clink"></div>
-              <div class="cbtn" id="cbtn">Copy</div>
-            </div>
-          </div>
+    <div class="wrap">
+      <ul class="sidebar">
+        <h2 class="sidebar-title">Meeting CSS</h2>
+        <a href="css-intro.html">
+          <li>CSS Intro</li>
+        </a>
+        <a href="adding-css.html">
+          <li>Adding CSS</li>
+        </a>
+        <a href="quiz-meeting.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Colors & Borders</h2>
+        <a href="css-colors.html">
+          <li>CSS Colors</li>
+        </a>
+        <a href="css-background.html">
+          <li>CSS Background</li>
+        </a>
+        <a href="css-borders.html">
+          <li>CSS Borders</li>
+        </a>
+        <a href="quiz-colors.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Adding Space</h2>
+        <a href="css-width-height.html">
+          <li>CSS Width & Height</li>
+        </a>
+        <a href="css-padding-margin.html">
+          <li>CSS Padding & Margin</li>
+        </a>
+        <a href="css-box-model.html">
+          <li>CSS Box Model</li>
+        </a>
+        <a href="quiz-space.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Text & Content</h2>
+        <a
+          href="css-font.html"
+          style="font-weight: bold; color: rgb(89, 137, 227)"
+        >
+          <li>CSS Font</li>
+        </a>
+        <a href="css-text.html">
+          <li>CSS Text</li>
+        </a>
+        <a href="css-align.html">
+          <li>CSS Align</li>
+        </a>
+        <a href="quiz-content.html">
+          <li>Unit Quiz</li>
+        </a>
+        <div class="sidebtns">
+          <a href="/maclearn/" class="sidebtn">Back</a>
+          <a href="css-display.html" class="sidebtn">Next</a>
         </div>
-        <h1>CSS Font</h1>
-        <h3 class="author">
-          By Tony
-          <!--<span class="date">2024.8.2</span>
-          <span style="padding-inline: 10px">•</span> Last updated-->
-          <span class="date">8.2.2024</span>
-          <div class="icons">
-            <img
-              src="/maclearn/media/icons/star-regular.svg"
-              alt="Favorite"
-              id="favorite"
-              class="icon"
-            />
-            <img
-              src="/maclearn/media/icons/share-solid.svg"
-              alt="Share"
-              id="share"
-              class="icon"
-            />
-            <img
-              src="/maclearn/media/icons/flag.svg"
-              alt="Report"
-              id="flag"
-              class="icon"
-            />
-          </div>
-        </h3>
-        <hr />
-        <p>
-          A website is really boring without some font. Content is the core of
-          all websites, especially text. To make text easier to read, more
-          pleasing to look at, or pop out, you can use CSS font to style their
-          sizes, styles, font library, and more.
-        </p>
-        <code class="code">
-          font-family: Arial, Helvetica, sans-serif;<br />
-          font-size: 20px;<br />
-          font-weight: bold;<br />
-          font-style: italic;<br />
-          font-variant: small-caps;<br />
-        </code>
-        <p>
-          These are the most common and useful CSS properties for styling fonts
-          and text on your page. The font-family property sets the actual font
-          of the text. It can be the serif, sans-serif, or monospace famamilies.
-          You can also set other fonts if you import them. The font-size
-          property sets the size of the text according to each letter's height.
-          The font-weight property sets the bolding of the text. It can also be
-          number values from 100 to 900. The font-style property sets whether or
-          not you want the text to be italicized or obliqued. The font-variant
-          property is a little advanced, in which it sets the different variants
-          of the font. The rule font-variant: small-caps; sets all the non-caps
-          letters to caps, except smaller in size. Here's an example of all the
-          font properties:
-        </p>
-        <div class="example">
-          <textarea id="css" class="html-example" placeholder="CSS"></textarea>
-          <input
-            type="text"
-            id="html"
-            style="display: none"
-            value="<p>Some random text being styled.</p>"
-          />
-          <iframe
-            class="iframe-example"
-            id="output"
-            style="background-color: white"
-            sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
-          ></iframe>
-          <script>
-            const cssExample = document.getElementById("css");
-            cssExample.value = `  
-p {
+      </ul>
+      <div class="content">
+        <article class="article">
+          <h1 class="article-title">CSS Font</h1>
+          <h3 class="author">By Tony <span class="date">8.2.2024</span></h3>
+          <!--<span class="date">2024.8.2</span>-->
+          <hr />
+          <p>
+            A website is really boring without some font. Content is the core of
+            all websites, especially text. To make text easier to read, more
+            pleasing to look at, or pop out, you can use CSS font to style their
+            sizes, styles, font library, and more.
+          </p>
+          <code class="code">
+            font-family: Arial, Helvetica, sans-serif;<br />
+            font-size: 20px;<br />
+            font-weight: bold;<br />
+            font-style: italic;<br />
+            font-variant: small-caps;<br />
+          </code>
+          <p>
+            These are the most common and useful CSS properties for styling
+            fonts and text on your page. The font-family property sets the
+            actual font of the text. It can be the serif, sans-serif, or
+            monospace famamilies. You can also set other fonts if you import
+            them. The font-size property sets the size of the text according to
+            each letter's height. The font-weight property sets the bolding of
+            the text. It can also be number values from 100 to 900. The
+            font-style property sets whether or not you want the text to be
+            italicized or obliqued. The font-variant property is a little
+            advanced, in which it sets the different variants of the font. The
+            rule font-variant: small-caps; sets all the non-caps letters to
+            caps, except smaller in size. Here's an example of all the font
+            properties:
+          </p>
+          <div class="lab">
+            <div class="tabs">
+              <div class="tab active" id="html">HTML</div>
+              <div class="tab" id="css">CSS</div>
+              <div class="tab" id="js">JavaScript</div>
+              <div class="tab" id="output">Output</div>
+            </div>
+            <div class="contentt" id="content">
+              <textarea
+                id="htmlEdit"
+                placeholder="Enter HTML here"
+                class="show"
+                value='<p>Some random text being styled.</p>'
+              ></textarea
+              ><textarea
+                id="cssEdit"
+                placeholder="Enter CSS here"
+                class="show"
+                value='p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: bold;
   font-style: italic;
   font-variant: small-caps;
-}`;
-          </script>
-        </div>
-        <p>
-          In the above example, we set the &lt;p&gt; tag's font (font-family) to
-          Arial, Helvetica, sans-serif. We also used the font-size property to
-          make the size 20px. We used the font-weight and font-style properties
-          to make the text bolded and italicized. We used the font-variant
-          property to make all lowercase letters caps, but smaller. Feel free to
-          change up the values of these rules to explore the wide variety of
-          styling options CSS font really gives you. Have fun styling text!
-        </p>
-        <div class="buttons">
-          <button id="prevButton" class="button">Back</button>
-          <button id="myButton" class="button">Next</button>
-          <script>
-            document
-              .getElementById("myButton")
-              .addEventListener("click", function () {
-                window.location.href = "css-text.html";
-              });
-            document
-              .getElementById("prevButton")
-              .addEventListener("click", function () {
-                window.location.href = "quiz-space.html";
-              });
-          </script>
-        </div>
-      </article>
-      <footer class="footer">
-        <div>
-          © <span id="year">2024</span>
-          <a
-            href="/"
-            target="_blank"
-            style="text-decoration: underline; color: white"
-            >MacWeb</a
-          >
-        </div>
-      </footer>
+}'
+              ></textarea
+              ><textarea
+                id="jsEdit"
+                placeholder="Enter JavaScript here"
+                class="show"
+              ></textarea
+              ><iframe frameborder="0" id="outputEdit"></iframe>
+            </div>
+          </div>
+          <p>
+            In the above example, we set the &lt;p&gt; tag's font (font-family)
+            to Arial, Helvetica, sans-serif. We also used the font-size property
+            to make the size 20px. We used the font-weight and font-style
+            properties to make the text bolded and italicized. We used the
+            font-variant property to make all lowercase letters caps, but
+            smaller. Feel free to change up the values of these rules to explore
+            the wide variety of styling options CSS font really gives you. Have
+            fun styling text!
+          </p>
+          <div class="buttons">
+            <a href="quiz-space.html" class="button">Back</a>
+            <a href="css-text.html" class="button">Next</a>
+          </div>
+          <footer class="footer">
+            <div>
+              © <span id="year">2024</span>
+              <a
+                href="/"
+                target="_blank"
+                style="text-decoration: underline; color: white"
+                >MacWeb</a
+              >
+            </div>
+          </footer>
+        </article>
+      </div>
     </div>
   </body>
 </html>

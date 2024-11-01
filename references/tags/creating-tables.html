@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Creating Tables | HTML Reference | MacLearn</title>
-  <link href="../style.css" rel="stylesheet" />
-  <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
-    <script src="../app.js"></script>
-</head>
-<body>
-    <div class="overflow-menu shoot" id="overflow-menu">
-      <a href="/maclearn/html/" class="olink">HTML</a>
-      <a href="/maclearn/css/" class="olink">CSS</a>
-      <a href="/maclearn/references/" class="olink">References</a>
-      <a href="/maclearn/playground/" class="olink">Playground</a>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating Tables | MacLearn</title>
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/maclearn/references/style.css" />
+    <script src="/maclearn/references/app.js"></script>
+  </head>
+  <body>
+    <div class="macsidebar" id="sidebar">
+      <a href="/"><img src="/logo.png" alt="" /></a>
+      <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
+      <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
+      <a href="/mactime/"><img src="/MacTime Logo.png" alt="" /></a>
+      <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
+      <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
     </div>
     <nav class="nav">
-      <div class="overflowm shoot" id="overflowm">
-        <img src="/bars-solid.svg" alt="Menu" class="shoot" />
-      </div>
       <a href="/maclearn/" class="logo">
         <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
       </a>
@@ -24,32 +25,31 @@
       <a href="/maclearn/css/" class="nav-link">CSS</a>
       <a href="/maclearn/references/" class="nav-link">References</a>
       <a href="/maclearn/playground/" class="nav-link">Playground</a>
-      <a href="/maclearn/me/" class="nav-link">Me</a>
-      <div class="select secondselect">
-        <span id="header123">Tabs</span>
-        <ul id="cats">
-          <a href="/maclearn/html/">HTML</a>
-          <a href="/maclearn/css/">CSS</a>
-          <a href="/maclearn/references/">References</a>
-          <a href="/maclearn/playground/">Playground</a>
-        </ul>
-      </div>
-      <div class="select">
-        <span id="header123">Help</span>
-        <ul id="cats">
-          <a href="/macblog/projects/maclearn/">About</a>
-          <a href="/macblog/updates/maclearn/">Updates</a>
-          <a href="/macblog/projects/maclearn/">Docs</a>
-          <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"
-            >Feedback</a
-          >
-        </ul>
+      <div class="right">
+        <div class="select help-menu" id="help-menu">
+          <span class="help-menu">Help</span>
+          <img
+            src="/maclearn/media/icons/caret.svg"
+            class="caret help-menu"
+            id="caret"
+          />
+          <ul id="cats" class="help-menu">
+            <a href="/macblog/projects/maclearn/">About</a>
+            <a href="/macblog/updates/maclearn/">Updates</a>
+            <a href="/macblog/projects/maclearn/">Docs</a>
+            <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank">
+              Feedback
+            </a>
+          </ul>
+        </div>
+        <a href="/maclearn/me/" class="profile">
+          <img src="/maclearn/media/icons/profile.svg" />
+        </a>
       </div>
     </nav>
-  <div class="wrapper side-wrapper">
-    <div class="sidebar side">
-      <ul style="list-style-type: none;">
-        <h2>HTML Tags</h2>
+    <div class="wrap">
+      <ul class="sidebar">
+        <h2 class="sidebar-title">HTML Tags</h2>
         <a href="a-tags.html">
           <li>&lta&gt</li>
         </a>
@@ -68,101 +68,141 @@
         <a href="creating-lists.html">
           <li>List Tags</li>
         </a>
-        <a href="creating-tables.html" style="font-weight: bold; color: rgb(89, 137, 227)">
+        <a
+          href="creating-tables.html"
+          style="font-weight: bold; color: rgb(89, 137, 227)"
+        >
           <li>Table Tags</li>
-        </a><br><br>
+        </a>
       </ul>
-    </div>
-    <article class="article">
-      <h1>Creating Tables</h1>
-      <h3 class="author">By Tony <span class="date">2023.6.15</span></h3>
-      <hr>
-      <p>
-        To be continued
-      </p>
-      <code>
-        &lttable&gt<br>
-        <span style="color: transparent; user-select: x;">ww</span>&ltthead&gt<br>
-        <span style="color: transparent; user-select: x;">wwww</span>&lttr&gt<br>
-        <span style="color: transparent; user-select: x;">wwwwww</span>&ltth&gtName&lt/th&gt<br>
-        <span style="color: transparent; user-select: x;">wwwwww</span>&ltth&gtScore&lt/th&gt<br>
-        <span style="color: transparent; user-select: x;">wwww</span>&lt/tr&gt<br>
-        <span style="color: transparent; user-select: x;">ww</span>&lt/thead&gt<br>
-  
-        <span style="color: transparent; user-select: x;">ww</span>&lttbody&gt<br>
-        <span style="color: transparent; user-select: x;">wwww</span>&lttr&gt<br>
-        <span style="color: transparent; user-select: x;">wwwwww</span>&lttd&gtTony&lt/td&gt<br>
-        <span style="color: transparent; user-select: x;">wwwwww</span>&lttd&gt95&lt/td&gt<br>
-        <span style="color: transparent; user-select: x;">wwww</span>&lt/tr&gt<br>
-        <span style="color: transparent; user-select: x;">wwww</span>&lttr&gt<br>
-        <span style="color: transparent; user-select: x;">wwwwww</span>&lttd&gtKyle&lt/td&gt<br>
-        <span style="color: transparent; user-select: x;">wwwwww</span>&lttd&gt85&lt/td&gt<br>
-        <span style="color: transparent; user-select: x;">wwww</span>&lt/tr&gt<br>
-        <span style="color: transparent; user-select: x;">ww</span>&lt/tbody&gt<br>
-        <span style="color: transparent; user-select: x;">ww</span>&lttfoot&gt<br>
-        <span style="color: transparent; user-select: x;">wwww</span>&lttr&gt<br>
-        <span style="color: transparent; user-select: x;">wwwwww</span>&lttd&gtAverage&lt/th&gt<br>
-        <span style="color: transparent; user-select: x;">wwwwww</span>&lttd&gt90&lt/th&gt<br>
-        <span style="color: transparent; user-select: x;">wwww</span>&lt/tr&gt<br>
-        <span style="color: transparent; user-select: x;">ww</span>&lt/tfoot&gt<br>
-        &lt/table&gt
-      </code>
-      <img style="width: 80%; margin-top: 20px;margin-inline: 10%" src="../media/table1.png" alt="table structure image">
-      <p>
-        The &lttable&gt tags wrap up three sections of the table: &ltthead&gt, &lttbody&gt, and &lttfoot&gt. No matter what the section is, a row is always created by the &lttr&gt tags. The &ltthead&gt is the table header row and each data cell in this row is created by the &ltth&gt tags. &lttbody&gt contains the actual data of the table, and &lttfoot&gt contains summary information. Each data cell in both &lttbody&gt and &lttfoot&gt sections is enclosed by the &lttd&gt tags. Here's the output of the example above:
-      </p>
-      <style>
-        td, th {
-          border: 1px solid black;
-        }
-      </style>
-      <table>
-        <thead>
-        <tr>
-        <th>Name</th>
-        <th>Score</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td>Tony</td>
-        <td>95</td>
-        </tr>
-        <tr>
-        <td>Kyle</td>
-        <td>85</td>
-        </tr>
-        </tbody>
-        <tfoot>
-        <tr>
-        <td>Average</th>
-        <td>90</th>
-        </tr>
-      </tfoot>
-        </table>
-        <br><span style="font-size: 17px;">Note: We added <i>border: 1px solid black;</i> to th and td so the table has borders. Add <i>border-collapse: collapse;</i> to the table tag to make the borders collapse.</span><br>
-        <p>So the above information is the neccesary steps of creating HTML tables. I know it's a bit confusing, but practice makes perfect, you just need to keep trying and practicing and you will master this skill. For additional guide and styling tips on tables.</p>
-      <div class="buttons">
-        <button id="prevButton" class="button">◀ Previous</button>
-        <button id="myButton" class="button">Next ▶</button>
-        <script>
-        document.getElementById("myButton").addEventListener("click", function() {
-          window.location.href = "";
-          });
-          document.getElementById("prevButton").addEventListener("click", function() {
-          window.location.href = "creating-lists.html";
-          });
-  </script>
-  
-      </div>
-    </article>
-    
-  <footer class="footer">
-    <div>© <span id="year">2024</span> <a href="/" style="text-decoration: underline; color:white;">MacWeb</a>
-    </div>
-  </footer>
-  </div>
-  
-</body>
-</html>
+      <div class="content">
+        <article class="article">
+          <h1 class="article-title">Creating Tables</h1>
+          <h3 class="author">By Tony <span class="date">2023.6.15</span></h3>
+          <hr />
+          <p>To be continued</p>
+          <code>
+            &lttable&gt<br />
+            <span style="color: transparent; user-select: x">ww</span
+            >&ltthead&gt<br />
+            <span style="color: transparent; user-select: x">wwww</span
+            >&lttr&gt<br />
+            <span style="color: transparent; user-select: x">wwwwww</span
+            >&ltth&gtName&lt/th&gt<br />
+            <span style="color: transparent; user-select: x">wwwwww</span
+            >&ltth&gtScore&lt/th&gt<br />
+            <span style="color: transparent; user-select: x">wwww</span
+            >&lt/tr&gt<br />
+            <span style="color: transparent; user-select: x">ww</span
+            >&lt/thead&gt<br />
 
+            <span style="color: transparent; user-select: x">ww</span
+            >&lttbody&gt<br />
+            <span style="color: transparent; user-select: x">wwww</span
+            >&lttr&gt<br />
+            <span style="color: transparent; user-select: x">wwwwww</span
+            >&lttd&gtTony&lt/td&gt<br />
+            <span style="color: transparent; user-select: x">wwwwww</span
+            >&lttd&gt95&lt/td&gt<br />
+            <span style="color: transparent; user-select: x">wwww</span
+            >&lt/tr&gt<br />
+            <span style="color: transparent; user-select: x">wwww</span
+            >&lttr&gt<br />
+            <span style="color: transparent; user-select: x">wwwwww</span
+            >&lttd&gtKyle&lt/td&gt<br />
+            <span style="color: transparent; user-select: x">wwwwww</span
+            >&lttd&gt85&lt/td&gt<br />
+            <span style="color: transparent; user-select: x">wwww</span
+            >&lt/tr&gt<br />
+            <span style="color: transparent; user-select: x">ww</span
+            >&lt/tbody&gt<br />
+            <span style="color: transparent; user-select: x">ww</span
+            >&lttfoot&gt<br />
+            <span style="color: transparent; user-select: x">wwww</span
+            >&lttr&gt<br />
+            <span style="color: transparent; user-select: x">wwwwww</span
+            >&lttd&gtAverage&lt/th&gt<br />
+            <span style="color: transparent; user-select: x">wwwwww</span
+            >&lttd&gt90&lt/th&gt<br />
+            <span style="color: transparent; user-select: x">wwww</span
+            >&lt/tr&gt<br />
+            <span style="color: transparent; user-select: x">ww</span
+            >&lt/tfoot&gt<br />
+            &lt/table&gt
+          </code>
+          <img
+            style="width: 80%; margin-top: 20px; margin-inline: 10%"
+            src="../media/table1.png"
+            alt="table structure image"
+          />
+          <p>
+            The &lttable&gt tags wrap up three sections of the table:
+            &ltthead&gt, &lttbody&gt, and &lttfoot&gt. No matter what the
+            section is, a row is always created by the &lttr&gt tags. The
+            &ltthead&gt is the table header row and each data cell in this row
+            is created by the &ltth&gt tags. &lttbody&gt contains the actual
+            data of the table, and &lttfoot&gt contains summary information.
+            Each data cell in both &lttbody&gt and &lttfoot&gt sections is
+            enclosed by the &lttd&gt tags. Here's the output of the example
+            above:
+          </p>
+          <style>
+            td,
+            th {
+              border: 1px solid black;
+            }
+          </style>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tony</td>
+                <td>95</td>
+              </tr>
+              <tr>
+                <td>Kyle</td>
+                <td>85</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Average</td>
+                <td>90</td>
+              </tr>
+            </tfoot>
+          </table>
+          <p>
+            <span style="font-size: 17px"
+              >Note: We added <i>border: 1px solid black;</i> to th and td so
+              the table has borders. Add <i>border-collapse: collapse;</i> to
+              the table tag to make the borders collapse.</span
+            ><br /><br />
+            So the above information is the neccesary steps of creating HTML
+            tables. I know it's a bit confusing, but practice makes perfect, you
+            just need to keep trying and practicing and you will master this
+            skill. For additional guide and styling tips on tables.
+          </p>
+          <div class="buttons">
+            <a href="creating-lists.html" class="button">Back</a>
+            <a href="../" class="button">Next</a>
+          </div>
+          <footer class="footer">
+            © <span id="year">2024 </span>
+            <a
+              href="/"
+              target="_blank"
+              style="text-decoration: underline; color: white"
+            >
+              MacWeb</a
+            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All Rights Reserved
+          </footer>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>

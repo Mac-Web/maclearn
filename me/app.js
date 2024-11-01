@@ -22,5 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
+  } else {
+    pages.innerHTML =
+      '<p class="no-saved">You don\'t have any saved pages. Click on the star icon on the page if you want to save it here!</p>';
   }
 });

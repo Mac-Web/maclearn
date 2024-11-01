@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Useful Tips Quiz | MacLearn</title>
+    <link href="../quiz.css" rel="stylesheet" />
+    <link href="/maclearn/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="overflow-menu shoot" id="overflow-menu">
+      <a href="/maclearn/html/" class="olink">HTML</a>
+      <a href="/maclearn/css/" class="olink">CSS</a>
+      <a href="/maclearn/references/" class="olink">References</a>
+      <a href="/maclearn/playground/" class="olink">Playground</a>
+    </div>
+    <nav class="nav">
+      <div class="overflowm shoot" id="overflowm">
+        <img src="/bars-solid.svg" alt="Menu" class="shoot" />
+      </div>
+      <a href="/maclearn/" class="logo">
+        <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
+      </a>
+      <a href="/maclearn/html/" class="nav-link">HTML</a>
+      <a href="/maclearn/css/" class="nav-link">CSS</a>
+      <a href="/maclearn/references/" class="nav-link">References</a>
+      <a href="/maclearn/playground/" class="nav-link">Playground</a>
+      <a href="/maclearn/me/" class="nav-link">Me</a>
+      <div class="select secondselect">
+        <span id="header123">Tabs</span>
+        <ul id="cats">
+          <a href="/maclearn/html/">HTML</a>
+          <a href="/maclearn/css/">CSS</a>
+          <a href="/maclearn/references/">References</a>
+          <a href="/maclearn/playground/">Playground</a>
+        </ul>
+      </div>
+      <div class="select">
+        <span id="header123">Help</span>
+        <ul id="cats">
+          <a href="/macblog/projects/maclearn/">About</a>
+          <a href="/macblog/updates/maclearn/">Updates</a>
+          <a href="/macblog/projects/maclearn/">Docs</a>
+          <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"
+            >Feedback</a
+          >
+        </ul>
+      </div>
+    </nav>
+    <div class="wrapper side-wrapper">
+      <div class="sidebar side">
+        <ul style="list-style-type: none">
+          <h2>Laying Out Stuff</h2>
+          <a href="css-display.html">
+            <li>CSS Display</li>
+          </a>
+          <a href="css-flexbox.html">
+            <li>CSS Flexbox</li>
+          </a>
+          <a href="css-position.html">
+            <li>CSS Position</li>
+          </a>
+          <a href="quiz-layout.html">
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Useful CSS Tips</h2>
+          <a href="css-math.html">
+            <li>CSS Math</li>
+          </a>
+          <a href="css-important.html">
+            <li>CSS !important</li>
+          </a>
+          <a href="css-pseudo.html">
+            <li>CSS Pseudo</li>
+          </a>
+          <a
+            href="quiz-useful.html"
+            style="font-weight: bold; color: rgb(89, 137, 227)"
+          >
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Creating Animations</h2>
+          <a href="css-transition.html">
+            <li>CSS Transition</li>
+          </a>
+          <a href="css-animation.html">
+            <li>CSS Animation</li>
+          </a>
+          <a href="css-transform.html">
+            <li>CSS Transform</li>
+          </a>
+          <a href="quiz-animation.html">
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Responsive Design</h2>
+          <a href="css-media-queries.html">
+            <li>CSS Media Queries</li>
+          </a>
+          <a href="css-viewport.html">
+            <li>CSS Viewport</li>
+          </a>
+          <a href="quiz-responsive.html">
+            <li>Unit Quiz</li>
+          </a>
+          <br />
+          <div class="sidebtns">
+            <a href="css-intro.html" class="sidebtn">Back</a>
+            <a href="finish.html" class="sidebtn">Next</a>
+          </div>
+        </ul>
+      </div>
+      <script src="app.js"></script>
+      <div class="flex">
+        <div class="container">
+          <div id="question-container" class="hide">
+            <div id="question">Question</div>
+
+            <div id="answer-buttons" class="btn-grid">
+              <button class="btn">Answer 1</button>
+              <button class="btn">Answer 2</button>
+              <button class="btn">Answer 3</button>
+              <button class="btn">Answer 4</button>
+            </div>
+          </div>
+          <div id="controls">
+            <div id="message">
+              <div
+                id="message2"
+                style="
+                  padding-inline: 100px;
+                  line-height: 40px;
+                  font-size: 27px;
+                "
+              >
+                Click "start" to see what you know about basic CSS syntax and
+                implementation!
+              </div>
+            </div>
+          </div>
+          <div class="results" id="results">
+            <div class="score" id="score">fdewedf</div>
+          </div>
+        </div>
+      </div>
+      <article class="article">
+        <div class="buttons">
+          <button id="back" class="button">Back</button>
+          <button id="start" class="button">Start</button>
+        </div>
+      </article>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const start = document.getElementById("start");
+          const quiz = document.getElementById("question-container");
+          const question = document.getElementById("question");
+          const answerButtonsElement =
+            document.getElementById("answer-buttons");
+          const back = document.getElementById("back");
+          const controls = document.getElementById("controls");
+          const results = document.getElementById("results");
+          let currentQuestionIndex, index;
+          let answerArray = [];
+          let correctArray = [];
+          back.classList.add("hide");
+          results.classList.add("hide");
+          start.addEventListener("click", () => {
+            if (start.innerHTML === "Start") {
+              startQuiz();
+              controls.style.display = "none";
+            } else if (start.innerHTML === "Next") {
+              currentQuestionIndex++;
+              setNextQuestion();
+            } else if (start.innerHTML === "Finish") {
+              currentQuestionIndex++;
+              question.classList.add("hide");
+              results.classList.remove("hide");
+              answerButtonsElement.classList.add("hide");
+              let actualCount = 0;
+              correctArray.forEach((correct) => {
+                if (correct !== null) {
+                  actualCount++;
+                }
+              });
+              let percentage = Math.round(
+                (actualCount / questions.length) * 100
+              );
+              results.innerHTML =
+                "Your quiz score is " +
+                percentage +
+                "% correct. <br> Go back, review, and improve your score!";
+              start.innerHTML = "Review!";
+              start.addEventListener("click", () => {
+                window.location.href = "/maclearn/css/articles/css-math.html";
+              });
+              if (percentage > 80) {
+                results.innerHTML =
+                  "Your quiz score is " +
+                  percentage +
+                  "% correct! <br> Move on to learn more CSS properties and tricks!";
+                start.innerHTML = "Go!";
+                start.addEventListener("click", () => {
+                  window.location.href =
+                    "/maclearn/css/articles/css-transition.html";
+                });
+              }
+            }
+          });
+
+          back.addEventListener("click", () => {
+            if (currentQuestionIndex >= 1) {
+              currentQuestionIndex--;
+              setNextQuestion();
+              question.classList.remove("hide");
+              answerButtonsElement.classList.remove("hide");
+              results.classList.add("hide");
+              start.innerHTML = "Next";
+              if (currentQuestionIndex === 3) {
+                start.innerHTML = "Finish";
+              }
+            } else {
+              controls.style.display = "flex";
+              start.innerHTML = "Start";
+              message.classList.remove("hide");
+              quiz.classList.add("hide");
+              back.classList.add("hide");
+            }
+          });
+
+          function startQuiz() {
+            start.innerHTML = "Next";
+            message.classList.add("hide");
+            quiz.classList.remove("hide");
+            shuffledQuestions = questions;
+            currentQuestionIndex = 0;
+            back.classList.remove("hide");
+            setNextQuestion();
+          }
+
+          function setNextQuestion() {
+            reset();
+            showQuestion(questions[currentQuestionIndex]);
+            if (currentQuestionIndex === 3) {
+              start.innerHTML = "Finish";
+            }
+          }
+
+          function reset() {
+            while (answerButtonsElement.firstChild) {
+              answerButtonsElement.removeChild(answerButtonsElement.firstChild);
+            }
+          }
+
+          function showQuestion(q) {
+            question.innerText = q.question;
+            index = 0;
+            q.answers.forEach((answer) => {
+              const button = document.createElement("div");
+              const label = document.createElement("label");
+              const radioButton = document.createElement("input");
+              radioButton.setAttribute("type", "radio");
+              label.setAttribute("for", index);
+              radioButton.setAttribute("id", index);
+              radioButton.setAttribute("name", "radio");
+              label.innerText = answer.text;
+              button.classList.add("btn");
+              if (answer.correct) {
+                button.dataset.correct = answer.correct;
+              }
+              button.addEventListener("click", selectAnswer);
+              answerButtonsElement.appendChild(button);
+              button.appendChild(radioButton);
+              button.appendChild(label);
+              if (answerArray[currentQuestionIndex]) {
+                if (answerArray[currentQuestionIndex] === button.innerHTML) {
+                  radioButton.checked = true;
+                }
+              }
+              index++;
+            });
+          }
+
+          function selectAnswer(e) {
+            const selectedAnswer = e.target;
+            const correct = selectedAnswer.parentElement.dataset.correct;
+            if (questions.length > currentQuestionIndex + 1) {
+              start.innerHTML = "Next";
+            } else {
+              start.innerHTML = "Finish";
+            }
+            if (selectedAnswer.parentElement.dataset.correct) {
+              correctArray[currentQuestionIndex] = selectedAnswer;
+            } else {
+              correctArray.splice(currentQuestionIndex, 1);
+            }
+            answerArray[currentQuestionIndex] =
+              selectedAnswer.parentElement.innerHTML;
+          }
+
+          const questions = [
+            {
+              question:
+                "Which CSS value function performs math on different units in CSS?",
+              answers: [
+                { text: "unit()", correct: false },
+                { text: "var()", correct: false },
+                { text: "math()", correct: false },
+                { text: "calc()", correct: true },
+              ],
+            },
+            {
+              question:
+                "How to make a rule in a type selector override inline styles?",
+              answers: [
+                { text: "You can't override inline styles.", correct: false },
+                {
+                  text: "Use the !override property.",
+                  correct: false,
+                },
+                {
+                  text: "Repeat the rule 2 times.",
+                  correct: false,
+                },
+                { text: "Use the !important property.", correct: true },
+              ],
+            },
+            {
+              question: 'What does the ":after" pseudo class do?',
+              answers: [
+                {
+                  text: "It applies styles to an element after it's being hovered.",
+                  correct: false,
+                },
+                {
+                  text: "It creates an extension of an element after the element.",
+                  correct: true,
+                },
+                {
+                  text: "It applies styles to an element after it's being clicked.",
+                  correct: false,
+                },
+                {
+                  text: "It moves the element to the end of the document.",
+                  correct: false,
+                },
+              ],
+            },
+          ];
+        });
+      </script>
+    </div>
+    <footer class="footer">
+      <div>
+        © <span id="year">2024</span>
+        <a href="/" style="text-decoration: underline; color: white">MacWeb</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
     author,
     prevLink,
     nextLink,
-    interactiveHTML;
+    interactiveHTML = null;
   const dataFile = "data/" + currentPage.split(".")[0] + ".json";
   fetch(dataFile)
     .then((response) => response.json())
@@ -90,6 +90,12 @@ document.addEventListener("DOMContentLoaded", function () {
       author = data.author;
       prevLink = data.previous;
       nextLink = data.next;
+      if (data.interactiveHTML) {
+        interactiveHTML = data.interactiveHTML;
+      }
+      if (data.interactives) {
+        interactiveHTML = data.interactives;
+      }
       if (data.interactives) {
         interactiveHTML = data.interactives;
         console.log(interactiveHTML);
@@ -226,29 +232,19 @@ document.addEventListener("DOMContentLoaded", function () {
           item.parentElement.style.fontWeight = "bold";
         }
       });
-      if (interactiveHTML) {
-        for (let i = 1; i <= interactiveHTML.count; i++) {
-          let htmlExample;
-          if (i == 1) {
-            htmlExample = document.getElementById(`html`);
-          } else {
-            htmlExample = document.getElementById(`html${i}`);
+      if (interactiveHTML != null) {
+        if (interactiveHTML.count) {
+          for (let i = 1; i <= interactiveHTML.count; i++) {
+            let htmlCodeLabs =
+              i == 1
+                ? document.getElementById("htmlEdit")
+                : document.getElementById("htmlEdit2");
+            htmlCodeLabs.value = interactiveHTML[`interactiveHTML${i}`];
           }
-          htmlExample.value = interactiveHTML[`interactiveHTML${i}`];
-          setInterval(runCode2, 1000);
-          function runCode2() {
-            const html2 = htmlExample.value;
-            const output2 = document.getElementById(`output${i}`).contentWindow
-              .document;
-            console.log();
-            output2.open();
-            output2.writeln("<body>" + html2 + "</body>");
-            output2.close();
-          }
+        } else {
+          let htmlCodeLabs = document.getElementById("htmlEdit");
+          htmlCodeLabs.value = interactiveHTML;
         }
-      } else {
-        let htmlExample = document.getElementById("html");
-        htmlExample.value = data.interactiveHTML;
       }
 
       const bar = document.getElementById("tbar");
@@ -284,7 +280,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       favorite.addEventListener("click", function () {
         if (favorite.src.endsWith("star-solid.svg")) {
-            favorite.src = "/maclearn/media/icons/star-regular.svg";
+          favorite.src = "/maclearn/media/icons/star-regular.svg";
           let favorites = localStorage.macLearnFavorites.split(",");
           let things = Array.from(favorites);
           things.forEach(function (thing, index) {
@@ -295,7 +291,7 @@ document.addEventListener("DOMContentLoaded", function () {
           localStorage.setItem("macLearnFavorites", things.join(",")); // Convert things back to a string
           return;
         } else {
-            favorite.src = "/maclearn/media/icons/star-solid.svg";
+          favorite.src = "/maclearn/media/icons/star-solid.svg";
           if (localStorage.macLearnFavorites) {
             let favorites = localStorage.macLearnFavorites.split(",");
             let things = Array.from(favorites);
@@ -323,21 +319,108 @@ document.addEventListener("DOMContentLoaded", function () {
       report.addEventListener("click", function () {
         window.open("https://forms.gle/GrNw79oqWgr2u9aLA", "_blank");
       });
-      runCode();
-      const html2 = document.getElementById("html");
-      html2.addEventListener("input", function () {
-        const html = document.getElementById("html").value;
-        const output = document.getElementById("output").contentWindow.document;
-        output.open();
-        output.writeln("<body>" + html + "</body>");
-        output.close();
+      const htmlTab = document.getElementById("html");
+      const cssTab = document.getElementById("css");
+      const jsTab = document.getElementById("js");
+      const outputTab = document.getElementById("output");
+      const htmlEdit = document.getElementById("htmlEdit");
+      const cssEdit = document.getElementById("cssEdit");
+      const jsEdit = document.getElementById("jsEdit");
+      const outputEdit = document.getElementById("outputEdit");
+      const tabs = [htmlTab, cssTab, jsTab, outputTab];
+      const edits = [htmlEdit, cssEdit, jsEdit, outputEdit];
+      const outputWindow = outputEdit.contentWindow.document;
+      htmlTab.addEventListener("click", function () {
+        code(htmlTab, htmlEdit);
       });
-      function runCode() {
-        const html = document.getElementById("html").value;
-        const output = document.getElementById("output").contentWindow.document;
-        output.open();
-        output.writeln("<body>" + html + "</body>");
-        output.close();
+      cssTab.addEventListener("click", function () {
+        code(cssTab, cssEdit);
+      });
+      jsTab.addEventListener("click", function () {
+        code(jsTab, jsEdit);
+      });
+      outputTab.addEventListener("click", function () {
+        code(outputTab, outputEdit);
+        output();
+      });
+      function code(tab, edit) {
+        tabs.forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+        edits.forEach((e) => e.classList.remove("show"));
+        edit.classList.add("show");
+      }
+      function output() {
+        let html = htmlEdit.value;
+        let css = cssEdit.value;
+        let js = jsEdit.value;
+        let documentHTML = outputWindow.getElementsByTagName("html")[0];
+        documentHTML.innerHTML = "";
+        outputWindow.open();
+        outputWindow.write(
+          "<style>" +
+            "* {margin:8px; word-wrap:break-word; white-space:pre-wrap; } html {margin:0px;background-color: white;}" +
+            css +
+            "</style>" +
+            "<body>" +
+            html +
+            "<script>{" +
+            js +
+            "}</script>" +
+            "</body>"
+        );
+        outputWindow.close();
+      }
+      
+      const htmlTab2 = document.getElementById("html2");
+      const cssTab2 = document.getElementById("css2");
+      const jsTab2 = document.getElementById("js2");
+      const outputTab2 = document.getElementById("output2");
+      const htmlEdit2 = document.getElementById("htmlEdit2");
+      const cssEdit2 = document.getElementById("cssEdit2");
+      const jsEdit2 = document.getElementById("jsEdit2");
+      const outputEdit2 = document.getElementById("outputEdit2");
+      const tabs2 = [htmlTab2, cssTab2, jsTab2, outputTab2];
+      const edits2 = [htmlEdit2, cssEdit2, jsEdit2, outputEdit2];
+      const outputWindow2 = outputEdit2.contentWindow.document;
+      htmlTab2.addEventListener("click", function () {
+        code2(htmlTab2, htmlEdit2);
+      });
+      cssTab2.addEventListener("click", function () {
+        code2(cssTab2, cssEdit2);
+      });
+      jsTab2.addEventListener("click", function () {
+        code2(jsTab2, jsEdit2);
+      });
+      outputTab2.addEventListener("click", function () {
+        code2(outputTab2, outputEdit2);
+        output2();
+      });
+      function code2(tab, edit) {
+        tabs2.forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+        edits2.forEach((e) => e.classList.remove("show"));
+        edit.classList.add("show");
+      }
+      function output2() {
+        let html = htmlEdit2.value;
+        let css = cssEdit2.value;
+        let js = jsEdit2.value;
+        let documentHTML = outputWindow2.getElementsByTagName("html")[0];
+        documentHTML.innerHTML = "";
+        outputWindow2.open();
+        outputWindow2.write(
+          "<style>" +
+            "* {margin:8px; word-wrap:break-word; white-space:pre-wrap; } html {margin:0px;background-color: white;}" +
+            css +
+            "</style>" +
+            "<body>" +
+            html +
+            "<script>{" +
+            js +
+            "}</script>" +
+            "</body>"
+        );
+        outputWindow2.close();
       }
     });
 });

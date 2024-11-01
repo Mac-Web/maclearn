@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Math | MacLearn</title>
+    <link href="../style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
+      async="async"
+    ></script>
+    <name id="page" data="css-math"></name>
+    <script src="../app.js"></script>
+  </head>
+  <body>
+    <div class="macsidebar" id="sidebar">
+      <a href="/"><img src="/logo.png" alt="" /></a>
+      <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
+      <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
+      <a href="/mactime/"><img src="/MacTime Logo.png" alt="" /></a>
+      <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
+      <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
+    </div>
+    <nav class="nav">
+      <a href="/maclearn/" class="logo">
+        <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
+      </a>
+      <a href="/maclearn/html/" class="nav-link">HTML</a>
+      <a href="/maclearn/css/" class="nav-link">CSS</a>
+      <a href="/maclearn/references/" class="nav-link">References</a>
+      <a href="/maclearn/playground/" class="nav-link">Playground</a>
+      <div class="right">
+        <div class="select help-menu" id="help-menu">
+          <span class="help-menu">Help</span>
+          <img
+            src="/maclearn/media/icons/caret.svg"
+            class="caret help-menu"
+            id="caret"
+          />
+          <ul id="cats" class="help-menu">
+            <a href="/macblog/projects/maclearn/">About</a>
+            <a href="/macblog/updates/maclearn/">Updates</a>
+            <a href="/macblog/projects/maclearn/">Docs</a>
+            <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank">
+              Feedback
+            </a>
+          </ul>
+        </div>
+        <a href="/maclearn/me/" class="profile">
+          <img src="/maclearn/media/icons/profile.svg" />
+        </a>
+      </div>
+    </nav>
+    <div class="wrap">
+      <ul class="sidebar">
+        <h2 class="sidebar-title">Laying Out Stuff</h2>
+        <a href="css-display.html">
+          <li>CSS Display</li>
+        </a>
+        <a href="css-flexbox.html">
+          <li>CSS Flexbox</li>
+        </a>
+        <a href="css-position.html">
+          <li>CSS Position</li>
+        </a>
+        <a href="quiz-layout.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Useful CSS Tips</h2>
+        <a
+          href="css-math.html"
+          style="font-weight: bold; color: rgb(89, 137, 227)"
+        >
+          <li>CSS Math</li>
+        </a>
+        <a href="css-important.html">
+          <li>CSS !important</li>
+        </a>
+        <a href="css-pseudo.html">
+          <li>CSS Pseudo</li>
+        </a>
+        <a href="quiz-useful.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Creating Animations</h2>
+        <a href="css-transition.html">
+          <li>CSS Transition</li>
+        </a>
+        <a href="css-animation.html">
+          <li>CSS Animation</li>
+        </a>
+        <a href="css-transform.html">
+          <li>CSS Transform</li>
+        </a>
+        <a href="quiz-animation.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Responsive Design</h2>
+        <a href="css-media-queries.html">
+          <li>CSS Media Queries</li>
+        </a>
+        <a href="css-viewport.html">
+          <li>CSS Viewport</li>
+        </a>
+        <a href="quiz-responsive.html">
+          <li>Unit Quiz</li>
+        </a>
+        <div class="sidebtns">
+          <a href="css-intro.html" class="sidebtn">Back</a>
+          <a href="finish.html" class="sidebtn">Next</a>
+        </div>
+      </ul>
+      <div class="content">
+        <article class="article">
+          <h1 class="article-title">CSS Math</h1>
+          <h3 class="author">By Tony <span class="date">8.29.2024</span></h3>
+          <!--<span class="date">2024.8.29</span>-->
+          <hr />
+          <p>
+            Imagine a situation where a lot of the elements on your page use the
+            same background color, but it's only for the dark mode of the page,
+            and you need to set a new background color for each element again if
+            the user activates the light mode. How can you achieve this with
+            minumum code? That's where CSS variables come in. In this tutorial,
+            we'll teach you the basics of CSS math functions and variables.
+          </p>
+          <code class="code">
+            width: calc(50vw - 100px);<br />
+            background-color: var(--bg-color);
+          </code>
+          <p>
+            Maybe you've already noticed the weird calc and var values with
+            parenthesis. These are called CSS value functions. The calc() value
+            function involkes, or runs, a built-in CSS function that does math
+            calculations with CSS values. In this example, the calc() function
+            sets the element's width to the difference of 50vw and 100px. Why do
+            we want to use the math function when we can just set a simple, say,
+            50px width to an element? It's for flexibility. You may want to
+            create elements that adapt to different screen sizes by having
+            values with different units combined so the elements look great on
+            any device. As of the other value function, var(), it's basically
+            just a placeholder for the value of the property. In this example,
+            it replaces the actual value of the background-color property with
+            the --bg-color variable. This is very useful when you want to have
+            the same value applied to many different elements. With CSS
+            variables, you don't have to reset the values one by one when you
+            want to change them, instead, you can just change one variable, and
+            the change is applied to all the elements with that variable. Note
+            that you have to set the variable first in the :root selector (see
+            example below), and the variable name must always begin with 2
+            dashes --.
+          </p>
+          <div class="lab">
+            <div class="tabs">
+              <div class="tab active" id="html">HTML</div>
+              <div class="tab" id="css">CSS</div>
+              <div class="tab" id="js">JavaScript</div>
+              <div class="tab" id="output">Output</div>
+            </div>
+            <div class="contentt" id="content">
+              <textarea
+                id="htmlEdit"
+                placeholder="Enter HTML here"
+                class="show"
+                value='<div class="element">My width is calculated with calc() and my background color came from a variable.</div>'
+              ></textarea
+              ><textarea
+                id="cssEdit"
+                placeholder="Enter CSS here"
+                class="show"
+                value=':root {
+  --bg-color: orange;
+}
+
+.element {
+  width: calc(50vw - 100px);
+  background-color: var(--bg-color);
+}'
+              ></textarea
+              ><textarea
+                id="jsEdit"
+                placeholder="Enter JavaScript here"
+                class="show"
+              ></textarea
+              ><iframe frameborder="0" id="outputEdit"></iframe>
+            </div>
+          </div>
+          <p>
+            In conclusion, calc() and var() are both CSS value functions that
+            are powerful features in CSS. calc() uses math to calculate the
+            value of 2 values with different units combined. The var() function
+            returns the variable's value. It's very useful when you want to
+            dynamically change a CSS value across multiple elements without
+            changing them one by one.
+          </p>
+          <div class="buttons">
+            <a href="quiz-layout.html" class="button">Back</a>
+            <a href="css-important.html" class="button">Next</a>
+          </div>
+          <footer class="footer">
+            <div>
+              © <span id="year">2024</span>
+              <a
+                href="/"
+                target="_blank"
+                style="text-decoration: underline; color: white"
+                >MacWeb</a
+              >
+            </div>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeLabs</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--ADD CODELAB TO HTML AND CSS CODE PLAYGROUND-->
+    <div class="wrap">
+      <h1>CodeLabs</h1>
+      <div class="lab">
+        <div class="tabs">
+          <div class="tab active" id="html">HTML</div>
+          <div class="tab" id="css">CSS</div>
+          <div class="tab" id="js">JavaScript</div>
+          <div class="tab" id="output">Output</div>
+        </div>
+        <div class="content" id="content">
+          <textarea
+            id="htmlEdit"
+            placeholder="Enter HTML here"
+            class="show"
+          ></textarea>
+          <textarea
+            id="cssEdit"
+            placeholder="Enter CSS here"
+            class="show"
+          ></textarea>
+          <textarea
+            id="jsEdit"
+            placeholder="Enter JavaScript here"
+            class="show"
+          ></textarea>
+          <iframe frameborder="0" id="outputEdit"></iframe>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

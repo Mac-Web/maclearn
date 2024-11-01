@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS | MacLearn</title>
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="/maclearn/style.css" />
     <script src="app.js"></script>
-    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
   </head>
   <body>
-    <div class="overflow-menu shoot" id="overflow-menu">
-      <a href="/maclearn/html/" class="olink">HTML</a>
-      <a href="/maclearn/css/" class="olink">CSS</a>
-      <a href="/maclearn/references/" class="olink">References</a>
-      <a href="/maclearn/playground/" class="olink">Playground</a>
+    <div class="macsidebar" id="sidebar">
+      <a href="/"><img src="/logo.png" alt="" /></a>
+      <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
+      <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
+      <a href="/mactime/"><img src="/MacTime Logo.png" alt="" /></a>
+      <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
+      <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
     </div>
     <nav class="nav">
-      <div class="overflowm shoot" id="overflowm">
-        <img src="/bars-solid.svg" alt="Menu" class="shoot" />
-      </div>
       <a href="/maclearn/" class="logo">
         <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
       </a>
@@ -24,184 +25,127 @@
       <a href="/maclearn/css/" class="nav-link">CSS</a>
       <a href="/maclearn/references/" class="nav-link">References</a>
       <a href="/maclearn/playground/" class="nav-link">Playground</a>
-      <a href="/maclearn/me/" class="nav-link">Me</a>
-      <div class="select secondselect">
-        <span id="header123">Tabs</span>
-        <ul id="cats">
-          <a href="/maclearn/html/">HTML</a>
-          <a href="/maclearn/css/">CSS</a>
-          <a href="/maclearn/references/">References</a>
-          <a href="/maclearn/playground/">Playground</a>
-        </ul>
-      </div>
-      <div class="select">
-        <span id="header123">Help</span>
-        <ul id="cats">
-          <a href="/macblog/projects/maclearn/">About</a>
-          <a href="/macblog/updates/maclearn/">Updates</a>
-          <a href="/macblog/projects/maclearn/">Docs</a>
-          <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"
-            >Feedback</a
-          >
-        </ul>
+      <div class="right">
+        <div class="select help-menu" id="help-menu">
+          <span class="help-menu">Help</span>
+          <img
+            src="/maclearn/media/icons/caret.svg"
+            class="caret help-menu"
+            id="caret"
+          />
+          <ul id="cats" class="help-menu">
+            <a href="/macblog/projects/maclearn/">About</a>
+            <a href="/macblog/updates/maclearn/">Updates</a>
+            <a href="/macblog/projects/maclearn/">Docs</a>
+            <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank">
+              Feedback
+            </a>
+          </ul>
+        </div>
+        <a href="/maclearn/me/" class="profile">
+          <img src="/maclearn/media/icons/profile.svg" />
+        </a>
       </div>
     </nav>
-    <div class="homeheader">
-      <div class="title">MacLearn CSS Course</div>
-      <div class="sub">
-        CSS is a really powerful and important styling language to style webpage
-        contents, appearance, and layout.
+    <div class="wrap">
+      <div class="hero">
+        <h1 class="hero-title">CSS</h1>
+        <p class="hero-des">
+          CSS is an extremely flexible language that styles the layout and the
+          design of your webpage.
+        </p>
+      </div>
+      <div class="sections">
+        <div class="section">
+          <h2 class="section-title">Meeting CSS</h2>
+          <div class="lessons">
+            <a href="articles/css-intro.html" class="lesson">CSS Intro</a>
+            <a href="articles/adding-css.html" class="lesson">Adding CSS</a>
+            <a href="articles/quiz-meeting.html" class="lesson">Unit Quiz</a>
+          </div>
+        </div>
+        <div class="section">
+          <h2 class="section-title">Colors & Borders</h2>
+          <div class="lessons">
+            <a href="articles/css-colors.html" class="lesson">CSS Colors</a>
+            <a href="articles/css-background.html" class="lesson">
+              CSS Background
+            </a>
+            <a href="articles/css-borders.html" class="lesson">CSS Borders</a>
+            <a href="articles/quiz-colors.html" class="lesson">Unit Quiz</a>
+          </div>
+        </div>
+        <div class="section">
+          <h2 class="section-title">Adding Space</h2>
+          <div class="lessons">
+            <a href="articles/css-width-height.html" class="lesson"
+              >CSS Width & Height</a
+            >
+            <a href="articles/css-padding-margin.html" class="lesson">
+              CSS Padding & Margin
+            </a>
+            <a href="articles/css-box-model.html" class="lesson"
+              >CSS Box Model</a
+            >
+            <a href="articles/quiz-space.html" class="lesson">Unit Quiz</a>
+          </div>
+        </div>
+        <div class="section">
+          <h2 class="section-title">Text & Content</h2>
+          <div class="lessons">
+            <a href="articles/css-font.html" class="lesson">CSS Font</a>
+            <a href="articles/css-text.html" class="lesson">CSS Text</a>
+            <a href="articles/css-align.html" class="lesson">CSS Align</a>
+            <a href="articles/quiz-content.html" class="lesson">Unit Quiz</a>
+          </div>
+        </div>
+        <div class="section">
+          <h2 class="section-title">Laying Out Stuff</h2>
+          <div class="lessons">
+            <a href="articles/css-display.html" class="lesson">CSS Display</a>
+            <a href="articles/css-flexbox.html" class="lesson">CSS Flexbox</a>
+            <a href="articles/css-position.html" class="lesson">CSS Position</a>
+            <a href="articles/quiz-layout.html" class="lesson">Unit Quiz</a>
+          </div>
+        </div>
+        <div class="section">
+          <h2 class="section-title">Useful CSS Tips</h2>
+          <div class="lessons">
+            <a href="articles/css-math.html" class="lesson">CSS Math</a>
+            <a href="articles/css-important.html" class="lesson"
+              >CSS !important</a
+            >
+            <a href="articles/css-pseudo.html" class="lesson">CSS Pseudo</a>
+            <a href="articles/quiz-useful.html" class="lesson">Unit Quiz</a>
+          </div>
+        </div>
+        <div class="section">
+          <h2 class="section-title">Creating Animations</h2>
+          <div class="lessons">
+            <a href="articles/css-transition.html" class="lesson"
+              >CSS Transition</a
+            >
+            <a href="articles/css-animation.html" class="lesson"
+              >CSS Animation</a
+            >
+            <a href="articles/css-transform.html" class="lesson"
+              >CSS Transform</a
+            >
+            <a href="articles/quiz-animation.html" class="lesson">Unit Quiz</a>
+          </div>
+        </div>
+        <div class="section">
+          <h2 class="section-title">Responsive Design</h2>
+          <div class="lessons">
+            <a href="articles/css-media-queries.html" class="lesson"
+              >CSS Media Queries</a
+            >
+            <a href="articles/css-viewport.html" class="lesson">CSS Viewport</a>
+            <a href="articles/quiz-responsive.html" class="lesson">Unit Quiz</a>
+          </div>
+        </div>
       </div>
     </div>
-    <!--
-    <div class="htmlcourse">
-      <div class="coursep">
-        <h2>CSS</h2>
-        <p id="htmlp">
-          <span
-            style="
-              text-align: center;
-              display: block;
-              background-color: rgb(255, 208, 0);
-              color: rgb(0, 0, 0);
-              width: 40%;
-              margin-inline: 30%;
-              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
-                sans-serif;
-              border-radius: 10px;
-              font-weight: bold;
-            "
-            >Coming 2024 Fall</span
-          ><br />
-          <b>Learn</b> CSS (Cascading Style Sheet) , the most important and
-          powerful language to change and style a website's look.
-        </p><a href="/maclearn/html/what-is-coding.html"
-          ><button>Start Learning</button></a>
-      </div>
-      <div class="courseimg">
-        <img src="/maclearn/images/coding1.jpg" alt="HTML" />
-      </div>
-    </div>
-  -->
-    <h1 class="section-divider">CSS Beginner Section</h1>
-    <h2>Meeting CSS</h2>
-    <div class="lessons">
-      <a href="articles/css-intro.html" class="lesson">
-        <h2 class="lessonn">CSS Intro</h2>
-      </a>
-      <a href="articles/adding-css.html" class="lesson">
-        <h2 class="lessonn">Adding CSS</h2>
-      </a>
-      <a href="articles/quiz-meeting.html" class="lesson">
-        <h2 class="lessonn">Unit Quiz</h2>
-      </a>
-    </div>
-    <h2>Colors & Borders</h2>
-    <div class="lessons">
-      <a href="articles/css-colors.html" class="lesson">
-        <h2 class="lessonn">CSS Colors</h2>
-      </a>
-      <a href="articles/css-background.html" class="lesson">
-        <h2 class="lessonn">CSS Background</h2>
-      </a>
-      <a href="articles/css-borders.html" class="lesson">
-        <h2 class="lessonn">CSS Borders</h2>
-      </a>
-      <a href="articles/quiz-colors.html" class="lesson">
-        <h2 class="lessonn">Unit Quiz</h2>
-      </a>
-    </div>
-    <h2>Adding Space</h2>
-    <div class="lessons">
-      <a href="articles/css-width-height.html" class="lesson">
-        <h2 class="lessonn">CSS Width & Height</h2>
-      </a>
-      <a href="articles/css-padding-margin.html" class="lesson">
-        <h2 class="lessonn">CSS Padding & Margin</h2>
-      </a>
-      <a href="articles/css-box-model.html" class="lesson">
-        <h2 class="lessonn">CSS Box Model</h2>
-      </a>
-      <a href="articles/quiz-space.html" class="lesson">
-        <h2 class="lessonn">Unit Quiz</h2>
-      </a>
-    </div>
-    <h2>Text & Content</h2>
-    <div class="lessons">
-      <a href="articles/css-font.html" class="lesson">
-        <h2 class="lessonn">CSS Font</h2>
-      </a>
-      <a href="articles/css-text.html" class="lesson">
-        <h2 class="lessonn">CSS Text</h2>
-      </a>
-      <a href="articles/css-align.html" class="lesson">
-        <h2 class="lessonn">CSS Align</h2>
-      </a>
-      <a href="articles/quiz-content.html" class="lesson">
-        <h2 class="lessonn">Unit Quiz</h2>
-      </a>
-    </div>
-
-    <h1 class="section-divider">CSS Advanced Section</h1>
-
-    <h2>Laying Out Stuff</h2>
-    <div class="lessons">
-      <a href="articles/css-display.html" class="lesson">
-        <h2 class="lessonn">CSS Display</h2>
-      </a>
-      <a href="articles/css-flexbox.html" class="lesson">
-        <h2 class="lessonn">CSS Flexbox</h2>
-      </a>
-      <a href="articles/css-position.html" class="lesson">
-        <h2 class="lessonn">CSS Position</h2>
-      </a>
-      <a href="articles/quiz-layout.html" class="lesson">
-        <h2 class="lessonn">Unit Quiz</h2>
-      </a>
-    </div>
-    <h2>Useful CSS Tips</h2>
-    <div class="lessons">
-      <a href="articles/css-math.html" class="lesson">
-        <h2 class="lessonn">CSS Math</h2>
-      </a>
-      <a href="articles/css-important.html" class="lesson">
-        <h2 class="lessonn">CSS !important</h2>
-      </a>
-      <a href="articles/css-pseudo.html" class="lesson">
-        <h2 class="lessonn">CSS Pseudo</h2>
-      </a>
-      <a href="articles/quiz-useful.html" class="lesson">
-        <h2 class="lessonn">Unit Quiz</h2>
-      </a>
-    </div>
-    <h2>Creating Animations</h2>
-    <div class="lessons">
-      <a href="articles/css-transition.html" class="lesson">
-        <h2 class="lessonn">CSS Transition</h2>
-      </a>
-      <a href="articles/css-animation.html" class="lesson">
-        <h2 class="lessonn">CSS Animation</h2>
-      </a>
-      <a href="articles/css-transform.html" class="lesson">
-        <h2 class="lessonn">CSS Transform</h2>
-      </a>
-      <a href="articles/quiz-animation.html" class="lesson">
-        <h2 class="lessonn">Unit Quiz</h2>
-      </a>
-    </div>
-    <h2>Responsive Design</h2>
-    <div class="lessons">
-      <a href="articles/css-media-queries.html" class="lesson">
-        <h2 class="lessonn">CSS Media Queries</h2>
-      </a>
-      <a href="articles/css-viewport.html" class="lesson">
-        <h2 class="lessonn">CSS Viewport</h2>
-      </a>
-      <a href="articles/quiz-responsive.html" class="lesson">
-        <h2 class="lessonn">Unit Quiz</h2>
-      </a>
-    </div>
-
     <footer class="footer">
       <div>
         © <span id="year">2024</span>

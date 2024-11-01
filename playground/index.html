@@ -2,18 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coding Playground | MacLearn</title>
-    <link rel="stylesheet" href="/maclearn/style.css" />
+    <title>Playground | MacLearn</title>
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/maclearn/style.css" />
     <style>
-      body {
-        background-color: rgb(40, 40, 40);
-      }
       .inputs {
-        width: 49%;
-        height: 454px;
+        width: 50%;
         margin: 0;
         padding: 0;
       }
@@ -23,18 +18,13 @@
         height: 150px;
       }
 
-      .output {
-        width: 49%;
-      }
-
       #output {
-        width: 100%;
+        width: 50%;
         border: none;
         outline: none;
         background-color: white;
-        height: 454px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 5px 0px black;
+        height: 450px;
+        border-radius: 0px 10px 10px 0px;
       }
 
       textarea {
@@ -47,33 +37,33 @@
         width: 100%;
         padding-inline: 5%;
         padding-block: 25px;
-        background-color: rgb(20, 20, 20);
+        background-color: rgb(15, 15, 15);
         font-size: 20px;
         font-family: Arial, Helvetica, sans-serif;
         border: none;
         overflow: auto;
       }
+
       .wrapper {
         display: flex;
-        width: 100%;
-        justify-content: space-between;
-        padding: 1%;
-        height: calc(100vh - 46.6px);
+        justify-content: center;
         align-items: center;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 20px;
       }
     </style>
   </head>
   <body>
-    <div class="overflow-menu shoot" id="overflow-menu">
-      <a href="/maclearn/html/" class="olink">HTML</a>
-      <a href="/maclearn/css/" class="olink">CSS</a>
-      <a href="/maclearn/references/" class="olink">References</a>
-      <a href="/maclearn/playground/" class="olink">Playground</a>
+    <div class="macsidebar" id="sidebar">
+      <a href="/"><img src="/logo.png" alt="" /></a>
+      <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
+      <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
+      <a href="/mactime/"><img src="/MacTime Logo.png" alt="" /></a>
+      <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
+      <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
     </div>
     <nav class="nav">
-      <div class="overflowm shoot" id="overflowm">
-        <img src="/bars-solid.svg" alt="Menu" class="shoot" />
-      </div>
       <a href="/maclearn/" class="logo">
         <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
       </a>
@@ -81,56 +71,47 @@
       <a href="/maclearn/css/" class="nav-link">CSS</a>
       <a href="/maclearn/references/" class="nav-link">References</a>
       <a href="/maclearn/playground/" class="nav-link">Playground</a>
-      <a href="/maclearn/me/" class="nav-link">Me</a>
-      <div class="select secondselect">
-        <span id="header123">Tabs</span>
-        <ul id="cats">
-          <a href="/maclearn/html/">HTML</a>
-          <a href="/maclearn/css/">CSS</a>
-          <a href="/maclearn/references/">References</a>
-          <a href="/maclearn/playground/">Playground</a>
-        </ul>
-      </div>
-      <div class="select">
-        <span id="header123">Help</span>
-        <ul id="cats">
-          <a href="/macblog/projects/maclearn/">About</a>
-          <a href="/macblog/updates/maclearn/">Updates</a>
-          <a href="/macblog/projects/maclearn/">Docs</a>
-          <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"
-            >Feedback</a
-          >
-        </ul>
+      <div class="right">
+        <div class="select help-menu" id="help-menu">
+          <span class="help-menu">Help</span>
+          <img
+            src="/maclearn/media/icons/caret.svg"
+            class="caret help-menu"
+            id="caret"
+          />
+          <ul id="cats" class="help-menu">
+            <a href="/macblog/projects/maclearn/">About</a>
+            <a href="/macblog/updates/maclearn/">Updates</a>
+            <a href="/macblog/projects/maclearn/">Docs</a>
+            <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank">
+              Feedback
+            </a>
+          </ul>
+        </div>
+        <a href="/maclearn/me/" class="profile">
+          <img src="/maclearn/media/icons/profile.svg" />
+        </a>
       </div>
     </nav>
-    <div class="wrapper">
-      <div class="inputs">
-        <div class="input">
-          <textarea
-            id="html"
-            placeholder="HTML"
-            style="border-radius: 10px 10px 0px 0px"
-          ></textarea>
+    <div class="wrap">
+      <div class="wrapper">
+        <div class="inputs">
+          <div class="input">
+            <textarea id="html" placeholder="HTML"></textarea>
+          </div>
+          <div class="input">
+            <textarea id="css" placeholder="CSS"></textarea>
+          </div>
+          <div class="input">
+            <textarea id="js" placeholder="JavaScript"></textarea>
+          </div>
         </div>
-        <div class="input">
-          <textarea id="css" placeholder="CSS"></textarea>
-        </div>
-        <div class="input">
-          <textarea
-            id="js"
-            placeholder="JavaScript"
-            style="border-radius: 0px 0px 10px 10px"
-          ></textarea>
-        </div>
-      </div>
-
-      <div class="output">
         <iframe
           id="output"
           sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
         ></iframe>
       </div>
+      <script src="script.js"></script>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Transform | MacLearn</title>
+    <link href="../style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
+      async="async"
+    ></script>
+    <name id="page" data="css-transform"></name>
+    <script src="../app.js"></script>
+  </head>
+  <body>
+    <div class="macsidebar" id="sidebar">
+      <a href="/"><img src="/logo.png" alt="" /></a>
+      <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
+      <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
+      <a href="/mactime/"><img src="/MacTime Logo.png" alt="" /></a>
+      <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
+      <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
+    </div>
+    <nav class="nav">
+      <a href="/maclearn/" class="logo">
+        <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
+      </a>
+      <a href="/maclearn/html/" class="nav-link">HTML</a>
+      <a href="/maclearn/css/" class="nav-link">CSS</a>
+      <a href="/maclearn/references/" class="nav-link">References</a>
+      <a href="/maclearn/playground/" class="nav-link">Playground</a>
+      <div class="right">
+        <div class="select help-menu" id="help-menu">
+          <span class="help-menu">Help</span>
+          <img
+            src="/maclearn/media/icons/caret.svg"
+            class="caret help-menu"
+            id="caret"
+          />
+          <ul id="cats" class="help-menu">
+            <a href="/macblog/projects/maclearn/">About</a>
+            <a href="/macblog/updates/maclearn/">Updates</a>
+            <a href="/macblog/projects/maclearn/">Docs</a>
+            <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank">
+              Feedback
+            </a>
+          </ul>
+        </div>
+        <a href="/maclearn/me/" class="profile">
+          <img src="/maclearn/media/icons/profile.svg" />
+        </a>
+      </div>
+    </nav>
+    <div class="wrap">
+      <ul class="sidebar">
+        <h2 class="sidebar-title">Laying Out Stuff</h2>
+        <a href="css-display.html">
+          <li>CSS Display</li>
+        </a>
+        <a href="css-flexbox.html">
+          <li>CSS Flexbox</li>
+        </a>
+        <a href="css-position.html">
+          <li>CSS Position</li>
+        </a>
+        <a href="quiz-layout.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Useful CSS Tips</h2>
+        <a href="css-math.html">
+          <li>CSS Math</li>
+        </a>
+        <a href="css-important.html">
+          <li>CSS !important</li>
+        </a>
+        <a href="css-pseudo.html">
+          <li>CSS Pseudo</li>
+        </a>
+        <a href="quiz-useful.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Creating Animations</h2>
+        <a href="css-transition.html">
+          <li>CSS Transition</li>
+        </a>
+        <a href="css-animation.html">
+          <li>CSS Animation</li>
+        </a>
+        <a
+          href="css-transform.html"
+          style="font-weight: bold; color: rgb(89, 137, 227)"
+        >
+          <li>CSS Transform</li>
+        </a>
+        <a href="quiz-animation.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Responsive Design</h2>
+        <a href="css-media-queries.html">
+          <li>CSS Media Queries</li>
+        </a>
+        <a href="css-viewport.html">
+          <li>CSS Viewport</li>
+        </a>
+        <a href="quiz-responsive.html">
+          <li>Unit Quiz</li>
+        </a>
+        <div class="sidebtns">
+          <a href="css-intro.html" class="sidebtn">Back</a>
+          <a href="finish.html" class="sidebtn">Next</a>
+        </div>
+      </ul>
+      <div class="content">
+        <article class="article">
+          <h1 class="article-title">CSS Transform</h1>
+          <h3 class="author">By Tony <span class="date">9.5.2024</span></h3>
+          <!--<span class="date">2024.9.5</span>-->
+          <hr />
+          <p>
+            CSS transform is a relatively new and very powerful and versatile
+            way to move the elements around, rotate them, and do all sorts of
+            stuff involving the properties of the element. Let's dive in and see
+            what CSS transform can do!
+          </p>
+          <code class="code">
+            transform: translate(100px, 50px) rotate(45deg) scale(2);
+          </code>
+          <p>
+            To use the CSS transform feature, simply use the "transform"
+            property, followed by the value functions (we introduced these in
+            the CSS Math article) of the effects you want to apply to the
+            element. In this case, it's translate, rotate, and scale. The first
+            function, translate, moves the element. In this function, there are
+            2 values. The frist value, 100px, sets the movement on the
+            horizontal axis, meaning the element is moved to the right by 100
+            pixels. The second value, 50px, sets the vertical axis movement,
+            which is 50 pixels down in this case. The second function in this
+            rule, rotate, rotates the element clockwise. The value in it (45deg)
+            tells the browser to rotate the element by 45 degrees clockwise. The
+            final function, scale, scales the element according to the value in
+            it. 1 is original size, 2 is double, 3 is triple, and so on. In this
+            case, it scales the element to double its original size.
+          </p>
+          <div class="lab">
+            <div class="tabs">
+              <div class="tab active" id="html">HTML</div>
+              <div class="tab" id="css">CSS</div>
+              <div class="tab" id="js">JavaScript</div>
+              <div class="tab" id="output">Output</div>
+            </div>
+            <div class="contentt" id="content">
+              <textarea
+                id="htmlEdit"
+                placeholder="Enter HTML here"
+                class="show"
+                value='<div class="element">I am repositioned using CSS transform.</div>'
+              ></textarea
+              ><textarea
+                id="cssEdit"
+                placeholder="Enter CSS here"
+                class="show"
+                value='.element {
+  width: 50px;
+  height: 50px;
+  font-size: 10px;
+  background-color: red;
+  transform: translate(100px, 50px) rotate(45deg) scale(2);
+}'
+              ></textarea
+              ><textarea
+                id="jsEdit"
+                placeholder="Enter JavaScript here"
+                class="show"
+              ></textarea
+              ><iframe frameborder="0" id="outputEdit"></iframe>
+            </div>
+          </div>
+          <p>
+            As you can see from the example above, we set the element's size,
+            background color, and gave it a font size. Then, we used the
+            transform property to move the element 100 pixels right and 50
+            pixels down, rotated it by 45 degrees, and doubled its size. Note
+            that for translate and rotate functions, you can set negative
+            values. For example, translate(-50px, -100px) moves the element 50
+            pixels left and 100 pixels up (inverse); and rotate(-90deg) rotates
+            the element 90 degrees counterclockwise. You can also set decimal
+            values for the scale function, meaning that scale(0.5) scales the
+            element by half. Feel free to play around with the values in the
+            example above and see what transform can do as this is the best way
+            to learn how they work!
+          </p>
+          <div class="buttons">
+            <a href="css-animation.html" class="button">Back</a>
+            <a href="quiz-animation.html" class="button">Next</a>
+          </div>
+          <footer class="footer">
+            <div>
+              © <span id="year">2024</span>
+              <a
+                href="/"
+                target="_blank"
+                style="text-decoration: underline; color: white"
+                >MacWeb</a
+              >
+            </div>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>

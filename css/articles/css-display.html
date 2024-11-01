@@ -10,18 +10,18 @@
       async="async"
     ></script>
     <name id="page" data="css-display"></name>
+    <script src="../app.js"></script>
   </head>
   <body>
-    <div class="overflow-menu shoot" id="overflow-menu">
-      <a href="/maclearn/html/" class="olink">HTML</a>
-      <a href="/maclearn/css/" class="olink">CSS</a>
-      <a href="/maclearn/references/" class="olink">References</a>
-      <a href="/maclearn/playground/" class="olink">Playground</a>
+    <div class="macsidebar" id="sidebar">
+      <a href="/"><img src="/logo.png" alt="" /></a>
+      <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
+      <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
+      <a href="/mactime/"><img src="/MacTime Logo.png" alt="" /></a>
+      <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
+      <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
     </div>
     <nav class="nav">
-      <div class="overflowm shoot" id="overflowm">
-        <img src="/bars-solid.svg" alt="Menu" class="shoot" />
-      </div>
       <a href="/maclearn/" class="logo">
         <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
       </a>
@@ -29,238 +29,209 @@
       <a href="/maclearn/css/" class="nav-link">CSS</a>
       <a href="/maclearn/references/" class="nav-link">References</a>
       <a href="/maclearn/playground/" class="nav-link">Playground</a>
-      <a href="/maclearn/me/" class="nav-link">Me</a>
-      <div class="select secondselect">
-        <span id="header123">Tabs</span>
-        <ul id="cats">
-          <a href="/maclearn/html/">HTML</a>
-          <a href="/maclearn/css/">CSS</a>
-          <a href="/maclearn/references/">References</a>
-          <a href="/maclearn/playground/">Playground</a>
-        </ul>
-      </div>
-      <div class="select">
-        <span id="header123">Help</span>
-        <ul id="cats">
-          <a href="/macblog/projects/maclearn/">About</a>
-          <a href="/macblog/updates/maclearn/">Updates</a>
-          <a href="/macblog/projects/maclearn/">Docs</a>
-          <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"
-            >Feedback</a
-          >
-        </ul>
+      <div class="right">
+        <div class="select help-menu" id="help-menu">
+          <span class="help-menu">Help</span>
+          <img
+            src="/maclearn/media/icons/caret.svg"
+            class="caret help-menu"
+            id="caret"
+          />
+          <ul id="cats" class="help-menu">
+            <a href="/macblog/projects/maclearn/">About</a>
+            <a href="/macblog/updates/maclearn/">Updates</a>
+            <a href="/macblog/projects/maclearn/">Docs</a>
+            <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank">
+              Feedback
+            </a>
+          </ul>
+        </div>
+        <a href="/maclearn/me/" class="profile">
+          <img src="/maclearn/media/icons/profile.svg" />
+        </a>
       </div>
     </nav>
-    <div class="wrapper side-wrapper">
-      <div class="sidebar side">
-        <ul style="list-style-type: none">
-          <h2>Laying Out Stuff</h2>
-          <a
-            href="css-display.html"
-            style="font-weight: bold; color: rgb(89, 137, 227)"
-          >
-            <li>CSS Display</li>
-          </a>
-          <a href="css-flexbox.html">
-            <li>CSS Flexbox</li>
-          </a>
-          <a href="css-position.html">
-            <li>CSS Position</li>
-          </a>
-          <a href="quiz-layout.html">
-            <li>Unit Quiz</li>
-          </a>
-          <h2>Useful CSS Tips</h2>
-          <a href="css-math.html">
-            <li>CSS Math</li>
-          </a>
-          <a href="css-important.html">
-            <li>CSS !important</li>
-          </a>
-          <a href="css-pseudo.html">
-            <li>CSS Pseudo</li>
-          </a>
-          <a href="quiz-useful.html">
-            <li>Unit Quiz</li>
-          </a>
-          <h2>Creating Animations</h2>
-          <a href="css-transition.html">
-            <li>CSS Transition</li>
-          </a>
-          <a href="css-animation.html">
-            <li>CSS Animation</li>
-          </a>
-          <a href="css-transform.html">
-            <li>CSS Transform</li>
-          </a>
-          <a href="quiz-animation.html">
-            <li>Unit Quiz</li>
-          </a>
-          <h2>Responsive Design</h2>
-          <a href="css-media-queries.html">
-            <li>CSS Media Queries</li>
-          </a>
-          <a href="css-viewport.html">
-            <li>CSS Viewport</li>
-          </a>
-          <a href="quiz-responsive.html">
-            <li>Unit Quiz</li>
-          </a>
-          <br />
-          <div class="sidebtns">
-            <a href="css-intro.html" class="sidebtn">Back</a>
-            <a href="finish.html" class="sidebtn">Next</a>
-          </div>
-        </ul>
-      </div>
-      <div class="tbar" id="tbar">
-        <h2 class="bart">CSS Display</h2>
-        <div class="bard">8.14.2024</div>
-      </div>
-      <script src="../app.js"></script>
-      <article class="article">
-        <div class="entire">
-          <div class="sharepanel">
-            <div class="sharethis-inline-share-buttons"></div>
-            <div class="copy">
-              <div class="clink" id="clink"></div>
-              <div class="cbtn" id="cbtn">Copy</div>
-            </div>
-          </div>
+    <div class="wrap">
+      <ul class="sidebar">
+        <h2 class="sidebar-title">Laying Out Stuff</h2>
+        <a
+          href="css-display.html"
+          style="font-weight: bold; color: rgb(89, 137, 227)"
+        >
+          <li>CSS Display</li>
+        </a>
+        <a href="css-flexbox.html">
+          <li>CSS Flexbox</li>
+        </a>
+        <a href="css-position.html">
+          <li>CSS Position</li>
+        </a>
+        <a href="quiz-layout.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Useful CSS Tips</h2>
+        <a href="css-math.html">
+          <li>CSS Math</li>
+        </a>
+        <a href="css-important.html">
+          <li>CSS !important</li>
+        </a>
+        <a href="css-pseudo.html">
+          <li>CSS Pseudo</li>
+        </a>
+        <a href="quiz-useful.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Creating Animations</h2>
+        <a href="css-transition.html">
+          <li>CSS Transition</li>
+        </a>
+        <a href="css-animation.html">
+          <li>CSS Animation</li>
+        </a>
+        <a href="css-transform.html">
+          <li>CSS Transform</li>
+        </a>
+        <a href="quiz-animation.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Responsive Design</h2>
+        <a href="css-media-queries.html">
+          <li>CSS Media Queries</li>
+        </a>
+        <a href="css-viewport.html">
+          <li>CSS Viewport</li>
+        </a>
+        <a href="quiz-responsive.html">
+          <li>Unit Quiz</li>
+        </a>
+        <div class="sidebtns">
+          <a href="css-intro.html" class="sidebtn">Back</a>
+          <a href="finish.html" class="sidebtn">Next</a>
         </div>
-        <h1>CSS Display</h1>
-        <h3 class="author">
-          By Tony
-          <!--<span class="date">2024.8.14</span>
-          <span style="padding-inline: 10px">•</span> Last updated-->
-          <span class="date">8.14.2024</span>
-          <div class="icons">
-            <img
-              src="/maclearn/media/icons/star-regular.svg"
-              alt="Favorite"
-              id="favorite"
-              class="icon"
-            />
-            <img
-              src="/maclearn/media/icons/share-solid.svg"
-              alt="Share"
-              id="share"
-              class="icon"
-            />
-            <img
-              src="/maclearn/media/icons/flag.svg"
-              alt="Report"
-              id="flag"
-              class="icon"
-            />
-          </div>
-        </h3>
-        <hr />
-        <p>
-          Welcome to the advanced section of the CSS course here on MacLearn!
-          Today, we'll be learning how to arrange the layout of your website
-          with the powerfull CSS display.
-        </p>
-        <code class="code">
-          display: block;<br />
-          display: inline;<br />
-          display: inline-block;<br />
-          display: none;<br />
-        </code>
-        <p>
-          Above, we have four different display rules, even though there are
-          tons more display values that you can play around with, but these four
-          are the most useful and intuitive. The display property basically
-          changes how the element behaves in accordance to the CSS box model,
-          which we've covered earlier. First, we have display: block;. It lets
-          the element behave like a block, meaning that it stretches out to its
-          maximum width and pushes(breaks) other elements around it into a new
-          line on the page, making them stack vertically on the page. The block
-          also maintains its padding and margin if you've set any. display:
-          inline; is a seperate story though. The element is now literally
-          in-line, like a word in a paragraph. It doesn't stretch out fully and
-          doesn't break into a new line. Additionally, some padding/margin will
-          work differently, and the height and width properties also don't apply
-          to inline elements. Well, what if you want to set the height and width
-          of an element but you don't want it to break into a new line? That's
-          where display: inline-block; comes in! With this value, the element
-          behaves exactly like a block element, with custom sizes and
-          padding/margin, except it doesn't break into a new line! Lastly,
-          display: none; makes the element invisible and basically "removes" it
-          from the page, so it doesn't take up any space.
-        </p>
-        <div class="example">
-          <textarea id="css" class="html-example" placeholder="CSS"></textarea>
-          <input
-            type="text"
-            id="html"
-            style="display: none"
-            value="Some text <div>An element</div> some text."
-          />
-          <iframe
-            class="iframe-example"
-            id="output"
-            style="background-color: white"
-            sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
-          ></iframe>
-          <script>
-            const cssExample = document.getElementById("css");
-            cssExample.value = `div {
+      </ul>
+      <div class="content">
+        <article class="article">
+          <h1 class="article-title">CSS Display</h1>
+          <h3 class="author">By Tony <span class="date">8.14.2024</span></h3>
+          <!--<span class="date">2024.8.14</span>-->
+          <hr />
+          <p>
+            Welcome to the advanced section of the CSS course here on MacLearn!
+            Today, we'll be learning how to arrange the layout of your website
+            with the powerfull CSS display.
+          </p>
+          <code class="code">
+            display: block;<br />
+            display: inline;<br />
+            display: inline-block;<br />
+            display: none;<br />
+          </code>
+          <p>
+            Above, we have four different display rules, even though there are
+            tons more display values that you can play around with, but these
+            four are the most useful and intuitive. The display property
+            basically changes how the element behaves in accordance to the CSS
+            box model, which we've covered earlier. First, we have display:
+            block;. It lets the element behave like a block, meaning that it
+            stretches out to its maximum width and pushes(breaks) other elements
+            around it into a new line on the page, making them stack vertically
+            on the page. The block also maintains its padding and margin if
+            you've set any. display: inline; is a seperate story though. The
+            element is now literally in-line, like a word in a paragraph. It
+            doesn't stretch out fully and doesn't break into a new line.
+            Additionally, some padding/margin will work differently, and the
+            height and width properties also don't apply to inline elements.
+            Well, what if you want to set the height and width of an element but
+            you don't want it to break into a new line? That's where display:
+            inline-block; comes in! With this value, the element behaves exactly
+            like a block element, with custom sizes and padding/margin, except
+            it doesn't break into a new line! Lastly, display: none; makes the
+            element invisible and basically "removes" it from the page, so it
+            doesn't take up any space.
+          </p>
+          <div class="lab">
+            <div class="tabs">
+              <div class="tab active" id="html">HTML</div>
+              <div class="tab" id="css">CSS</div>
+              <div class="tab" id="js">JavaScript</div>
+              <div class="tab" id="output">Output</div>
+            </div>
+            <div class="contentt" id="content">
+              <textarea
+                id="htmlEdit"
+                placeholder="Enter HTML here"
+                class="show"
+                value='Some text <div>An element</div> some text.'
+              ></textarea
+              ><textarea
+                id="cssEdit"
+                placeholder="Enter CSS here"
+                class="show"
+                value='div {
   background-color: lightblue;
   display: block;
-}`;
-          </script>
-        </div>
-        <p>
-          Feel free to try out the different display values along with different
-          sizes and padding/margin in the playground above and see what happens
-          to the block, the text, and the layout of the page! After you're
-          confident on your knowledge, move on and learn about CSS flexbox,
-          arguably the most important CSS property on webpage layout. Have fun!
-        </p>
-        <h2>Bonus: corner rounding</h2>
-        <p>
-          If you pay attention to websitesm you'll notice rounded corners are
-          everywhere in modern design. From a video's edges, an image's corners,
-          and even the buttons below, are rounded. How exactly do we get rid of
-          the sharp corners and replace them with smooth rounded corners using
-          CSS?
-        </p>
-        <code class="code">
-          border-radius: 20px;<br />
-          border-radius: 0px 10px 20px 30px;
-        </code>
-        <p>
-          You only need one CSS property to achieve this effect: border-radius. Imagine the corner as a circle. This property determines how wide the circle should be using the radius defined, using pixels (px), and replaces the sharp corner with the round circle, achieving the rounded effect. The more the radius, the more rounded the corner becomes. The first rule in the snippet above applies a corner radius of 20px to all 4 corners of the element. What if you want different roundness on different corners? The second rule applies different values to each corner. The first value is for the radius of the top-left corner, the second value for top-right, the third for bottom-right, and the fourth for bottom-left. Feel free to try it out and see the magic at work!
-        </p>
-        <div class="buttons">
-          <button id="prevButton" class="button">Back</button>
-          <button id="myButton" class="button">Next</button>
-          <script>
-            document
-              .getElementById("myButton")
-              .addEventListener("click", function () {
-                window.location.href = "css-flexbox.html";
-              });
-            document
-              .getElementById("prevButton")
-              .addEventListener("click", function () {
-                window.location.href = "quiz-content.html";
-              });
-          </script>
-        </div>
-      </article>
-      <footer class="footer">
-        <div>
-          © <span id="year">2024</span>
-          <a
-            href="/"
-            target="_blank"
-            style="text-decoration: underline; color: white"
-            >MacWeb</a
-          >
-        </div>
-      </footer>
+}'
+              ></textarea
+              ><textarea
+                id="jsEdit"
+                placeholder="Enter JavaScript here"
+                class="show"
+              ></textarea
+              ><iframe frameborder="0" id="outputEdit"></iframe>
+            </div>
+          </div>
+          <p>
+            Feel free to try out the different display values along with
+            different sizes and padding/margin in the playground above and see
+            what happens to the block, the text, and the layout of the page!
+            After you're confident on your knowledge, move on and learn about
+            CSS flexbox, arguably the most important CSS property on webpage
+            layout. Have fun!
+          </p>
+          <h2>Bonus: corner rounding</h2>
+          <p>
+            If you pay attention to websitesm you'll notice rounded corners are
+            everywhere in modern design. From a video's edges, an image's
+            corners, and even the buttons below, are rounded. How exactly do we
+            get rid of the sharp corners and replace them with smooth rounded
+            corners using CSS?
+          </p>
+          <code class="code">
+            border-radius: 20px;<br />
+            border-radius: 0px 10px 20px 30px;
+          </code>
+          <p>
+            You only need one CSS property to achieve this effect:
+            border-radius. Imagine the corner as a circle. This property
+            determines how wide the circle should be using the radius defined,
+            using pixels (px), and replaces the sharp corner with the round
+            circle, achieving the rounded effect. The more the radius, the more
+            rounded the corner becomes. The first rule in the snippet above
+            applies a corner radius of 20px to all 4 corners of the element.
+            What if you want different roundness on different corners? The
+            second rule applies different values to each corner. The first value
+            is for the radius of the top-left corner, the second value for
+            top-right, the third for bottom-right, and the fourth for
+            bottom-left. Feel free to try it out and see the magic at work!
+          </p>
+          <div class="buttons">
+            <a href="quiz-content.html" class="button">Back</a>
+            <a href="css-flexbox.html" class="button">Next</a>
+          </div>
+          <footer class="footer">
+            <div>
+              © <span id="year">2024</span>
+              <a
+                href="/"
+                target="_blank"
+                style="text-decoration: underline; color: white"
+                >MacWeb</a
+              >
+            </div>
+          </footer>
+        </article>
+      </div>
     </div>
   </body>
 </html>

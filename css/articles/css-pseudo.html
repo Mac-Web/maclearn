@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Pseudo-classes | MacLearn</title>
+    <link href="../style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
+      async="async"
+    ></script>
+    <name id="page" data="css-pseudo"></name>
+    <script src="../app.js"></script>
+  </head>
+  <body>
+    <div class="macsidebar" id="sidebar">
+      <a href="/"><img src="/logo.png" alt="" /></a>
+      <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
+      <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
+      <a href="/mactime/"><img src="/MacTime Logo.png" alt="" /></a>
+      <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
+      <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
+    </div>
+    <nav class="nav">
+      <a href="/maclearn/" class="logo">
+        <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
+      </a>
+      <a href="/maclearn/html/" class="nav-link">HTML</a>
+      <a href="/maclearn/css/" class="nav-link">CSS</a>
+      <a href="/maclearn/references/" class="nav-link">References</a>
+      <a href="/maclearn/playground/" class="nav-link">Playground</a>
+      <div class="right">
+        <div class="select help-menu" id="help-menu">
+          <span class="help-menu">Help</span>
+          <img
+            src="/maclearn/media/icons/caret.svg"
+            class="caret help-menu"
+            id="caret"
+          />
+          <ul id="cats" class="help-menu">
+            <a href="/macblog/projects/maclearn/">About</a>
+            <a href="/macblog/updates/maclearn/">Updates</a>
+            <a href="/macblog/projects/maclearn/">Docs</a>
+            <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank">
+              Feedback
+            </a>
+          </ul>
+        </div>
+        <a href="/maclearn/me/" class="profile">
+          <img src="/maclearn/media/icons/profile.svg" />
+        </a>
+      </div>
+    </nav>
+    <div class="wrap">
+      <ul class="sidebar">
+        <h2 class="sidebar-title">Laying Out Stuff</h2>
+        <a href="css-display.html">
+          <li>CSS Display</li>
+        </a>
+        <a href="css-flexbox.html">
+          <li>CSS Flexbox</li>
+        </a>
+        <a href="css-position.html">
+          <li>CSS Position</li>
+        </a>
+        <a href="quiz-layout.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Useful CSS Tips</h2>
+        <a href="css-math.html">
+          <li>CSS Math</li>
+        </a>
+        <a href="css-important.html">
+          <li>CSS !important</li>
+        </a>
+        <a
+          href="css-pseudo.html"
+          style="font-weight: bold; color: rgb(89, 137, 227)"
+        >
+          <li>CSS Pseudo</li>
+        </a>
+        <a href="quiz-useful.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Creating Animations</h2>
+        <a href="css-transition.html">
+          <li>CSS Transition</li>
+        </a>
+        <a href="css-animation.html">
+          <li>CSS Animation</li>
+        </a>
+        <a href="css-transform.html">
+          <li>CSS Transform</li>
+        </a>
+        <a href="quiz-animation.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Responsive Design</h2>
+        <a href="css-media-queries.html">
+          <li>CSS Media Queries</li>
+        </a>
+        <a href="css-viewport.html">
+          <li>CSS Viewport</li>
+        </a>
+        <a href="quiz-responsive.html">
+          <li>Unit Quiz</li>
+        </a>
+        <div class="sidebtns">
+          <a href="css-intro.html" class="sidebtn">Back</a>
+          <a href="finish.html" class="sidebtn">Next</a>
+        </div>
+      </ul>
+      <div class="content">
+        <article class="article">
+          <h1 class="article-title">CSS Pseudo-classes</h1>
+          <h3 class="author">By Tony <span class="date">8.31.2024</span></h3>
+          <!--<span class="date">2024.8.31</span>-->
+          <hr />
+          <p>
+            Think of CSS pseudo-classes as "extensions" of CSS selectors, or a
+            more advanced version of selectors that select an element only when
+            it's in a special state. For example, you can change an element's
+            appearance while being hovered using the :hover pseudo class.
+          </p>
+          <code class="code">
+            .element:hover {background-color: red;}<br />
+            .element:active {background-color: green;}<br />
+            .element:first-child {background-color: blue;}<br />
+            .element:last-child {background-color: yellow;}<br />
+            .element:before {<br />
+            &nbsp;&nbsp;content: "Before element";<br />
+            &nbsp;&nbsp;background-color: gray;<br />
+            &nbsp;&nbsp;width: 100px;<br />
+            }
+          </code>
+          <p>
+            You might have already noticed the :hover, :active, and :before
+            pseudo classes attached to the element class in the example above.
+            Note that all pseudo classes start with one colon : and is directly
+            attached to the selector without any spaces. The styles defined in
+            the :hover pseudo class only apply to the element when it is being
+            hovered over by the user. The :active styles only apply to the
+            element when it is being clicked. The :first-child psuedo class
+            applies styles to an element only if it is the first child of its
+            parent, and :last-child targets the last child of its parent. The
+            :before pseudo class is a bit different. It basically creates a new
+            element that belongs to the original element, but as a "before"
+            extension. The content property gives the before element actual text
+            content. There's also another pseudo class, :after, which works
+            exactly the same as :before, except it's created after the original
+            element. An element can have both the :before and the :after pseudo
+            classes at the same time.
+          </p>
+          <div class="lab">
+            <div class="tabs">
+              <div class="tab active" id="html">HTML</div>
+              <div class="tab" id="css">CSS</div>
+              <div class="tab" id="js">JavaScript</div>
+              <div class="tab" id="output">Output</div>
+            </div>
+            <div class="contentt" id="content">
+              <textarea
+                id="htmlEdit"
+                placeholder="Enter HTML here"
+                class="show"
+                value='<div>
+  <div class="element">First child</div>
+  <div class="element">Second child</div>
+  <div class="element">Third child</div>
+  <div class="element">Fourth child</div>
+  <div class="element">Last child</div>
+</div>'
+              ></textarea
+              ><textarea
+                id="cssEdit"
+                placeholder="Enter CSS here"
+                class="show"
+                value='.element:hover {
+  background-color: red;
+}
+.element:active {
+  background-color: green;
+}
+.element:first-child {
+  background-color: blue;
+}
+.element:last-child {
+  background-color: yellow;
+}
+.element:before {
+  content: "Before element";
+  background-color: gray;
+  width: 100px;
+}'
+              ></textarea
+              ><textarea
+                id="jsEdit"
+                placeholder="Enter JavaScript here"
+                class="show"
+              ></textarea
+              ><iframe frameborder="0" id="outputEdit"></iframe>
+            </div>
+          </div>
+          <p>
+            From the example above, you can see that the first element (child)
+            is being highlighted in blue because of the :first-child pseudo
+            class, and the last element is in yellow because of :last-child.
+            Now, when you hover over the other elements, they turn red because
+            of the :hover pseudo class. When you're not hovering over them, they
+            turn back to white because the :hover pseudo class only applies to
+            the element when it is being hovered. Same as the :active pseudo
+            class, the elements only turn green when you click on them. You can
+            also see that each element has a gray "Before element" that appears
+            before them. That's the :before pseudo class at work.
+          </p>
+          <p>
+            The reason the first child and the last child don't have the :hover
+            and :active effects is because their styles are defined later in the
+            CSS, so it overrides the previous rules. Feel free to play around
+            and explore different pseudo-classes to really learn how they work
+            and how useful they are when creating webpages. From hover effects
+            to applying different styles, pseudo-classes can do them all.
+          </p>
+          <div class="buttons">
+            <a href="css-important.html" class="button">Back</a>
+            <a href="quiz-useful.html" class="button">Next</a>
+          </div>
+          <footer class="footer">
+            <div>
+              © <span id="year">2024</span>
+              <a
+                href="/"
+                target="_blank"
+                style="text-decoration: underline; color: white"
+                >MacWeb</a
+              >
+            </div>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>

@@ -548,6 +548,15 @@ hr {
   transition: background-color 0.2s ease;
 }
 
+.no-saved {
+  color: white;
+  font-size: 20px;
+  padding-block: 20px;
+  line-height: 30px;
+  width: 40%;
+  margin-inline: 30%;
+}
+
 .lessonn {
   font-size: 20px;
   text-align: center;
