@@ -176,8 +176,8 @@ body {
 
 .sidebar {
   height: calc(100% - 15px);
-  min-width: 230px;
-  max-width: 230px;
+  min-width: 250px;
+  max-width: 250px;
   list-style-type: none;
   padding-bottom: 60px;
   margin-left: 80px;
@@ -211,7 +211,7 @@ body {
 
 .sidebtns {
   display: flex;
-  width: 18vw;
+  width: 200px;
   margin-inline: 1vw;
   margin-block: 10px;
   position: fixed;
@@ -233,6 +233,7 @@ body {
   padding-block: 8px;
   font-size: 18px;
   transition: background-color 0.2s ease;
+  margin-bottom: 0 !important;
 }
 
 .sidebtn:hover {
@@ -314,7 +315,8 @@ body {
   margin-block: 15px;
 }
 
-.article ul, .article ol {
+.article ul,
+.article ol {
   list-style-position: inside;
   padding: 20px;
   padding-inline: 0;
@@ -419,7 +421,6 @@ body {
   border: 3px solid rgb(25, 25, 25);
   border-radius: 10px;
 }
-
 
 .lab {
   width: 100%;

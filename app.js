@@ -34,3 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  let updateModal = document.querySelector(".modal-background");
+  document.addEventListener("click", (e) => {
+    if (e.target === updateModal) {
+      e.target.style.display = "none";
+      localStorage.setItem("maclearnmodal", "true");
+    }
+  });
+});

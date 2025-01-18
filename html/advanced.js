@@ -5,14 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
   sidebarmain.innerHTML = `<a href="/"><img src="/logo.png" alt="" /></a>
   <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
 <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
-<a href="/mactime/"><img src="/MacTime Logo.png" alt="" /></a>
+<a href="/mactools/"><img src="/MacTools Logo.png" alt="" /></a>
 <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
 <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>`;
   document.addEventListener("mousemove", function (event) {
-    if (
-      event.clientX <= 5 &&
-      sidebarmain.classList.contains("movingbar") !== true
-    ) {
+    if (event.clientX <= 5 && sidebarmain.classList.contains("movingbar") !== true) {
       sidebarmain.classList.add("movingbar");
     }
   });
@@ -25,9 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const nav = document.createElement("nav");
   nav.classList.add("nav");
   nav.innerHTML = `
-      <div class="overflowm shoot" id="overflowm">
-        <img src="/bars-solid.svg" alt="Menu" class="shoot" />
-      </div>
       <a href="/maclearn/" class="logo">
         <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
       </a>
@@ -35,40 +29,28 @@ document.addEventListener("DOMContentLoaded", function () {
       <a href="/maclearn/css/" class="nav-link">CSS</a>
       <a href="/maclearn/references/" class="nav-link">References</a>
       <a href="/maclearn/playground/" class="nav-link">Playground</a>
-      <a href="/maclearn/me/" class="nav-link">Me</a>
-      <div class="select secondselect">
-        <span id="header123">Tabs</span>
-        <ul id="cats">
-          <a href="/maclearn/html/">HTML</a>
-          <a href="/maclearn/css/">CSS</a>
-          <a href="/maclearn/references/">References</a>
-          <a href="/maclearn/playground/">Playground</a>
-        </ul>
-      </div>
-      <div class="select">
-        <span id="header123">Help</span>
-        <ul id="cats">
-          <a href="/macblog/projects/maclearn/">About</a>
-          <a href="/macblog/updates/maclearn/">Updates</a>
-          <a href="/macblog/projects/maclearn/">Docs</a>
-          <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"
-            >Feedback</a
-          >
-        </ul>
+      <div class="right">
+        <div class="select help-menu" id="help-menu">
+          <span class="help-menu">Help</span>
+          <img
+            src="/maclearn/media/icons/caret.svg"
+            class="caret help-menu"
+            id="caret"
+          />
+          <ul id="cats" class="help-menu">
+            <a href="/macblog/projects/maclearn/">About</a>
+            <a href="/macblog/updates/maclearn/">Updates</a>
+            <a href="/macblog/projects/maclearn/">Docs</a>
+            <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank">
+              Feedback
+            </a>
+          </ul>
+        </div>
+        <a href="/maclearn/me/" class="profile">
+          <img src="/maclearn/media/icons/profile.svg" />
+        </a>
       </div>`;
   //Above is code for nav bar
-
-  const overflowMenu = document.createElement("div");
-  overflowMenu.classList.add("overflowmenu");
-  overflowMenu.classList.add("shoot");
-  overflowMenu.innerHTML = `<div class="overflow-menu shoot" id="overflow-menu">
-      <a href="/maclearn/html/" class="olink">HTML</a>
-      <a href="/maclearn/css/" class="olink">CSS</a>
-      <a href="/maclearn/references/" class="olink">References</a>
-      <a href="/maclearn/playground/" class="olink">Playground</a>
-    </div>
-  `;
-  //Above is code for overflow menu
 
   const currentPage = window.location.pathname.split("/").pop();
   let paragraph,
@@ -101,62 +83,59 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(interactiveHTML);
       }
       const wrapper = document.createElement("div");
-      wrapper.classList.add("wrapper");
-      wrapper.classList.add("side-wrapper");
+      wrapper.classList.add("wrap");
       wrapper.innerHTML = `
-      <div class="sidebar side">
-        <ul style="list-style-type: none">
-          <h2>HTML Visuals</h2>
-          <a href="html-tables.html">
-            <li>HTML Tables</li>
-          </a>
-          <a href="html-multimedia.html">
-            <li>HTML Multimedia</li>
-          </a>
-          <a href="html-embed.html">
-            <li>HTML Embed</li>
-          </a>
-          <a href="html-svg.html">
-            <li>HTML SVG</li>
-          </a>
-          <a href="visuals-quiz.html">
-            <li>Unit Quiz</li>
-          </a>
-          <h2>Efficient Code</h2>
-
-          <a href="html-semantics.html">
-            <li>HTML Semantics</li>
-          </a>
-          <a href="html-special-characters.html">
-            <li>HTML Special Characters</li>
-          </a>
-          <a href="efficient-quiz.html">
-            <li>Unit Quiz</li>
-          </a>
-          <h2>Handling Users</h2>
-          <a href="html-forms.html">
-            <li>HTML Forms</li>
-          </a>
-          <a href="html-meta.html">
-            <li>HTML Meta Tag</li>
-          </a>
-          <a href="user-quiz.html">
-            <li>Unit Quiz</li>
-          </a>
-          <br />
-          <div class="sidebtns">
-            <a href="what-is-coding.html" class="sidebtn">Back</a>
-            <a href="finish.html" class="sidebtn">Next</a>
-          </div>
-        </ul>
-      </div>
-      <div class="tbar" id="tbar">
+      
+      <ul class="sidebar">
+        <h2 class="sidebar-title">HTML Visuals</h2>
+        <a href="html-tables.html">
+          <li>HTML Tables</li>
+        </a>
+        <a href="html-multimedia.html">
+          <li>HTML Multimedia</li>
+        </a>
+        <a href="html-embed.html">
+          <li>HTML Embed</li>
+        </a>
+        <a href="html-svg.html">
+          <li>HTML SVG</li>
+        </a>
+        <a href="visuals-quiz.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Efficient Code</h2>
+        <a href="html-semantics.html">
+          <li>HTML Semantics</li>
+        </a>
+        <a href="html-special-characters.html">
+          <li>HTML Special Characters</li>
+        </a>
+        <a href="efficient-quiz.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Handling Users</h2>
+        <a href="html-forms.html">
+          <li>HTML Forms</li>
+        </a>
+        <a href="html-meta.html">
+          <li>HTML Meta Tag</li>
+        </a>
+        <a href="user-quiz.html">
+          <li>Unit Quiz</li>
+        </a>
+        <div class="sidebtns">
+          <a href="what-is-coding.html" class="sidebtn">Back</a>
+          <a href="finish.html" class="sidebtn">Next</a>
+        </div>
+      </ul>
+      <!--<div class="tbar" id="tbar">
         <h2 class="bart">${articleName}</h2>
         <div class="bard">${articleDate}</div>
-      </div>
+      </div>-->
       <script src="app.js"></script>
+      <div class="content">
       <article class="article">
-        <div class="entire">
+       <!-- <div class="entire">
           <div class="sharepanel">
             <div class="sharethis-inline-share-buttons"></div>
             <div class="copy">
@@ -164,13 +143,11 @@ document.addEventListener("DOMContentLoaded", function () {
               <div class="cbtn" id="cbtn">Copy</div>
             </div>
           </div>
-        </div>
-        <h1>${articleName}</h1>
-        <h3 class="author">
-          By ${author}
-          <!--<span class="date">${articleRelease}</span>
-            <span style="padding-inline: 10px">•</span> Last updated-->
-          <span class="date">${articleDate}</span>
+        </div>-->
+        <h1 class="article-title">${articleName}</h1>
+        <h3 class="author">By ${author} <span class="date">${articleDate}</span></h3>
+        <!--<span class="date">${articleRelease}</span>-->
+        <!--
           <div class="icons">
             <img
               src="/maclearn/media/icons/star-regular.svg"
@@ -190,41 +167,59 @@ document.addEventListener("DOMContentLoaded", function () {
               id="flag"
               class="icon"
             />
-          </div>
-        </h3>
+          </div>-->
         <hr />
-        <div>${paragraph}</div>
+        ${paragraph}
         <div class="buttons">
-          <button id="prevButton" class="button">Back</button>
-          <button id="myButton" class="button">Next</button>
+          <a href="${prevLink}" class="button">Back</a>
+          <a href="${nextLink}" class="button">Next</a>
         </div>
+        <footer class="footer">
+          <div>
+            © <span id="year">2025</span>
+            <a
+              href="/"
+              target="_blank"
+              style="text-decoration: underline; color: white"
+              >MacWeb</a
+            >
+          </div>
+        </footer>
       </article>
-      <footer class="footer">
-        <div>
-          © <span id="year">2024</span>
-          <a href="/" style="text-decoration: underline; color: white"
-            >MacWeb</a
-          >
-        </div>
-      </footer>`;
+      </div>`;
       //Above is code for the main content of the page
 
-      document.body.appendChild(overflowMenu);
       document.body.appendChild(nav);
       document.body.appendChild(wrapper);
-      document
-        .getElementById("myButton")
-        .addEventListener("click", function () {
-          window.location.href = nextLink;
-        });
-      document
-        .getElementById("prevButton")
-        .addEventListener("click", function () {
-          window.location.href = prevLink;
-        });
-      const sideItems = document
-        .querySelector(".sidebar")
-        .querySelectorAll("li");
+
+      const helpMenuItems = document.getElementById("cats");
+      const helpMenu = document.getElementById("help-menu");
+      const helpCaret = document.getElementById("caret");
+      let helpOpen = false;
+      document.addEventListener("click", (e) => {
+        if (!e.target.classList.contains("help-menu")) {
+          helpMenuItems.style.transform = "scaleY(0)";
+          helpMenu.removeAttribute("style");
+          helpCaret.removeAttribute("style");
+          helpOpen = false;
+        }
+      });
+      helpMenu.addEventListener("click", () => {
+        if (helpOpen === false) {
+          helpMenuItems.style.transform = "scaleY(1)";
+          helpMenu.style.backgroundColor = "rgba(15, 15, 15, 0.8)";
+          helpCaret.style.transform = "rotate(0deg)";
+          helpOpen = true;
+        } else {
+          helpMenuItems.style.transform = "scaleY(0)";
+          helpMenu.removeAttribute("style");
+          helpCaret.removeAttribute("style");
+          helpOpen = false;
+        }
+      });
+
+      const sideItems = document.querySelector(".sidebar").querySelectorAll("li");
+      console.log(sideItems);
       sideItems.forEach((item) => {
         let itemText = item.innerHTML;
         if (itemText === articleName) {
@@ -235,10 +230,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (interactiveHTML != null) {
         if (interactiveHTML.count) {
           for (let i = 1; i <= interactiveHTML.count; i++) {
-            let htmlCodeLabs =
-              i == 1
-                ? document.getElementById("htmlEdit")
-                : document.getElementById("htmlEdit2");
+            let htmlCodeLabs = i == 1 ? document.getElementById("htmlEdit") : document.getElementById("htmlEdit2");
             htmlCodeLabs.value = interactiveHTML[`interactiveHTML${i}`];
           }
         } else {
@@ -258,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const icons = document.querySelector(".icons");
       const authorr = document.querySelector(".author");
       const page = document.getElementById("page").getAttribute("data");
-      clink.innerHTML = window.location.href;
+      /*clink.innerHTML = window.location.href;
       window.addEventListener("scroll", function () {
         if (window.scrollY > 150) {
           bar.classList.add("tbar-v");
@@ -318,7 +310,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
       report.addEventListener("click", function () {
         window.open("https://forms.gle/GrNw79oqWgr2u9aLA", "_blank");
-      });
+      });*/
       const htmlTab = document.getElementById("html");
       const cssTab = document.getElementById("css");
       const jsTab = document.getElementById("js");
@@ -330,6 +322,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const tabs = [htmlTab, cssTab, jsTab, outputTab];
       const edits = [htmlEdit, cssEdit, jsEdit, outputEdit];
       const outputWindow = outputEdit.contentWindow.document;
+      code(htmlTab, htmlEdit);
       htmlTab.addEventListener("click", function () {
         code(htmlTab, htmlEdit);
       });
@@ -370,7 +363,7 @@ document.addEventListener("DOMContentLoaded", function () {
         );
         outputWindow.close();
       }
-      
+
       const htmlTab2 = document.getElementById("html2");
       const cssTab2 = document.getElementById("css2");
       const jsTab2 = document.getElementById("js2");

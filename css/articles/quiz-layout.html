@@ -3,20 +3,18 @@
   <head>
     <title>Laying Out Stuff Quiz | MacLearn</title>
     <link href="../quiz.css" rel="stylesheet" />
-    <link href="/maclearn/style.css" rel="stylesheet" />
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
   </head>
   <body>
-    <div class="overflow-menu shoot" id="overflow-menu">
-      <a href="/maclearn/html/" class="olink">HTML</a>
-      <a href="/maclearn/css/" class="olink">CSS</a>
-      <a href="/maclearn/references/" class="olink">References</a>
-      <a href="/maclearn/playground/" class="olink">Playground</a>
+    <div class="macsidebar" id="sidebar">
+      <a href="/"><img src="/logo.png" alt="" /></a>
+      <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
+      <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
+      <a href="/mactools/"><img src="/MacTools Logo.png" alt="" /></a>
+      <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
+      <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
     </div>
     <nav class="nav">
-      <div class="overflowm shoot" id="overflowm">
-        <img src="/bars-solid.svg" alt="Menu" class="shoot" />
-      </div>
       <a href="/maclearn/" class="logo">
         <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
       </a>
@@ -24,136 +22,123 @@
       <a href="/maclearn/css/" class="nav-link">CSS</a>
       <a href="/maclearn/references/" class="nav-link">References</a>
       <a href="/maclearn/playground/" class="nav-link">Playground</a>
-      <a href="/maclearn/me/" class="nav-link">Me</a>
-      <div class="select secondselect">
-        <span id="header123">Tabs</span>
-        <ul id="cats">
-          <a href="/maclearn/html/">HTML</a>
-          <a href="/maclearn/css/">CSS</a>
-          <a href="/maclearn/references/">References</a>
-          <a href="/maclearn/playground/">Playground</a>
-        </ul>
-      </div>
-      <div class="select">
-        <span id="header123">Help</span>
-        <ul id="cats">
-          <a href="/macblog/projects/maclearn/">About</a>
-          <a href="/macblog/updates/maclearn/">Updates</a>
-          <a href="/macblog/projects/maclearn/">Docs</a>
-          <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"
-            >Feedback</a
-          >
-        </ul>
+      <div class="right">
+        <div class="select help-menu" id="help-menu">
+          <span class="help-menu">Help</span>
+          <img src="/maclearn/media/icons/caret.svg" class="caret help-menu" id="caret" />
+          <ul id="cats" class="help-menu">
+            <a href="/macblog/projects/maclearn/">About</a>
+            <a href="/macblog/updates/maclearn/">Updates</a>
+            <a href="/macblog/projects/maclearn/">Docs</a>
+            <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"> Feedback </a>
+          </ul>
+        </div>
+        <a href="/maclearn/me/" class="profile">
+          <img src="/maclearn/media/icons/profile.svg" />
+        </a>
       </div>
     </nav>
-    <div class="wrapper side-wrapper">
-      <div class="sidebar side">
-        <ul style="list-style-type: none">
-          <h2>Laying Out Stuff</h2>
-          <a href="css-display.html">
-            <li>CSS Display</li>
-          </a>
-          <a href="css-flexbox.html">
-            <li>CSS Flexbox</li>
-          </a>
-          <a href="css-position.html">
-            <li>CSS Position</li>
-          </a>
-          <a
-            href="quiz-layout.html"
-            style="font-weight: bold; color: rgb(89, 137, 227)"
-          >
-            <li>Unit Quiz</li>
-          </a>
-          <h2>Useful CSS Tips</h2>
-          <a href="css-math.html">
-            <li>CSS Math</li>
-          </a>
-          <a href="css-important.html">
-            <li>CSS !important</li>
-          </a>
-          <a href="css-pseudo.html">
-            <li>CSS Pseudo</li>
-          </a>
-          <a href="quiz-useful.html">
-            <li>Unit Quiz</li>
-          </a>
-          <h2>Creating Animations</h2>
-          <a href="css-transition.html">
-            <li>CSS Transition</li>
-          </a>
-          <a href="css-animation.html">
-            <li>CSS Animation</li>
-          </a>
-          <a href="css-transform.html">
-            <li>CSS Transform</li>
-          </a>
-          <a href="quiz-animation.html">
-            <li>Unit Quiz</li>
-          </a>
-          <h2>Responsive Design</h2>
-          <a href="css-media-queries.html">
-            <li>CSS Media Queries</li>
-          </a>
-          <a href="css-viewport.html">
-            <li>CSS Viewport</li>
-          </a>
-          <a href="quiz-responsive.html">
-            <li>Unit Quiz</li>
-          </a>
-          <br />
-          <div class="sidebtns">
-            <a href="css-intro.html" class="sidebtn">Back</a>
-            <a href="finish.html" class="sidebtn">Next</a>
-          </div>
-        </ul>
-      </div>
-      <script src="app.js"></script>
-      <div class="flex">
-        <div class="container">
-          <div id="question-container" class="hide">
-            <div id="question">Question</div>
+    <div class="wrap">
+      <ul class="sidebar">
+        <h2 class="sidebar-title">Laying Out Stuff</h2>
+        <a href="css-display.html">
+          <li>CSS Display</li>
+        </a>
+        <a href="css-flexbox.html">
+          <li>CSS Flexbox</li>
+        </a>
+        <a href="css-position.html">
+          <li>CSS Position</li>
+        </a>
+        <a href="quiz-layout.html" style="font-weight: bold; color: rgb(89, 137, 227)">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Useful CSS Tips</h2>
+        <a href="css-math.html">
+          <li>CSS Math</li>
+        </a>
+        <a href="css-important.html">
+          <li>CSS !important</li>
+        </a>
+        <a href="css-pseudo.html">
+          <li>CSS Pseudo</li>
+        </a>
+        <a href="quiz-useful.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Creating Animations</h2>
+        <a href="css-transition.html">
+          <li>CSS Transition</li>
+        </a>
+        <a href="css-animation.html">
+          <li>CSS Animation</li>
+        </a>
+        <a href="css-transform.html">
+          <li>CSS Transform</li>
+        </a>
+        <a href="quiz-animation.html">
+          <li>Unit Quiz</li>
+        </a>
+        <h2 class="sidebar-title">Responsive Design</h2>
+        <a href="css-media-queries.html">
+          <li>CSS Media Queries</li>
+        </a>
+        <a href="css-viewport.html">
+          <li>CSS Viewport</li>
+        </a>
+        <a href="quiz-responsive.html">
+          <li>Unit Quiz</li>
+        </a>
+        <div class="sidebtns">
+          <a href="css-intro.html" class="sidebtn">Back</a>
+          <a href="finish.html" class="sidebtn">Next</a>
+        </div>
+      </ul>
+      <script src="../app.js"></script>
+      <div class="content">
+        <div class="flex">
+          <div class="container">
+            <div id="question-container" class="hide">
+              <div id="question">Question</div>
 
-            <div id="answer-buttons" class="btn-grid">
-              <button class="btn">Answer 1</button>
-              <button class="btn">Answer 2</button>
-              <button class="btn">Answer 3</button>
-              <button class="btn">Answer 4</button>
-            </div>
-          </div>
-          <div id="controls">
-            <div id="message">
-              <div
-                id="message2"
-                style="
-                  padding-inline: 100px;
-                  line-height: 40px;
-                  font-size: 27px;
-                "
-              >
-                Click "start" to see what you know about basic CSS syntax and
-                implementation!
+              <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
               </div>
             </div>
-          </div>
-          <div class="results" id="results">
-            <div class="score" id="score">fdewedf</div>
+            <div id="controls">
+              <div id="message">
+                <div id="message2" style="padding-inline: 100px; line-height: 40px; font-size: 27px">
+                  Click "start" to see what you know about basic CSS syntax and implementation!
+                </div>
+              </div>
+            </div>
+            <div class="results" id="results">
+              <div class="score" id="score">fdewedf</div>
+            </div>
           </div>
         </div>
+        <article class="article">
+          <div class="buttons">
+            <button id="back" class="button">Back</button>
+            <button id="start" class="button">Start</button>
+          </div>
+          <footer class="footer">
+            <div>
+              © <span id="year">2024</span>
+              <a href="/" style="text-decoration: underline; color: white">MacWeb</a>
+            </div>
+          </footer>
+        </article>
       </div>
-      <article class="article">
-        <div class="buttons">
-          <button id="back" class="button">Back</button>
-          <button id="start" class="button">Start</button>
-        </div>
-      </article>
       <script>
         document.addEventListener("DOMContentLoaded", () => {
           const start = document.getElementById("start");
           const quiz = document.getElementById("question-container");
           const question = document.getElementById("question");
-          const answerButtonsElement =
-            document.getElementById("answer-buttons");
+          const answerButtonsElement = document.getElementById("answer-buttons");
           const back = document.getElementById("back");
           const controls = document.getElementById("controls");
           const results = document.getElementById("results");
@@ -180,26 +165,18 @@
                   actualCount++;
                 }
               });
-              let percentage = Math.round(
-                (actualCount / questions.length) * 100
-              );
-              results.innerHTML =
-                "Your quiz score is " +
-                percentage +
-                "% correct. <br> Go back, review, and improve your score!";
+              let percentage = Math.round((actualCount / questions.length) * 100);
+              results.innerHTML = "Your quiz score is " + percentage + "% correct. <br> Go back, review, and improve your score!";
               start.innerHTML = "Review!";
               start.addEventListener("click", () => {
                 window.location.href = "/maclearn/css/articles/css-display.html";
               });
               if (percentage > 80) {
                 results.innerHTML =
-                  "Your quiz score is " +
-                  percentage +
-                  "% correct! <br> Move on to learn more CSS properties and tricks!";
+                  "Your quiz score is " + percentage + "% correct! <br> Move on to learn more CSS properties and tricks!";
                 start.innerHTML = "Go!";
                 start.addEventListener("click", () => {
-                  window.location.href =
-                    "/maclearn/css/articles/css-math.html";
+                  window.location.href = "/maclearn/css/articles/css-math.html";
                 });
               }
             }
@@ -291,14 +268,12 @@
             } else {
               correctArray.splice(currentQuestionIndex, 1);
             }
-            answerArray[currentQuestionIndex] =
-              selectedAnswer.parentElement.innerHTML;
+            answerArray[currentQuestionIndex] = selectedAnswer.parentElement.innerHTML;
           }
 
           const questions = [
             {
-              question:
-                "Which CSS property determines how an element is being displayed?",
+              question: "Which CSS property determines how an element is being displayed?",
               answers: [
                 { text: "display", correct: true },
                 { text: "inline", correct: false },
@@ -307,8 +282,7 @@
               ],
             },
             {
-              question:
-                "How to align some elements in the center of the flexbox's axis?",
+              question: "How to align some elements in the center of the flexbox's axis?",
               answers: [
                 { text: "align: center;", correct: false },
                 {
@@ -347,11 +321,5 @@
         });
       </script>
     </div>
-    <footer class="footer">
-      <div>
-        © <span id="year">2024</span>
-        <a href="/" style="text-decoration: underline; color: white">MacWeb</a>
-      </div>
-    </footer>
   </body>
 </html>

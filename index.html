@@ -13,7 +13,7 @@
       <a href="/"><img src="/logo.png" alt="" /></a>
       <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
       <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
-      <a href="/mactime/"><img src="/MacTime Logo.png" alt="" /></a>
+      <a href="/mactools/"><img src="/MacTools Logo.png" alt="" /></a>
       <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
       <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
     </div>
@@ -28,18 +28,12 @@
       <div class="right">
         <div class="select help-menu" id="help-menu">
           <span class="help-menu">Help</span>
-          <img
-            src="/maclearn/media/icons/caret.svg"
-            class="caret help-menu"
-            id="caret"
-          />
+          <img src="/maclearn/media/icons/caret.svg" class="caret help-menu" id="caret" />
           <ul id="cats" class="help-menu">
             <a href="/macblog/projects/maclearn/">About</a>
             <a href="/macblog/updates/maclearn/">Updates</a>
             <a href="/macblog/projects/maclearn/">Docs</a>
-            <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank">
-              Feedback
-            </a>
+            <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"> Feedback </a>
           </ul>
         </div>
         <a href="/maclearn/me/" class="profile">
@@ -47,6 +41,23 @@
         </a>
       </div>
     </nav>
+    <div class="modal-background">
+      <div class="modal">
+        <h2 class="modal-title">MacLearn Winter Update</h2>
+        <img src="media/update.jpg" class="modal-img" />
+        <p class="modal-des">
+          Finished applying redesign across the platform, updated content and appearance, and more! Check out the MacLearn Winter
+          Update!
+        </p>
+        <a href="/macblog/updates/maclearn/2025/winter.html" class="modal-link" target="_blank"> What's new </a>
+      </div>
+    </div>
+    <script>
+      let updateModal = document.querySelector(".modal-background");
+      if (localStorage.maclearnmodal) {
+        updateModal.style.display = "none";
+      }
+    </script>
     <div class="wrap">
       <div class="hero">
         <h1 class="hero-title">Welcome to MacLearn!</h1>
@@ -78,12 +89,7 @@
     <footer class="footer">
       <div>
         © <span id="year">2024</span>
-        <a
-          href="/"
-          target="_blank"
-          style="text-decoration: underline; color: white"
-          >MacWeb</a
-        >
+        <a href="/" target="_blank" style="text-decoration: underline; color: white">MacWeb</a>
       </div>
     </footer>
   </body>
