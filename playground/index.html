@@ -6,6 +6,11 @@
     <title>Playground | MacLearn</title>
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="/maclearn/style.css" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5598129470490010"
+      crossorigin="anonymous"
+    ></script>
     <style>
       .inputs {
         width: 50%;
@@ -52,6 +57,41 @@
         overflow: hidden;
         margin-top: 20px;
       }
+
+      .ad-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 230px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-block: 20px;
+        position: relative;
+        border: 1px solid gray;
+        margin-block: 30px;
+        border-radius: 10px;
+      }
+
+      .ad-container::after {
+        content: "ADVERTISEMENT";
+        width: 10%;
+        color: gray;
+        position: absolute;
+        left: 45%;
+        top: 110px;
+        font-size: 13px;
+        text-align: center;
+      }
+
+      .ad-container ins {
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     </style>
   </head>
   <body>
@@ -72,20 +112,15 @@
       <a href="/maclearn/references/" class="nav-link">References</a>
       <a href="/maclearn/playground/" class="nav-link">Playground</a>
       <div class="right">
+        <input type="text" placeholder="Search articles" class="nav-search" id="nav-search" />
         <div class="select help-menu" id="help-menu">
           <span class="help-menu">Help</span>
-          <img
-            src="/maclearn/media/icons/caret.svg"
-            class="caret help-menu"
-            id="caret"
-          />
+          <img src="/maclearn/media/icons/caret.svg" class="caret help-menu" id="caret" />
           <ul id="cats" class="help-menu">
-            <a href="/macblog/projects/maclearn/">About</a>
+            <a href="/macblog/apps/maclearn/">About</a>
             <a href="/macblog/updates/maclearn/">Updates</a>
-            <a href="/macblog/projects/maclearn/">Docs</a>
-            <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank">
-              Feedback
-            </a>
+            <a href="/macblog/apps/maclearn/">Docs</a>
+            <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"> Feedback </a>
           </ul>
         </div>
         <a href="/maclearn/me/" class="profile">
@@ -106,12 +141,23 @@
             <textarea id="js" placeholder="JavaScript"></textarea>
           </div>
         </div>
-        <iframe
-          id="output"
-          sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
-        ></iframe>
+        <iframe id="output" sandbox="allow-forms allow-scripts allow-same-origin allow-popups"></iframe>
+      </div>
+
+      <div class="ad-container">
+        <ins
+          class="adsbygoogle"
+          style="display: block"
+          data-ad-client="ca-pub-5598129470490010"
+          data-ad-slot="2392383134"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
       </div>
       <script src="script.js"></script>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
     </div>
   </body>
 </html>

@@ -26,13 +26,14 @@
       <a href="/maclearn/references/" class="nav-link">References</a>
       <a href="/maclearn/playground/" class="nav-link">Playground</a>
       <div class="right">
+        <input type="text" placeholder="Search articles" autocomplete="off" class="nav-search" id="nav-search">
         <div class="select help-menu" id="help-menu">
           <span class="help-menu">Help</span>
           <img src="/maclearn/media/icons/caret.svg" class="caret help-menu" id="caret" />
           <ul id="cats" class="help-menu">
-            <a href="/macblog/projects/maclearn/">About</a>
+            <a href="/macblog/apps/maclearn/">About</a>
             <a href="/macblog/updates/maclearn/">Updates</a>
-            <a href="/macblog/projects/maclearn/">Docs</a>
+            <a href="/macblog/apps/maclearn/">Docs</a>
             <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"> Feedback </a>
           </ul>
         </div>
@@ -68,11 +69,19 @@
           <img src="media/html.png" />
           <h2 class="course-title">HTML</h2>
           <p><b>Learn</b> HTML to add content to your webpage.</p>
+          <div class="course-info">
+            <div class="progress"><div class="bar" id="html-progress"></div></div>
+            <span class="percentage" id="html-percentage">0%</span>
+          </div>
         </a>
         <a href="css/" class="course">
           <img src="media/css.png" />
           <h2 class="course-title">CSS</h2>
           <p><b>Master</b> CSS to design and style your webpage.</p>
+          <div class="course-info">
+            <div class="progress"><div class="bar" id="css-progress"></div></div>
+            <span class="percentage" id="css-percentage">0%</span>
+          </div>
         </a>
         <a href="references/" class="course">
           <img src="media/references.png" />
@@ -87,10 +96,24 @@
       </div>
     </div>
     <footer class="footer">
-      <div>
-        © <span id="year">2024</span>
-        <a href="/" target="_blank" style="text-decoration: underline; color: white">MacWeb</a>
-      </div>
+      <div>© <span id="year"></span> <a href="/" target="_blank" style="text-decoration: underline; color: white">MacWeb</a></div>
     </footer>
+    <script>
+      const htmlProgress = document.getElementById("html-progress");
+      const cssProgress = document.getElementById("css-progress");
+      const htmlPercentage = document.getElementById("html-percentage");
+      const cssPercentage = document.getElementById("css-percentage");
+      if (localStorage.getItem("htmlxp")) {
+        let percent = Math.round(Number(localStorage.getItem("htmlxp")) / 6).toString() + "%";
+        htmlProgress.style.width = percent;
+        htmlPercentage.textContent = percent;
+      }
+      if (localStorage.getItem("cssxp")) {
+        let percent = Math.round(Number(localStorage.getItem("cssxp")) / 8).toString() + "%";
+        cssProgress.style.width = percent;
+        cssPercentage.textContent = percent;
+      }
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
   </body>
 </html>

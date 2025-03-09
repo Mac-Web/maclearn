@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title id="title"></title>
+    <link rel="stylesheet" href="quiz.css" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5598129470490010"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="macsidebar" id="sidebar">
+      <a href="/"><img src="/logo.png" alt="" /></a>
+      <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
+      <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
+      <a href="/mactools/"><img src="/MacTools Logo.png" alt="" /></a>
+      <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
+      <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
+    </div>
+    <nav class="nav">
+      <a href="/maclearn/" class="logo">
+        <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
+      </a>
+      <a href="/maclearn/html/" class="nav-link">HTML</a>
+      <a href="/maclearn/css/" class="nav-link">CSS</a>
+      <a href="/maclearn/references/" class="nav-link">References</a>
+      <a href="/maclearn/playground/" class="nav-link">Playground</a>
+      <div class="right">
+        <input type="text" placeholder="Search articles" class="nav-search" id="nav-search" />
+        <div class="select help-menu" id="help-menu">
+          <span class="help-menu">Help</span>
+          <img src="/maclearn/media/icons/caret.svg" class="caret help-menu" id="caret" />
+          <ul id="cats" class="help-menu">
+            <a href="/macblog/apps/maclearn/">About</a>
+            <a href="/macblog/updates/maclearn/">Updates</a>
+            <a href="/macblog/apps/maclearn/">Docs</a>
+            <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"> Feedback </a>
+          </ul>
+        </div>
+        <a href="/maclearn/me/" class="profile">
+          <img src="/maclearn/media/icons/profile.svg" />
+        </a>
+      </div>
+    </nav>
+    <div class="wrap">
+      <ul class="sidebar" id="ul-sidebar"></ul>
+      <script src="app.js"></script>
+      <div class="content">
+        <div class="flex">
+          <div class="container">
+            <div id="question-container" class="hide">
+              <div id="question"></div>
+              <div id="answer-buttons" class="btn-grid"></div>
+            </div>
+            <div id="controls">
+              <div id="message">
+                <div id="message2" style="padding-inline: 100px; line-height: 40px; font-size: 27px"></div>
+              </div>
+            </div>
+            <div class="results hide" id="results">
+              <div class="score" id="score"></div>
+            </div>
+          </div>
+        </div>
+        <article class="article">
+          <div class="buttons">
+            <button id="back" class="button">Back</button>
+            <button id="start" class="button">Start</button>
+          </div>
+
+          <div class="ad-container">
+            <ins
+              class="adsbygoogle"
+              style="display: block"
+              data-ad-client="ca-pub-5598129470490010"
+              data-ad-slot="2392383134"
+              data-ad-format="auto"
+              data-full-width-responsive="true"
+            ></ins>
+          </div>
+          <footer class="footer">
+            <div>
+              © <span id="year">2025</span>
+              <a href="/" style="text-decoration: underline; color: white">MacWeb</a>
+            </div>
+          </footer>
+        </article>
+      </div>
+      <script src="quiz.js"></script>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </body>
+</html>

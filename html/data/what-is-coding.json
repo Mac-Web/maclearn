@@ -1,9 +1,0 @@
-{
-  "paragraph": "<p>Coding, or <i>programming</i>, is a skill that lets you tell computers or other hardware what you want them to do with lines of code that they can understand and execute. (This website is made by lines of code, too!)</p><p>There are many different programming languages, each specified for a different task. Here are some languages involved in web development:<br /></p><ul><li><strong> HTML</strong> (Hyper Text Markup Language) makes a website's contents and structures.</li><li><strong> CSS</strong> (Cascading Style Sheets) makes a website look better by changing its styling and looks.</li><li><strong> JavaScript</strong> makes a website more interactive, responsive, and dynamic.</li></ul><br /><img src=\"media/coding1.jpg\" alt=\"Coding Image\" /><figcaption>An example of some HTML markup code.</figcaption><p>Coding can improve your logical thinking skill. Having a clear, logical, and understandable structure of codes is really important.</p><p>It also trains your patience. You <i>will</i> experience bugs and frustration very often. But being patient to debug again and again and review your code again and again is an important skill to learn.</p><p><strong>Summary:</strong><br />Coding is a very important skill to learn in the 21st century. People code to control computers to do different things. There are different kinds of coding languages, each with its own purpose to handle a task.</p>",
-  "next": "what-is-html.html",
-  "previous": "./",
-  "articleName": "What is Coding?",
-  "articleDate": "2.19.2024",
-  "author": "Tony",
-  "articleRelease": "2.11.2023"
-}

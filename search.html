@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>References | MacLearn</title>
+    <title>Search | MacLearn</title>
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="/maclearn/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src="app.js"></script>
   </head>
   <body>
@@ -19,7 +19,7 @@
     </div>
     <nav class="nav">
       <a href="/maclearn/" class="logo">
-        <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
+        <img src="maclearn-logo.png" alt="MacLearn Logo" />
       </a>
       <a href="/maclearn/html/" class="nav-link">HTML</a>
       <a href="/maclearn/css/" class="nav-link">CSS</a>
@@ -44,47 +44,18 @@
     </nav>
     <div class="wrap">
       <div class="hero">
-        <h1 class="hero-title">References</h1>
-        <p class="hero-des">
-          Check out our detailed references on anything related to web
-          development here.
-        </p>
+        <h1 class="hero-title" id="header">Search results</h1>
       </div>
-      <div class="sections">
-        <div class="section">
-          <h2 class="section-title">HTML Tags</h2>
-          <div class="lessons">
-            <a href="tags/article.html?page=a-tags" class="lesson">&lt;a&gt;</a>
-            <a href="tags/article.html?page=br-tag" class="lesson">&lt;br&gt;</a>
-            <a href="tags/article.html?page=heading-tags" class="lesson">
-              &lt;h1&gt;-&lt;h6&gt;
-            </a>
-            <a href="tags/article.html?page=hr-tag" class="lesson">&lt;hr&gt;</a>
-            <a href="tags/article.html?page=img-tag" class="lesson">&lt;img&gt;</a>
-            <a href="tags/article.html?page=list-tags" class="lesson">List Tags</a>
-            <a href="tags/article.html?page=table-tags" class="lesson">Table Tags</a>
-          </div>
-        </div>
-        <div class="section">
-          <h2 class="section-title">Web Development</h2>
-          <div class="lessons">
-            <a href="development/article.html?page=installing-vscode" class="lesson">
-              Installing VS Code
-            </a>
-          </div>
-        </div>
+      <div class="results" id="result">
+        Loading results...
       </div>
     </div>
     <footer class="footer">
-      <div>
-        © <span id="year">2025</span>
-        <a
-          href="/"
-          target="_blank"
-          style="text-decoration: underline; color: white"
-          >MacWeb</a
-        >
-      </div>
+      <div>© <span id="year"></span> <a href="/" target="_blank" style="text-decoration: underline; color: white">MacWeb</a></div>
     </footer>
+    <script>
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+    <script src="search.js"></script>
   </body>
 </html>

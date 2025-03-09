@@ -1,0 +1,11 @@
+[
+  {
+    "paragraph": "<p>To code a website, we need a <i>code editor</i>, so you can code on it.</p><p>Most people use Microsoft's <strong>Visual Studio Code (VS Code)</strong> as thier code editor, but you can also use Replit, Sublime Text, TextEdit, or even Notepad. But because of its efficiency, power, and ease of use, VS Code is recomended for code editing.</p><img src=\"../media/vs1.jpg\" alt=\"Visual Studio Code logo\" style=\"width: 30%; margin-inline: 35%; border-radius: 10px\" /><figcaption>Visul Studio Code 2022 logo.</figcaption><p>To install VS Code, click on <a href=\"https://code.visualstudio.com/download\" target=\"_blank\"> their official website</a> and coose the version that maches your operating system, then download it and follow the steps bellow:</p><h2 class=\"article-subheading\">1. Click the downloaded file at the bottom-left corner.</h2><img src=\"../media/vs2.png\" alt=\"Step1\" /><h2 class=\"article-subheading\">2. Select \"I accept\" and click \"Next\".</h2><img src=\"../media/vs3.png\" alt=\"Step2\" /><h2 class=\"article-subheading\">3. Select \"Create a desktop icon\", and click \"Next\".</h2><img src=\"../media/vs4.png\" alt=\"Step3\" /><h2 class=\"article-subheading\">4. Click \"Install\".</h2><img src=\"../media/vs5.png\" alt=\"Step4\" /><h2 class=\"article-subheading\">5. Click \"Finish\" and VS Code should launch!</h2><img src=\"../media/vs6.png\" alt=\"Step5\" /><p>If it doesn't launch, go check if there is a VS Code icon on your desktop. If you still have any problems, feel free to search online for other VS Code installing tutorials!</p>",
+    "articleName": "Installing Visual Studio Code",
+    "articleDate": "6.8.2024",
+    "author": "Tony",
+    "articleRelease": "2.11.2023",
+    "id": "installing-vscode",
+    "sidebarText": "Installing VS Code"
+  }
+]

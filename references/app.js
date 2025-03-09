@@ -33,4 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
       helpOpen = false;
     }
   });
+  const navSearch = document.getElementById("nav-search");
+
+  navSearch.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && navSearch.value.trim().length > 0) {
+      window.location.href = `/maclearn/search.html?query=${navSearch.value.trim().toLowerCase()}`;
+    }
+  });
 });

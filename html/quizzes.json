@@ -1,0 +1,160 @@
+[
+  {
+    "name": "HTML Basics",
+    "description": "Click \"start\" to see what you know about the very basics of coding and HTML!",
+    "questions": [
+      {
+        "question": "What does HTML stand for?",
+        "answers": [
+          { "text": "Hypertext Marking Language" },
+          { "text": "Hacking Technology Manual Language" },
+          { "text": "Hypertext Markup Language", "correct": true },
+          { "text": "Http Text Making Language" }
+        ]
+      },
+      {
+        "question": "Which tag is used to create a level one heading?",
+        "answers": [{ "text": "<heading>" }, { "text": "<h1>", "correct": true }, { "text": "<h6>" }, { "text": "<head>" }]
+      },
+      {
+        "question": "Which pair of tags wraps the visible content of a webpage?",
+        "answers": [
+          { "text": "<information>" },
+          { "text": "<body>", "correct": true },
+          { "text": "<head>" },
+          { "text": "<content>" }
+        ]
+      }
+    ],
+    "links": ["/maclearn/html/html-basic-structure.html", "/maclearn/html/what-is-coding.html"],
+    "end": "Move on to learn more about HTML Foundations!"
+  },
+  {
+    "name": "HTML Foundations",
+    "description": "Click \"start\" to test your HTML basic structuring skills and knowledge!",
+    "questions": [
+      {
+        "question": "Fill in the blank: <img _____ = \"image.png\">",
+        "answers": [{ "text": "link" }, { "text": "source" }, { "text": "image" }, { "text": "src", "correct": true }]
+      },
+      {
+        "question": "What is the alt attribute for: <img src=\"image.png\" alt=\"An image.\">",
+        "answers": [
+          { "text": "Alternative Image" },
+          { "text": "Alternative Text", "correct": true },
+          { "text": "Autoclick" },
+          { "text": "It doesn't do anything" }
+        ]
+      }
+    ],
+    "links": ["/maclearn/html/html-img.html", "/maclearn/html/html-basic-structure.html"],
+    "end": "Move on to master more different HTML tags!"
+  },
+  {
+    "name": "HTML Common Tags",
+    "description": "Click \"start\" to see how many common HTML tags you know so far!",
+    "questions": [
+      {
+        "question": "Which tag and attribute is used to create links?",
+        "answers": [
+          { "text": "<link href=\" \">" },
+          { "text": "<anchor>" },
+          { "text": "<a src=\" \">" },
+          { "text": "<a href=\" \">", "correct": true }
+        ]
+      },
+      {
+        "question": "Which tag is used to make list items?",
+        "answers": [{ "text": "<list-items>" }, { "text": "<list>" }, { "text": "<li>", "correct": true }, { "text": "<ul>" }]
+      }
+    ],
+    "links": ["/maclearn/html/html-tables.html", "/maclearn/html/html-img.html"],
+    "end": "Good job, you just finished the beginner HTML unit! Move on and explore the more advanced HTML skills and knowledge in the next unit!"
+  },
+  {
+    "name": "HTML Visuals",
+    "description": "Click \"start\" to test your HTML visual element skills and knowledge!",
+    "questions": [
+      {
+        "question": "What does the <tr> tag do?",
+        "answers": [
+          { "text": "It creates data cells in a table" },
+          { "text": "It creates rows in a table", "correct": true },
+          { "text": "It creates a column in a table" },
+          { "text": "It creates a table" }
+        ]
+      },
+      {
+        "question": "How to embed another web page on your own web page?",
+        "answers": [{ "text": "<iframe>", "correct": true }, { "text": "<page>" }, { "text": "<link>" }, { "text": "<inline>" }]
+      },
+      {
+        "question": "What does the <circle> tag do?",
+        "answers": [
+          { "text": "It creates a circular background" },
+          { "text": "It creates a circle in a PNG file" },
+          { "text": "It circles an element" },
+          { "text": "It creates a circle in inline SVG", "correct": true }
+        ]
+      },
+      {
+        "question": "How to put a video on your web page?",
+        "answers": [
+          { "text": "<video> with <source>", "correct": true },
+          { "text": "<video src=\"\">" },
+          { "text": "<media src=\"\">" },
+          { "text": "<media> with <source>" }
+        ]
+      }
+    ],
+    "links": ["/maclearn/html/html-semantics.html", "/maclearn/html/html-tables.html"],
+    "end": "Good job, you finished the HTML Visuals unit! Move on and explore efficient code writing and user handling!"
+  },
+  {
+    "name": "HTML Efficient Code",
+    "description": "Click \"start\" to test your HTML code efficiency skills and knowledge!",
+    "questions": [
+      {
+        "question": "Which HTML entity is syntaxed correctly?",
+        "answers": [{ "text": "&#copy;" }, { "text": "&excl;", "correct": true }, { "text": "&199;" }, { "text": "#199;" }]
+      },
+      {
+        "question": "What's the semantic tag for creating image captions?",
+        "answers": [
+          { "text": "<caption>" },
+          { "text": "<description>" },
+          { "text": "<cap>" },
+          { "text": "<figcaption>", "correct": true }
+        ]
+      }
+    ],
+    "links": ["/maclearn/html/html-forms.html", "/maclearn/html/html-semantics.html"],
+    "end": "Good job, you finished the Efficient Code unit! Move on and explore how to handle users on your website!"
+  },
+  {
+    "name": "HTML Handling Users",
+    "description": "Click \"start\" to test your HTML user handling skills and knowledge!",
+    "questions": [
+      {
+        "question": "Which tag is used for multiple choice options?",
+        "answers": [
+          { "text": "<option>" },
+          { "text": "<input type=\"choice\">" },
+          { "text": "<choice mode=\"input\">" },
+          { "text": "<input type=\"radio\">", "correct": true }
+        ]
+      },
+      {
+        "question": "Which input type attribute is used to create an encoded input?",
+        "answers": [
+          { "text": "type=\"text\"" },
+          { "text": "type=\"login\"" },
+          { "text": "type=\"password\"", "correct": true },
+          { "text": "type=\"number\"" }
+        ]
+      }
+    ],
+    "links": ["/maclearn/html/finish.html", "/maclearn/html/html-forms.html"],
+    "end": "Congratulations, you finished the Handling Users unit and completed the HTML Course on MacLearn! Way to go!"
+  }
+]
