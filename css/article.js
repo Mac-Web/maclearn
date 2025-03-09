@@ -337,6 +337,8 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.appendChild(nav);
       document.body.appendChild(wrapper);
 
+      (adsbygoogle = window.adsbygoogle || []).push({});
+
       const helpMenuItems = document.getElementById("cats");
       const helpMenu = document.getElementById("help-menu");
       const helpCaret = document.getElementById("caret");

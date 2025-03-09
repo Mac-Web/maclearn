@@ -273,15 +273,13 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
         </footer>
       </article>
-      </div>
-      
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>`;
+      </div>`;
       //Above is code for the main content of the page
 
       document.body.appendChild(nav);
       document.body.appendChild(wrapper);
+
+      (adsbygoogle = window.adsbygoogle || []).push({});
 
       const helpMenuItems = document.getElementById("cats");
       const helpMenu = document.getElementById("help-menu");
