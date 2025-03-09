@@ -293,7 +293,6 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="ad-container">
           <ins
       class="adsbygoogle"
-      style="display: block"
       data-ad-client="ca-pub-5598129470490010"
       data-ad-slot="2392383134"
       data-ad-format="auto"
@@ -305,7 +304,6 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="ad-container">
             <ins
         class="adsbygoogle"
-        style="display: block"
         data-ad-client="ca-pub-5598129470490010"
         data-ad-slot="2392383134"
         data-ad-format="auto"
