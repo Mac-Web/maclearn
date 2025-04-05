@@ -54,6 +54,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const targetUrl = params.get("page");
   const currentPage = targetUrl;
   const pageTitle = document.getElementById("title");
+  let recents = localStorage.getItem("maclearnRecent") ? JSON.parse(localStorage.getItem("maclearnRecent")) : [];
+  let recentIndex = recents.indexOf("dev:" + currentPage);
+  if (recentIndex > -1) {
+    recents.splice(recentIndex, 1);
+    recents.push("dev:" + currentPage);
+  } else {
+    if (recents.length === 5) {
+      recents.shift();
+    }
+    recents.push("dev:" + currentPage);
+  }
+  localStorage.setItem("maclearnRecent", JSON.stringify(recents));
   let articleIndex = articles.indexOf(targetUrl);
   let paragraph, articleName, articleDate, articleRelease, author, prevLink, nextLink, sidebarText;
   const dataFile = "articles.json";
@@ -159,6 +171,15 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.appendChild(wrapper);
 
       (adsbygoogle = window.adsbygoogle || []).push({});
+      const observer = new MutationObserver(()=> {
+        wrapper.style.height = "calc(100vh - 50px)";
+        wrapper.style.minHeight = "calc(100vh - 50px)";
+      });
+      observer.observe(wrapper, {
+        attributes: true,
+        attributeFilter: ["style"],
+      });
+      //Above is code for getting rid of AdSense's height:auto rule on the wrapper
 
       const helpMenuItems = document.getElementById("cats");
       const helpMenu = document.getElementById("help-menu");

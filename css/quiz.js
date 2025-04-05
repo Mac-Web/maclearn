@@ -41,6 +41,17 @@ const advancedArticles = [
   "7",
 ];
 
+const wrapper = document.querySelector(".wrap");
+const observer = new MutationObserver(() => {
+  wrapper.style.height = "calc(100vh - 50px)";
+  wrapper.style.minHeight = "calc(100vh - 50px)";
+});
+observer.observe(wrapper, {
+  attributes: true,
+  attributeFilter: ["style"],
+});
+//Above is code for getting rid of AdSense's height:auto rule on the wrapper
+
 function initializeQuiz(data) {
   const params = new URLSearchParams(window.location.search);
   const quizID = params.get("id");
@@ -305,6 +316,19 @@ function setupQuiz(questions, links, end) {
         localStorage.setItem("cssxp", totalXP);
         completedQuizzes.push(quizID);
         localStorage.setItem("completequizcss", JSON.stringify(completedQuizzes));
+        let achievements = localStorage.getItem("achievements") ? JSON.parse(localStorage.getItem("achievements")) : [];
+        console.log(totalXP, localStorage.getItem("htmlxp"))
+        if (
+          totalXP == 800 &&
+          localStorage.getItem("htmlxp") == "600" &&
+          !achievements.includes("Web Development Master: Finish both HTML and CSS courses")
+        ) {
+          achievements.push("Web Development Master: Finish both HTML and CSS courses");
+          localStorage.setItem("achievements", JSON.stringify(achievements));
+          createNotification(
+            "Quiz complete, Achievement earned: Web Development Master! Go to your learner profile on the top right to learn more."
+          );
+        }
       }
       start.innerHTML = "Go!";
       start.addEventListener("click", () => {

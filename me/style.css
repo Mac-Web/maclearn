@@ -187,10 +187,12 @@ body {
 .hero-des {
   font-size: 20px;
   line-height: 32px;
+  width: 60%;
+  margin-inline: 20%;
 }
 
 .section-title {
-  padding-bottom: 30px;
+  padding-block: 20px;
   color: white;
   font-size: 25px;
   text-align: center;
@@ -201,6 +203,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  gap: 30px;
 }
 
 .pages h2 {
@@ -267,4 +270,19 @@ body {
   color: rgb(180, 180, 180);
   border-radius: 5px;
   font-size: 17px;
+}
+
+.recent, .achievement {
+  background-color: rgb(15, 15, 15);
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 20px 30px;
+  border-radius: 5px;
+}
+
+.achievement {
+  width: 300px;
+  text-align: center;
 }

@@ -35,6 +35,17 @@ const advancedArticles = [
   "5",
 ];
 
+const wrapper = document.querySelector(".wrap");
+const observer = new MutationObserver(() => {
+  wrapper.style.height = "calc(100vh - 50px)";
+  wrapper.style.minHeight = "calc(100vh - 50px)";
+});
+observer.observe(wrapper, {
+  attributes: true,
+  attributeFilter: ["style"],
+});
+//Above is code for getting rid of AdSense's height:auto rule on the wrapper
+
 function initializeQuiz(data) {
   const params = new URLSearchParams(window.location.search);
   const quizID = params.get("id");
@@ -120,7 +131,7 @@ function initializeQuiz(data) {
     const warning = document.createElement("div");
     warning.classList.add("warning");
     warning.innerHTML =
-      "<img src=\"/maclearn/media/icons/warning.svg\" /> You have already completed and gotten 100% on this quiz before, so no additional XP will be gained from completing the quiz again.";
+      '<img src="/maclearn/media/icons/warning.svg" /> You have already completed and gotten 100% on this quiz before, so no additional XP will be gained from completing the quiz again.';
     message.appendChild(warning);
   }
   let index,
@@ -251,6 +262,18 @@ function setupQuiz(questions, links, end) {
         localStorage.setItem("htmlxp", totalXP);
         completedQuizzes.push(quizID);
         localStorage.setItem("completequiz", JSON.stringify(completedQuizzes));
+        let achievements = localStorage.getItem("achievements") ? JSON.parse(localStorage.getItem("achievements")) : [];
+        if (
+          totalXP == 600 &&
+          localStorage.getItem("cssxp") == "800" &&
+          !achievements.includes("Web Development Master: Finish both HTML and CSS courses")
+        ) {
+          achievements.push("Web Development Master: Finish both HTML and CSS courses");
+          localStorage.setItem("achievements", JSON.stringify(achievements));
+          createNotification(
+            "Quiz complete, Achievement earned: Web Development Master! Go to your learner profile on the top right to learn more."
+          );
+        }
       }
       start.innerHTML = "Go!";
       start.addEventListener("click", () => {

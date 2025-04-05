@@ -81,6 +81,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const targetUrl = params.get("page");
   const currentPage = targetUrl;
   const pageTitle = document.getElementById("title");
+  let achievements = localStorage.getItem("achievements") ? JSON.parse(localStorage.getItem("achievements")) : [];
+  let recents = localStorage.getItem("maclearnRecent") ? JSON.parse(localStorage.getItem("maclearnRecent")) : [];
+  let recentIndex = recents.indexOf("html:" + currentPage);
+  if (recentIndex > -1) {
+    recents.splice(recentIndex, 1);
+    recents.push("html:" + currentPage);
+  } else {
+    if (recents.length === 5) {
+      recents.shift();
+      if (!achievements.includes("Dedicated Learner: Read 6 articles from any course")) {
+        achievements.push("Dedicated Learner: Read 6 articles from any course");
+        localStorage.setItem("achievements", JSON.stringify(achievements));
+        createNotification("Achievement earned: Dedicated Learner! Go to your learner profile on the top right to learn more.");
+      }
+    }
+    recents.push("html:" + currentPage);
+  }
+  localStorage.setItem("maclearnRecent", JSON.stringify(recents));
   let beginnerFlag = beginnerArticles.includes(targetUrl);
   let articleIndex = beginnerFlag ? beginnerArticles.indexOf(targetUrl) : advancedArticles.indexOf(targetUrl);
   let paragraph,
@@ -236,21 +254,12 @@ document.addEventListener("DOMContentLoaded", function () {
         <hr />
         
         <div class="ad-container">
-          <ins
-      class="adsbygoogle"
-      style="display: block"
-      data-ad-client="ca-pub-5598129470490010"
-      data-ad-slot="2392383134"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-          ></ins>
         </div>
         ${paragraph}
         
         <div class="ad-container">
           <ins
       class="adsbygoogle"
-      style="display: block"
       data-ad-client="ca-pub-5598129470490010"
       data-ad-slot="2392383134"
       data-ad-format="auto"
@@ -278,8 +287,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
       document.body.appendChild(nav);
       document.body.appendChild(wrapper);
+      const ad = document.createElement("ins");
+      ad.className = "adsbygoogle";
+      ad.style.display = "block";
+      ad.setAttribute("data-ad-client", "ca-pub-5598129470490010");
+      ad.setAttribute("data-ad-slot", "3087664545");
+      ad.setAttribute("data-ad-format", "auto");
+      ad.setAttribute("data-full-width-responsive", "true");
+      document.querySelector(".ad-container").appendChild(ad);
 
       (adsbygoogle = window.adsbygoogle || []).push({});
+      const observer = new MutationObserver(() => {
+        wrapper.style.height = "calc(100vh - 50px)";
+        wrapper.style.minHeight = "calc(100vh - 50px)";
+      });
+      observer.observe(wrapper, {
+        attributes: true,
+        attributeFilter: ["style"],
+      });
+      //Above is code for getting rid of AdSense's height:auto rule on the wrapper
 
       const helpMenuItems = document.getElementById("cats");
       const helpMenu = document.getElementById("help-menu");
@@ -381,21 +407,6 @@ document.addEventListener("DOMContentLoaded", function () {
         navigator.clipboard.writeText(window.location.href);
         createNotification("Link copied to clipboard!");
       });
-      function createNotification(message) {
-        if (document.querySelector(".notification")) {
-          document.body.removeChild(document.querySelector(".notification"));
-        }
-        const notification = document.createElement("div");
-        notification.classList.add("notification");
-        notification.innerHTML = "<img src='/maclearn/media/icons/notification.svg'>" + message;
-        document.body.appendChild(notification);
-        setTimeout(() => {
-          notification.style.opacity = "0";
-          setTimeout(() => {
-            document.body.removeChild(notification);
-          }, 300);
-        }, 3000);
-      }
       report.addEventListener("click", function () {
         window.open("https://forms.gle/GrNw79oqWgr2u9aLA", "_blank");
       });
@@ -555,4 +566,20 @@ document.addEventListener("DOMContentLoaded", function () {
         outputWindow3.close();
       }
     });
+
+  function createNotification(message) {
+    if (document.querySelector(".notification")) {
+      document.body.removeChild(document.querySelector(".notification"));
+    }
+    const notification = document.createElement("div");
+    notification.classList.add("notification");
+    notification.innerHTML = "<img src='/maclearn/media/icons/notification.svg'>" + message;
+    document.body.appendChild(notification);
+    setTimeout(() => {
+      notification.style.opacity = "0";
+      setTimeout(() => {
+        document.body.removeChild(notification);
+      }, 300);
+    }, 3000);
+  }
 });

@@ -87,6 +87,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const targetUrl = params.get("page");
   const currentPage = targetUrl;
   const pageTitle = document.getElementById("title");
+  let achievements = localStorage.getItem("achievements") ? JSON.parse(localStorage.getItem("achievements")) : [];
+  let recents = localStorage.getItem("maclearnRecent") ? JSON.parse(localStorage.getItem("maclearnRecent")) : [];
+  let recentIndex = recents.indexOf("css:" + currentPage);
+  if (recentIndex > -1) {
+    recents.splice(recentIndex, 1);
+    recents.push("css:" + currentPage);
+  } else {
+    if (recents.length === 5) {
+      recents.shift();
+      if (!achievements.includes("Dedicated Learner: Read 6 articles from any course")) {
+        achievements.push("Dedicated Learner: Read 6 articles from any course");
+        localStorage.setItem("achievements", JSON.stringify(achievements));
+      }
+    }
+    recents.push("css:" + currentPage);
+  }
+  localStorage.setItem("maclearnRecent", JSON.stringify(recents));
   let beginnerFlag = beginnerArticles.includes(targetUrl);
   let articleIndex = beginnerFlag ? beginnerArticles.indexOf(targetUrl) : advancedArticles.indexOf(targetUrl);
   let paragraph,
@@ -293,7 +310,6 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="ad-container">
           <ins
       class="adsbygoogle"
-      style="display: block"
       data-ad-client="ca-pub-5598129470490010"
       data-ad-slot="2392383134"
       data-ad-format="auto"
@@ -305,7 +321,6 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="ad-container">
             <ins
         class="adsbygoogle"
-        style="display: block"
         data-ad-client="ca-pub-5598129470490010"
         data-ad-slot="2392383134"
         data-ad-format="auto"
@@ -338,6 +353,15 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.appendChild(wrapper);
 
       (adsbygoogle = window.adsbygoogle || []).push({});
+      const observer = new MutationObserver(()=> {
+        wrapper.style.height = "calc(100vh - 50px)";
+        wrapper.style.minHeight = "calc(100vh - 50px)";
+      });
+      observer.observe(wrapper, {
+        attributes: true,
+        attributeFilter: ["style"],
+      });
+      //Above is code for getting rid of AdSense's height:auto rule on the wrapper
 
       const helpMenuItems = document.getElementById("cats");
       const helpMenu = document.getElementById("help-menu");
