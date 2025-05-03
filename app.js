@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("click", (e) => {
     if (e.target === updateModal) {
       e.target.style.display = "none";
-      localStorage.setItem("maclearnmodal", "true");
+      localStorage.setItem("maclearnmodall", "true");
     }
   });
 });
