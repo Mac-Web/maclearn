@@ -1,0 +1,401 @@
+{
+  "html": [
+    {
+      "id": 0,
+      "name": "HTML Basics",
+      "description": "Click \"start\" to see what you know about the very basics of coding and HTML!",
+      "questions": [
+        {
+          "question": "What does HTML stand for?",
+          "options": [
+            "Hypertext Marking Language",
+            "Hacking Technology Manual Language",
+            "Hypertext Markup Language",
+            "Http Text Making Language"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Which tag is used to create a level one heading?",
+          "options": ["<heading>", "<h1>", "<h6>", "<head>"],
+          "correct": 1
+        },
+        {
+          "question": "Which pair of tags wraps the visible content of a webpage?",
+          "options": ["<information>", "<body>", "<head>", "<content>"],
+          "correct": 1
+        }
+      ],
+      "prev": 2,
+      "end": "Move on to learn more about HTML Foundations!",
+      "unit": "The Very Basics"
+    },
+    {
+      "id": 1,
+      "name": "HTML Foundations",
+      "description": "Click \"start\" to test your HTML basic structuring skills and knowledge!",
+      "questions": [
+        {
+          "question": "Fill in the blank: <img _____ = \"image.png\">",
+          "options": ["link", "source", "image", "src"],
+          "correct": 3
+        },
+        {
+          "question": "What is the alt attribute for: <img src=\"image.png\" alt=\"An image.\">",
+          "options": ["Alternative Image", "Alternative Text", "Autoclick", "It doesn't do anything"],
+          "correct": 1
+        }
+      ],
+      "prev": 5,
+      "end": "Move on to master more different HTML tags!",
+      "unit": "HTML Foundation"
+    },
+    {
+      "id": 2,
+      "name": "HTML Common Tags",
+      "description": "Click \"start\" to see how many common HTML tags you know so far!",
+      "questions": [
+        {
+          "question": "Which tag and attribute is used to create links?",
+          "options": ["<link href=\" \">", "<anchor>", "<a src=\" \">", "<a href=\" \">"],
+          "correct": 3
+        },
+        {
+          "question": "Which tag is used to make list items?",
+          "options": ["<list-items>", "<list>", "<li>", "<ul>"],
+          "correct": 2
+        }
+      ],
+      "prev": 9,
+      "end": "Good job, you just finished the beginner HTML unit! Move on and explore the more advanced HTML skills and knowledge in the next unit!",
+      "unit": "Common Tags"
+    },
+    {
+      "id": 3,
+      "name": "HTML Visuals",
+      "description": "Click \"start\" to test your HTML visual element skills and knowledge!",
+      "questions": [
+        {
+          "question": "What does the <tr> tag do?",
+          "options": [
+            "It creates data cells in a table",
+            "It creates rows in a table",
+            "It creates a column in a table",
+            "It creates a table"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "How to embed another web page on your own web page?",
+          "options": ["<iframe>", "<page>", "<link>", "<inline>"],
+          "correct": 0
+        },
+        {
+          "question": "What does the <circle> tag do?",
+          "options": [
+            "It creates a circular background",
+            "It creates a circle in a PNG file",
+            "It circles an element",
+            "It creates a circle in inline SVG"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "How to put a video on your web page?",
+          "options": ["<video> with <source>", "<video src=\"\">", "<media src=\"\">", "<media> with <source>"],
+          "correct": 0
+        }
+      ],
+      "prev": 13,
+      "end": "Good job, you finished the HTML Visuals unit! Move on and explore efficient code writing and user handling!",
+      "unit": "HTML Visuals"
+    },
+    {
+      "id": 4,
+      "name": "HTML Efficient Code",
+      "description": "Click \"start\" to test your HTML code efficiency skills and knowledge!",
+      "questions": [
+        {
+          "question": "Which HTML entity is syntaxed correctly?",
+          "options": ["&#copy;", "&excl;", "&199;", "#199;"],
+          "correct": 1
+        },
+        {
+          "question": "What's the semantic tag for creating image captions?",
+          "options": ["<caption>", "<description>", "<cap>", "<figcaption>"],
+          "correct": 3
+        }
+      ],
+      "prev": 15,
+      "end": "Good job, you finished the Efficient Code unit! Move on and explore how to handle users on your website!",
+      "unit": "Efficient Code"
+    },
+    {
+      "id": 5,
+      "name": "HTML Handling Users",
+      "description": "Click \"start\" to test your HTML user handling skills and knowledge!",
+      "questions": [
+        {
+          "question": "Which tag is used for multiple choice options?",
+          "options": ["<option>", "<input type=\"choice\">", "<choice mode=\"input\">", "<input type=\"radio\">"],
+          "correct": 3
+        },
+        {
+          "question": "Which input type attribute is used to create an encoded input?",
+          "options": ["type=\"text\"", "type=\"login\"", "type=\"password\"", "type=\"number\""],
+          "correct": 2
+        }
+      ],
+      "prev": 17,
+      "end": "Congratulations, you finished the Handling Users unit and completed the HTML Course on MacLearn! Way to go!",
+      "unit": "Handling Users"
+    }
+  ],
+  "css": [
+    {
+      "id": 0,
+      "name": "Meeting CSS",
+      "description": "Click \"start\" to see what you know about the very basics of what CSS is and how to add it to your website!",
+      "questions": [
+        {
+          "question": "What does CSS do?",
+          "options": [
+            "It adds functionality to a website.",
+            "It creates a website's content.",
+            "It's a database system used in web servers.",
+            "It styles the design of a website."
+          ],
+          "correct": 3
+        }
+      ],
+      "prev": 1,
+      "end": "Move on to learn more CSS properties and tricks!",
+      "unit": "Meeting CSS"
+    },
+    {
+      "id": 1,
+      "name": "CSS Colors",
+      "description": "Click \"start\" to see what you know about basic CSS syntax and implementation!",
+      "questions": [
+        {
+          "question": "Which CSS property sets an element's text color?",
+          "options": ["text-color", "font-color", "color", "element-color"],
+          "correct": 2
+        },
+        {
+          "question": "How to make an element's background a gradient?",
+          "options": [
+            "background: gradient red blue;",
+            "background: linear-gradient(to right, red, blue);",
+            "background-color: linear-gradient(to right, red, blue);",
+            "gradient: to right red blue"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "What's wrong with this code: border: 2px circles black;",
+          "options": [
+            "There's nothing wrong with this code.",
+            "The property should be background-color.",
+            "The \"black\" value isn't a valid color.",
+            "The \"circles\" value isn't a valid border style."
+          ],
+          "correct": 3
+        }
+      ],
+      "prev": 4,
+      "end": "Move on to learn more CSS properties and tricks!",
+      "unit": "Colors & Borders"
+    },
+    {
+      "id": 2,
+      "name": "Adding Space",
+      "description": "Click \"start\" to see what you know about adding space and resizing elements in CSS!",
+      "questions": [
+        {
+          "question": "Which CSS properties set an element's width and height?",
+          "options": [
+            "\"width\" and \"height\"",
+            "\"wide\" and \"tall\"",
+            "\"horizontal\" and \"vertical\"",
+            "\"stretch\" and \"extend\""
+          ],
+          "correct": 0
+        },
+        {
+          "question": "How to add space that takes up 20 pixels inside an element?",
+          "options": ["margin: 20px;", "padding: 20px;", "margin: 20;", "space-inside: 20px;"],
+          "correct": 1
+        },
+        {
+          "question": "What does CSS box model do?",
+          "options": [
+            "It creates many boxes on the page.",
+            "It styles elements to make them rectangular.",
+            "It arranges the elements to be the shape of a box.",
+            "It tells the browser how to render the spaces of an element."
+          ],
+          "correct": 3
+        }
+      ],
+      "prev": 7,
+      "end": "Move on to learn more CSS properties and tricks!",
+      "unit": "Adding Space"
+    },
+    {
+      "id": 3,
+      "name": "Text & Content",
+      "description": "Click \"start\" to see what you know about styling the text and content on your webpage using CSS!",
+      "questions": [
+        {
+          "question": "Which CSS property determines whether or not a text is italicized?",
+          "options": ["font-style", "text-style", "italic", "font-italic"],
+          "correct": 0
+        },
+        {
+          "question": "How to change the line height of a pragraph to 30 pixels using CSS?",
+          "options": ["line: 30px;", "text-height: 30px;", "line-height: 30px;", "paragraph-height: 30pxl"],
+          "correct": 2
+        },
+        {
+          "question": "What does \"margin-inline: auto\" do?",
+          "options": [
+            "It removes all the margin on an element.",
+            "It gives an element as much margin on the left/right as possible.",
+            "It changes the margin on the left/right of an element so the element's size is fixed.",
+            "It adds a random amount of margin on the left/right of an element."
+          ],
+          "correct": 1
+        }
+      ],
+      "prev": 10,
+      "end": "Move on to learn more CSS properties and tricks!",
+      "unit": "Text & Content"
+    },
+    {
+      "id": 4,
+      "name": "Laying Out Stuff",
+      "description": "Click \"start\" to see what you know about arranging elements and content on your webpage using CSS!",
+      "questions": [
+        {
+          "question": "Which CSS property determines how an element is being displayed?",
+          "options": ["display", "inline", "block", "visibility"],
+          "correct": 0
+        },
+        {
+          "question": "How to align some elements in the center of the flexbox's axis?",
+          "options": ["align: center;", "align-items: center;", "flex-align: center;", "justify-content: center;"],
+          "correct": 3
+        },
+        {
+          "question": "What does \"z-index: 100;\" do?",
+          "options": [
+            "It brings an element to the 100th 3D layer on the page.",
+            "It gives an element an index to make search engines index the site better.",
+            "It moves the element 100 pixels right.",
+            "It moves the element 100 pixels down."
+          ],
+          "correct": 0
+        }
+      ],
+      "prev": 13,
+      "end": "Move on to learn more CSS properties and tricks!",
+      "unit": "Laying Out Stuff"
+    },
+    {
+      "id": 5,
+      "name": "Useful Tips",
+      "description": "Click \"start\" to see what you know about CSS math, variables, !important, and more!",
+      "questions": [
+        {
+          "question": "Which CSS value function performs math on different units in CSS?",
+          "options": ["unit()", "var()", "math()", "calc()"],
+          "correct": 3
+        },
+        {
+          "question": "How to make a rule in a type selector override inline styles?",
+          "options": [
+            "You can't override inline styles.",
+            "Use the !override property.",
+            "Repeat the rule 2 times.",
+            "Use the !important property."
+          ],
+          "correct": 3
+        },
+        {
+          "question": "What does the \":after\" pseudo class do?",
+          "options": [
+            "It applies styles to an element after it's being hovered.",
+            "It creates an extension of an element after the element.",
+            "It applies styles to an element after it's being clicked.",
+            "It moves the element to the end of the document."
+          ],
+          "correct": 1
+        }
+      ],
+      "prev": 16,
+      "end": "Move on to learn more CSS properties and tricks!",
+      "unit": "Useful CSS Tips"
+    },
+    {
+      "id": 6,
+      "name": "Creating Animations",
+      "description": "Click \"start\" to see what you know about making smooth transitions and animations with transform properties!",
+      "questions": [
+        {
+          "question": "Which CSS transition value defines the transition delay in this example? transition: background-color 0.5s 1s ease",
+          "options": ["background-color", "1s", "ease", "0.5s"],
+          "correct": 1
+        },
+        {
+          "question": "Which CSS rule defines an animation?",
+          "options": ["animation", "@animation", "@media", "@keyframes"],
+          "correct": 3
+        },
+        {
+          "question": "What does \"transform: rotate(50deg);\" do?",
+          "options": [
+            "The \"transform\" property doesn't have a rotate function.",
+            "It moves an element to the right by 50 pixels.",
+            "It rotates the element by 50 degrees clockwise.",
+            "It rotates the element by 50 degrees counterclockwise."
+          ],
+          "correct": 2
+        }
+      ],
+      "prev": 19,
+      "end": "Move on to learn more CSS properties and tricks!",
+      "unit": "Creating Animations"
+    },
+    {
+      "id": 7,
+      "name": "Responsive Design",
+      "description": "Click \"start\" to see what you know about making your website usable across different devices!",
+      "questions": [
+        {
+          "question": "Which CSS rule defines how an element should behave when a screen size condition is met?",
+          "options": ["responsive", "@responsive", "@media", "@keyframes"],
+          "correct": 2
+        },
+        {
+          "question": "Which HTML tag is used to define the viewport behavior?",
+          "options": ["<meta>", "<viewport>", "<screen>", "<style>"],
+          "correct": 0
+        },
+        {
+          "question": "What is wrong with this example:\n media (max-width: 500px) {...CSS code here}",
+          "options": [
+            "There's nothing wrong with it.",
+            "\"max-width: 500px\" isn't a valid condition.",
+            "There shouldn't be parentheses around the condition.",
+            "The media rule is missing the @ symbol."
+          ],
+          "correct": 3
+        }
+      ],
+      "prev": 21,
+      "end": "Move on to learn more CSS properties and tricks!",
+      "unit": "Responsive Design"
+    }
+  ]
+}

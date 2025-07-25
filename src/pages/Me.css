@@ -1,0 +1,19 @@
+.me-activities {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.me-activity {
+  background-color: var(--secondary-bg);
+  color: var(--primary-text);
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.me-activity:hover {
+  background-color: var(--primary-hover);
+}

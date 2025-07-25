@@ -1,0 +1,156 @@
+:root {
+  --green: rgb(0, 30, 0);
+  --red: rgb(70, 0, 0);
+}
+
+.light {
+  --green: rgb(100, 200, 100);
+  --red: rgb(250, 150, 150);
+}
+
+.quiz-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  padding-block: 50px;
+}
+
+.quiz-warning {
+  background-color: var(--secondary-bg);
+  border-radius: 10px;
+  color: var(--secondary-text);
+  font-size: 16px;
+  width: 550px;
+  line-height: 25px;
+  padding: 10px 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.quiz-warning img {
+  width: 30px;
+  filter: var(--invert);
+}
+
+.quiz-name {
+  color: var(--primary-text);
+  font-size: 35px;
+}
+
+.quiz-description {
+  color: var(--secondary-text);
+  font-size: 18px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.quiz-btn {
+  background-color: var(--primary-color);
+  color: var(--primary-text);
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.question {
+  padding-block: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.question-name {
+  color: var(--primary-text);
+  font-size: 25px;
+}
+
+.question-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.question-option {
+  background-color: var(--secondary-bg);
+  color: var(--secondary-text);
+  border-radius: 5px;
+  font-size: 18px;
+  padding-block: 15px;
+  cursor: pointer;
+  display: flex;
+}
+
+.question-option:hover {
+  background-color: var(--primary-hover);
+}
+
+.question-btns {
+  display: flex;
+  gap: 15px;
+}
+
+.quiz-results {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 15px;
+}
+
+.result-question {
+  background-color: var(--secondary-bg);
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.result-options {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.result-option {
+  color: var(--secondary-text);
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.result-question h2 {
+  color: var(--primary-text);
+  font-size: 18px;
+  padding-inline: 20px;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  display: inline-block;
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  border: 2px solid var(--secondary-text);
+  margin-inline: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-color: var(--secondary-text);
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(0.5);
+}
